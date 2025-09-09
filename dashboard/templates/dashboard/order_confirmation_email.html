@@ -1,0 +1,17 @@
+Subject: Your Daily Glam Order Confirmation
+
+Hi {{ user.username }},
+
+Thank you for your order!
+
+Here is a summary of your purchase:
+
+{% for item in cart_items %}
+- {{ item.product.name }} ({{ item.quantity }} x ₹{{ item.product.price }})
+{% endfor %}
+
+Total: ₹{{ total_price|floatformat:2 }}
+
+We'll notify you again once your order has shipped.
+
+Thanks for shopping with Daily Glam!

@@ -1,0 +1,293 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Beauty Advice - Daily Glam{% endblock %}
+
+{% block content %}
+<style>
+    #adviceForm .card {
+        border: 1px solid #dee2e6;
+        transition: box-shadow .3s;
+    }
+    #adviceForm .card:hover {
+        box-shadow: 0 0 11px rgba(33,33,33,.2);
+    }
+    .recommendation-section h4 {
+        color: #ff69b4;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .product-card {
+        display: flex;
+        align-items: center;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    .product-icon {
+        font-size: 2rem;
+        color: #ff69b4;
+        margin-right: 15px;
+    }
+    .loader {
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #ff69b4;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+        margin: 20px auto;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+</style>
+
+<div class="container mt-4">
+    <div class="text-center">
+        <h2 class="mb-2">Personalized Beauty Advice</h2>
+        <p class="text-muted">Answer a few questions to get a personalized skincare routine from our AI assistant.</p>
+    </div>
+
+    <form id="adviceForm" class="mt-5">
+        {% csrf_token %}
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Step 1: What is your skin type?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="skin_type" id="skin_oily" value="oily">
+                    <label class="form-check-label" for="skin_oily">Oily</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="skin_type" id="skin_dry" value="dry">
+                    <label class="form-check-label" for="skin_dry">Dry</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="skin_type" id="skin_combo" value="combination">
+                    <label class="form-check-label" for="skin_combo">Combination</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="skin_type" id="skin_normal" value="normal">
+                    <label class="form-check-label" for="skin_normal">Normal</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Step 2: What are your main skin concerns?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="skin_concern" value="acne" id="concern_acne">
+                    <label class="form-check-label" for="concern_acne">Acne & Blemishes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="skin_concern" value="aging" id="concern_aging">
+                    <label class="form-check-label" for="concern_aging">Fine Lines & Wrinkles</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="skin_concern" value="dullness" id="concern_dullness">
+                    <label class="form-check-label" for="concern_dullness">Dullness & Uneven Tone</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="skin_concern" value="pigmentation" id="concern_pigmentation">
+                    <label class="form-check-label" for="concern_pigmentation">Dark Spots & Pigmentation</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Step 3: What is your age range?</h5>
+                <select class="form-select" name="age_range" id="age_range">
+                    <option selected disabled value="">Select your age range</option>
+                    <option value="under20">Under 20</option>
+                    <option value="20s">20-29</option>
+                    <option value="30s">30-39</option>
+                    <option value="40plus">40+</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Step 4: What is your gender?</h5>
+                <select class="form-select" name="gender" id="gender">
+                    <option selected disabled value="">Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="prefer-not-to-say">Prefer not to say</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card mb-4" id="beardCareCard" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Do you have a beard?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="beard_care" id="beard_yes" value="yes">
+                    <label class="form-check-label" for="beard_yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="beard_care" id="beard_no" value="no" checked>
+                    <label class="form-check-label" for="beard_no">No</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Step 5: What is your skin tone?</h5>
+                <select class="form-select" name="skin_tone" id="skin_tone">
+                    <option selected disabled value="">Select your skin tone</option>
+                    <option value="fair">Fair</option>
+                    <option value="light">Light</option>
+                    <option value="medium">Medium</option>
+                    <option value="tan">Tan</option>
+                    <option value="deep">Deep</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Step 6: Do you prefer scented or unscented products?</h5>
+                <select class="form-select" name="scent_preference" id="scent_preference">
+                    <option selected disabled value="">Select your preference</option>
+                    <option value="scented">Scented</option>
+                    <option value="unscented">Unscented</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <button type="submit" id="getRecommendationsBtn" class="btn btn-primary btn-lg">Get My Routine</button>
+        </div>
+    </form>
+
+    <div id="recommendations" class="mt-5"></div>
+
+</div>
+
+<script>
+document.getElementById('gender').addEventListener('change', function() {
+    const beardCareCard = document.getElementById('beardCareCard');
+    if (this.value === 'male') {
+        beardCareCard.style.display = 'block';
+    } else {
+        beardCareCard.style.display = 'none';
+    }
+});
+
+document.getElementById('adviceForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const skinType = this.querySelector('input[name="skin_type"]:checked')?.value;
+    const skinConcerns = Array.from(this.querySelectorAll('input[name="skin_concern"]:checked')).map(el => el.value);
+    const ageRange = this.querySelector('#age_range').value;
+    const gender = this.querySelector('#gender').value;
+    const skinTone = this.querySelector('#skin_tone').value;
+    const scentPreference = this.querySelector('#scent_preference').value;
+
+    if (!skinType || skinConcerns.length === 0 || !ageRange || !gender || !skinTone || !scentPreference) {
+        alert('Please answer all questions to get recommendations.');
+        return;
+    }
+
+    const recommendationsContainer = document.getElementById('recommendations');
+    const submitButton = document.getElementById('getRecommendationsBtn');
+    
+    recommendationsContainer.innerHTML = '<div class="loader"></div>';
+    submitButton.disabled = true;
+    recommendationsContainer.scrollIntoView({ behavior: 'smooth' });
+
+    const requestBody = {
+        skin_type: skinType,
+        skin_concerns: skinConcerns,
+        age_range: ageRange,
+        gender: gender,
+        skin_tone: skinTone,
+        scent_preference: scentPreference
+    };
+
+    if (gender === 'male') {
+        requestBody.beard_care = this.querySelector('input[name="beard_care"]:checked').value;
+    }
+
+    fetch('{% url "advice:get_ai_recommendations" %}', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': this.querySelector('[name=csrfmiddlewaretoken]').value
+        },
+        body: JSON.stringify(requestBody)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            recommendationsContainer.innerHTML = `<p class="text-center text-danger">${data.error}</p>`;
+        } else {
+            displayRecommendations(data.recommendations);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        recommendationsContainer.innerHTML = '<p class="text-center text-danger">An error occurred. Please try again.</p>';
+    })
+    .finally(() => {
+        submitButton.disabled = false;
+    });
+});
+
+function displayRecommendations(text) {
+    const container = document.getElementById('recommendations');
+    container.innerHTML = '<h3 class="text-center mb-5">Your Personalized AI Routine</h3>';
+
+    const sections = text.split(/###\s*(.*?)\s*###/g).filter(Boolean);
+
+    for (let i = 0; i < sections.length; i += 2) {
+        const title = sections[i];
+        const content = sections[i+1];
+
+        const sectionDiv = document.createElement('div');
+        sectionDiv.className = 'recommendation-section mb-5';
+        sectionDiv.innerHTML = `<h4>${title}</h4>`;
+
+        const products = content.trim().split(/\*\s/g).filter(Boolean);
+        products.forEach(productText => {
+            const [productType, ...descriptionParts] = productText.split(':');
+            let description = descriptionParts.join(':').trim();
+            
+            // Definitive cleaning for both title and description
+            const cleanedProductType = productType.trim().replace(/[\*\_#]/g, '');
+            const cleanedDescription = description.replace(/[\*\_#]/g, '').trim();
+
+            const productCard = `
+                <div class="product-card">
+                    <i class="${getIconForProduct(cleanedProductType)} product-icon"></i>
+                    <div>
+                        <strong>${cleanedProductType}:</strong>
+                        <span>${cleanedDescription}</span>
+                    </div>
+                </div>
+            `;
+            sectionDiv.innerHTML += productCard;
+        });
+
+        container.appendChild(sectionDiv);
+    }
+}
+
+function getIconForProduct(productType) {
+    const type = productType.toLowerCase();
+    if (type.includes('cleanser')) return 'bi bi-droplet-half';
+    if (type.includes('serum')) return 'bi bi-eyedropper';
+    if (type.includes('moisturizer')) return 'bi bi-moisture';
+    if (type.includes('sunscreen')) return 'bi bi-sun';
+    if (type.includes('mask')) return 'bi bi-bandaid';
+    if (type.includes('treatment')) return 'bi bi-heart-pulse';
+    if (type.includes('oil') || type.includes('balm')) return 'bi bi-peace';
+    return 'bi bi-star';
+}
+</script>
+{% endblock %}

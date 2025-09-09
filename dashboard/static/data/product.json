@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "name": "Test Lipstick Pro",
+    "brand": "TestBrand Beauty",
+    "description": "A test lipstick with a matte finish.",
+    "image": "https://placehold.co/300x300/E57373/ffffff?text=Test+Lipstick",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 500.00,
+        "url": "http://example.com/nykaa/lipstick",
+        "rating": 4.5,
+        "review": "This is a fantastic test lipstick!"
+      },
+      {
+        "site": "Amazon",
+        "price": 490.00,
+        "url": "http://example.com/amazon/lipstick",
+        "rating": 4.3,
+        "review": "Pretty good for a test product."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Test Foundation HD",
+    "brand": "TestBrand Beauty",
+    "description": "A test foundation with full coverage.",
+    "image": "https://placehold.co/300x300/FFB74D/ffffff?text=Test+Foundation",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 1200.00,
+        "url": "http://example.com/nykaa/foundation",
+        "rating": 4.8,
+        "review": "Excellent coverage, a great test."
+      },
+      {
+        "site": "Purplle",
+        "price": 1150.00,
+        "url": "http://example.com/purplle/foundation",
+        "rating": 4.7,
+        "review": "Blends very well for a test foundation."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Test & Go Shampoo",
+    "brand": "TestCare Hair",
+    "description": "A cleansing shampoo for testing purposes.",
+    "image": "https://placehold.co/300x300/81C784/ffffff?text=Test+Shampoo",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 350.00,
+        "url": "http://example.com/amazon/shampoo",
+        "rating": 4.1,
+        "review": "My hair felt clean after this test."
+      },
+      {
+        "site": "Flipkart",
+        "price": 340.00,
+        "url": "http://example.com/flipkart/shampoo",
+        "rating": 4.0,
+        "review": "Good lather, decent test product."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "HydraTest Face Cream",
+    "brand": "TestCare Skin",
+    "description": "A daily moisturizer for testing hydration.",
+    "image": "https://placehold.co/300x300/64B5F6/ffffff?text=Test+Cream",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 800.00,
+        "url": "http://example.com/nykaa/cream",
+        "rating": 4.9,
+        "review": "Super hydrating! Best test cream ever."
+      },
+      {
+        "site": "Amazon",
+        "price": 790.00,
+        "url": "http://example.com/amazon/cream",
+        "rating": 4.8,
+        "review": "My skin feels soft after the test."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Precision Test Liner",
+    "brand": "TestBrand Beauty",
+    "description": "A liquid eyeliner for sharp, tested lines.",
+    "image": "https://placehold.co/300x300/BA68C8/ffffff?text=Test+Eyeliner",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 450.00,
+        "url": "http://example.com/purplle/eyeliner",
+        "rating": 4.6,
+        "review": "Very black and precise. A successful test."
+      },
+      {
+        "site": "Nykaa",
+        "price": 455.00,
+        "url": "http://example.com/nykaa/eyeliner",
+        "rating": 4.7,
+        "review": "Lasted all day, even during testing."
+      }
+    ]
+  }
+]

@@ -1,0 +1,101 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}User Profile - Daily Glam{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="mb-0">User Profile</h3>
+                </div>
+                <div class="card-body">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <p><strong>Username:</strong> {{ user.username }}</p>
+                    <p><strong>Email:</strong> {{ user.email }}</p>
+                    <p><strong>First Name:</strong> {{ user.first_name|default:"-" }}</p>
+                    <p><strong>Last Name:</strong> {{ user.last_name|default:"-" }}</p>
+                    <p><strong>Phone:</strong> {{ user.profile.phone|default:"-" }}</p>
+                    <p><strong>Address:</strong> {{ user.profile.address_line_1|default:"-" }}, {{ user.profile.city|default:"-" }}, {{ user.profile.state|default:"-" }} - {{ user.profile.pincode|default:"-" }}</p>
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateProfileModal">
+                        Update Profile
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Update Profile Modal -->
+<div class="modal fade" id="updateProfileModal" tabindex="-1" aria-labelledby="updateProfileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="updateProfileModalLabel">Update Your Profile</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="{{ user_form.first_name.id_for_label }}" class="form-label">First Name</label>
+                                {{ user_form.first_name.as_widget.attrs.class }}
+                                <input type="text" name="{{ user_form.first_name.name }}" value="{{ user_form.first_name.value|default:'' }}" class="form-control" id="{{ user_form.first_name.id_for_label }}">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="{{ user_form.last_name.id_for_label }}" class="form-label">Last Name</label>
+                                <input type="text" name="{{ user_form.last_name.name }}" value="{{ user_form.last_name.value|default:'' }}" class="form-control" id="{{ user_form.last_name.id_for_label }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ user_form.email.id_for_label }}" class="form-label">Email address</label>
+                        <input type="email" name="{{ user_form.email.name }}" value="{{ user_form.email.value|default:'' }}" class="form-control" id="{{ user_form.email.id_for_label }}">
+                    </div>
+                    <hr>
+                    <div class="mb-3">
+                        <label for="{{ profile_form.phone.id_for_label }}" class="form-label">Phone</label>
+                        <input type="text" name="{{ profile_form.phone.name }}" value="{{ profile_form.phone.value|default:'' }}" class="form-control" id="{{ profile_form.phone.id_for_label }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ profile_form.address_line_1.id_for_label }}" class="form-label">Address Line 1</label>
+                        <input type="text" name="{{ profile_form.address_line_1.name }}" value="{{ profile_form.address_line_1.value|default:'' }}" class="form-control" id="{{ profile_form.address_line_1.id_for_label }}">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="{{ profile_form.city.id_for_label }}" class="form-label">City</label>
+                                <input type="text" name="{{ profile_form.city.name }}" value="{{ profile_form.city.value|default:'' }}" class="form-control" id="{{ profile_form.city.id_for_label }}">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="{{ profile_form.state.id_for_label }}" class="form-label">State</label>
+                                <input type="text" name="{{ profile_form.state.name }}" value="{{ profile_form.state.value|default:'' }}" class="form-control" id="{{ profile_form.state.id_for_label }}">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="mb-3">
+                                <label for="{{ profile_form.pincode.id_for_label }}" class="form-label">Pincode</label>
+                                <input type="text" name="{{ profile_form.pincode.name }}" value="{{ profile_form.pincode.value|default:'' }}" class="form-control" id="{{ profile_form.pincode.id_for_label }}">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

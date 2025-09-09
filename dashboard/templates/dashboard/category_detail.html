@@ -1,0 +1,388 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}{{ category_name }} - Products - Daily Glam{% endblock %}
+
+{% block content %}
+<style>
+    .product-comparison-card {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        margin-bottom: 25px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,.05);
+        display: flex;
+        flex-direction: column;
+    }
+    .product-info {
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #dee2e6;
+    }
+    .product-info img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    .offer-list {
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+    }
+    .offer-list-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .offer-list-item:last-child {
+        border-bottom: none;
+    }
+    .site-badge {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+    .site-badge.amazon { background-color: #ff9900; }
+    .site-badge.nykaa { background-color: #ff69b4; }
+    .site-badge.purplle { background-color: #6a0dad; }
+    .site-badge.flipkart { background-color: #2874f0; }
+    .page-header {
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+    }
+    .filter-sidebar .card-header {
+        background-color: #f8f9fa;
+        font-weight: bold;
+    }
+    .product-actions .btn {
+        margin-top: 5px;
+    }
+    .rating {
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+    }
+    .rating i {
+        margin-left: 4px;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="filter-sidebar">
+                <h4 class="mb-4">Filters</h4>
+                <div class="card mb-3">
+                    <div class="card-header">Price</div>
+                    <div class="card-body">
+                        <input type="range" class="form-range" min="{{ min_price|floatformat:0 }}" max="{{ max_price|floatformat:0 }}" value="{{ max_price|floatformat:0 }}" id="priceRange">
+                        <div class="d-flex justify-content-between">
+                            <span>₹{{ min_price|floatformat:0 }}</span>
+                            <span id="price-range-value">₹{{ max_price|floatformat:0 }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="d-flex justify-content-between align-items-center page-header">
+                <h2 class="mb-0">{{ category_name }}</h2>
+                <div class="d-flex align-items-center">
+                    <label for="sortBy" class="form-label me-2 mb-0">Sort By:</label>
+                    <select class="form-select w-auto" id="sortBy">
+                        <option value="default">Relevance</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row" id="product-grid">
+                {% for product in products %}
+                <div class="col-md-6 product-item" data-price="{{ product.offers.first.price|default:0 }}" data-name="{{ product.name }}">
+                    <div class="product-comparison-card">
+                        <div class="product-info text-center">
+                            <img src="{{ product.image }}" alt="{{ product.name }}" class="mb-3">
+                            <h5 class="mt-3">{{ product.name }}</h5>
+                            <p class="text-muted">{{ product.brand.name }}</p>
+                            <div class="product-actions mt-2">
+                                <button class="btn btn-sm btn-outline-warning btn-set-alert" data-product-id="{{ product.id }}"><i class="bi bi-bell"></i></button>
+                                <a href="{% url 'dashboard:add_to_wishlist' product_id=product.id %}" class="btn btn-sm btn-outline-danger btn-add-to-wishlist"><i class="bi bi-heart"></i></a>
+                                <button class="btn btn-sm btn-outline-primary btn-add-to-kit" data-offer-id="{{ product.offers.first.id }}">Add to Kit</button>
+                                <button class="btn btn-sm btn-outline-secondary btn-add-to-compare" data-product-id="{{ product.id }}">Add to Compare</button>
+                            </div>
+                        </div>
+                        <ul class="offer-list list-group list-group-flush">
+                            {% for offer in product.offers.all %}
+                            <li class="offer-list-item">
+                                <div>
+                                    <span class="site-badge {{ offer.site|slugify }}">{{ offer.site }}</span>
+                                    <strong class="ms-3 fs-5">₹{{ offer.price }}</strong>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    {% if offer.rating %}
+                                    <div class="rating me-3">
+                                        <span class="fw-bold">{{ offer.rating|floatformat:1 }}</span>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    </div>
+                                    {% endif %}
+                                    <button class="btn btn-sm btn-success btn-add-to-cart" data-offer-id="{{ offer.id }}">Add to Cart</button>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Price Alert Modal -->
+<div class="modal fade" id="priceAlertModal" tabindex="-1" aria-labelledby="priceAlertModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="priceAlertModalLabel">Set Price Alert</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="priceAlertForm" method="POST">
+            {% csrf_token %}
+            <input type="hidden" id="alertProductId" name="product_id">
+            <div class="mb-3">
+                <label for="desiredPrice" class="form-label">Your Desired Price (₹)</label>
+                <input type="number" class="form-control" id="desiredPrice" name="desired_price" step="0.01" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Set Alert</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast Notification -->
+<div class="position-fixed top-50 start-50 translate-middle p-3" style="z-index: 11">
+  <div id="notificationToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Notification</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      <!-- Message will be inserted here -->
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    const priceAlertModal = new bootstrap.Modal(document.getElementById('priceAlertModal'));
+    const priceAlertForm = document.getElementById('priceAlertForm');
+    const alertProductIdInput = document.getElementById('alertProductId');
+
+    const notificationToastEl = document.getElementById('notificationToast');
+    const notificationToast = new bootstrap.Toast(notificationToastEl);
+    const toastBody = notificationToastEl.querySelector('.toast-body');
+
+    function showToast(message) {
+        toastBody.textContent = message;
+        notificationToast.show();
+    }
+
+    // --- Set Price Alert Logic ---
+    document.querySelectorAll('.btn-set-alert').forEach(button => {
+        button.addEventListener('click', function() {
+            const productId = this.dataset.productId;
+            alertProductIdInput.value = productId;
+            priceAlertForm.action = `{% url 'dashboard:add_price_alert' product_id=0 %}`.replace('0', productId);
+            priceAlertModal.show();
+        });
+    });
+
+    priceAlertForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const form = event.target;
+        const url = form.action;
+        const formData = new FormData(form);
+
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': csrftoken
+            },
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            showToast(data.message);
+            if (data.status === 'success') {
+                priceAlertModal.hide();
+            }
+        });
+    });
+
+    // --- Add to Cart Logic ---
+    document.querySelectorAll('.btn-add-to-cart').forEach(button => {
+        button.addEventListener('click', function() {
+            const offerId = this.dataset.offerId;
+            fetch("{% url 'dashboard:add_to_cart' %}", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrftoken
+                },
+                body: JSON.stringify({ 'offer_id': offerId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    const cartBadge = document.querySelector('.cart-badge');
+                    if(cartBadge) {
+                        cartBadge.textContent = data.cart_item_count;
+                    }
+                    showToast('Product added to cart!');
+                } else {
+                    showToast('Error: ' + data.message);
+                }
+            });
+        });
+    });
+
+    // --- Add to Wishlist Logic ---
+    document.querySelectorAll('.btn-add-to-wishlist').forEach(a => {
+        a.addEventListener('click', function(event) {
+            event.preventDefault();
+            const url = this.href;
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrftoken
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success' || data.status === 'info') {
+                    const wishlistBadge = document.querySelector('.wishlist-badge');
+                    if(wishlistBadge) {
+                        wishlistBadge.textContent = data.wishlist_item_count;
+                    }
+                    showToast(data.message);
+                } else {
+                    showToast('Error: ' + data.message);
+                }
+            });
+        });
+    });
+
+    // --- Add to Kit Logic ---
+    document.querySelectorAll('.btn-add-to-kit').forEach(button => {
+        button.addEventListener('click', function() {
+            const offerId = this.dataset.offerId;
+            if (!offerId) {
+                showToast('This product has no offers to add to the kit.');
+                return;
+            }
+            fetch("{% url 'kit:add_to_kit' %}", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrftoken
+                },
+                body: JSON.stringify({ 'offer_id': offerId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    const kitBadge = document.querySelector('.kit-badge');
+                    if(kitBadge) {
+                        kitBadge.textContent = data.kit_item_count;
+                    }
+                    showToast('Product added to kit!');
+                } else {
+                    showToast('Error: ' + data.message);
+                }
+            });
+        });
+    });
+
+    // --- Add to Compare Logic ---
+    document.querySelectorAll('.btn-add-to-compare').forEach(button => {
+        button.addEventListener('click', function() {
+            const productId = this.dataset.productId;
+            fetch("{% url 'compare:add_to_compare' %}", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrftoken
+                },
+                body: JSON.stringify({ 'product_id': productId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    const compareBadge = document.querySelector('.compare-badge');
+                    if (compareBadge) {
+                        compareBadge.textContent = data.compare_item_count;
+                    }
+                    showToast(data.message);
+                } else {
+                    showToast(data.message);
+                }
+            });
+        });
+    });
+
+    // --- Filter and Sort Logic ---
+    const priceRange = document.getElementById('priceRange');
+    const priceRangeValue = document.getElementById('price-range-value');
+    const sortBy = document.getElementById('sortBy');
+    const productGrid = document.getElementById('product-grid');
+    const productItems = Array.from(productGrid.querySelectorAll('.product-item'));
+
+    function filterAndSortProducts() {
+        const maxPrice = parseFloat(priceRange.value);
+        const sortOrder = sortBy.value;
+
+        productItems.forEach(item => {
+            const itemPrice = parseFloat(item.dataset.price);
+            if (itemPrice <= maxPrice) {
+                item.style.display = '';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        const visibleItems = productItems.filter(item => item.style.display !== 'none');
+        
+        if (sortOrder === 'price-asc') {
+            visibleItems.sort((a, b) => parseFloat(a.dataset.price) - parseFloat(b.dataset.price));
+        } else if (sortOrder === 'price-desc') {
+            visibleItems.sort((a, b) => parseFloat(b.dataset.price) - parseFloat(a.dataset.price));
+        } else {
+            visibleItems.sort((a, b) => a.dataset.name.localeCompare(b.dataset.name));
+        }
+
+        visibleItems.forEach(item => productGrid.appendChild(item));
+    }
+
+    priceRange.addEventListener('input', function() {
+        priceRangeValue.textContent = `₹${this.value}`;
+        filterAndSortProducts();
+    });
+
+    sortBy.addEventListener('change', filterAndSortProducts);
+
+    filterAndSortProducts();
+});
+</script>
+{% endblock %}

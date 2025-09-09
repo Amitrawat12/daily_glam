@@ -1,0 +1,77 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}{{ product.name }} - Daily Glam{% endblock %}
+
+{% block content %}
+<style>
+    .product-detail-card {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,.1);
+    }
+    .product-image-container {
+        padding: 30px;
+    }
+    .product-image-container img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    .product-info-container {
+        padding: 30px;
+    }
+    .offer-list-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border: 1px solid #f0f0f0;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        background-color: #f8f9fa;
+    }
+    .site-badge {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+    .site-badge.nykaa { background-color: #ff69b4; }
+    .site-badge.amazon { background-color: #ff9900; }
+    .site-badge.purplle { background-color: #6a0dad; }
+    .btn-buy-now {
+        background-color: #28a745;
+        border-color: #28a745;
+        color: #fff;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="product-detail-card">
+        <div class="row g-0">
+            <div class="col-md-5 product-image-container">
+                <img src="{{ product.image }}" alt="{{ product.name }}">
+            </div>
+            <div class="col-md-7 product-info-container">
+                <h6 class="text-muted">{{ product.brand }}</h6>
+                <h2 class="mb-3">{{ product.name }}</h2>
+                <p class="lead">{{ product.description }}</p>
+                
+                <h4 class="mt-4 mb-3">Compare Prices:</h4>
+                <div class="offer-list">
+                    {% for offer in product.offers %}
+                    <div class="offer-list-item">
+                        <div>
+                            <span class="site-badge {{ offer.site|lower }}">{{ offer.site }}</span>
+                            <strong class="ms-3 fs-4">₹{{ offer.price }}</strong>
+                        </div>
+                        <a href="{{ offer.url }}" class="btn btn-buy-now" target="_blank">Buy Now</a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

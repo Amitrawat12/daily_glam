@@ -1,0 +1,113 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Your Beauty Kit - Daily Glam{% endblock %}
+
+{% block content %}
+<style>
+    .kit-item-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        margin-bottom: 15px;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0,0,0,.08);
+    }
+    .kit-item-card img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 20px;
+    }
+    .kit-summary {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .site-badge {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+    .site-badge.amazon { background-color: #ff9900; }
+    .site-badge.nykaa { background-color: #ff69b4; }
+    .site-badge.purplle { background-color: #6a0dad; }
+    .site-badge.flipkart { background-color: #2874f0; }
+    .quantity-controls {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+    }
+    .quantity-controls .btn {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.9rem;
+    }
+    .quantity-controls .quantity-display {
+        margin: 0 10px;
+        font-weight: bold;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8">
+            <h2 class="mb-4">Your Custom Beauty Kit</h2>
+            {% if kit_items %}
+                {% for item in kit_items %}
+                <div class="kit-item-card">
+                    <div class="d-flex align-items-center">
+                        <img src="{{ item.image }}" alt="{{ item.name }}">
+                        <div>
+                            <h5>{{ item.name }}</h5>
+                            <p class="text-muted mb-0">Price: ₹{{ item.price }}</p>
+                            <span class="site-badge {{ item.site|slugify }}">{{ item.site }}</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="quantity-controls">
+                            <a href="{% url 'kit:decrease_kit_item' offer_id=item.offer_id %}" class="btn btn-outline-secondary btn-sm">-</a>
+                            <span class="quantity-display">{{ item.quantity }}</span>
+                            <a href="{% url 'kit:increase_kit_item' offer_id=item.offer_id %}" class="btn btn-outline-secondary btn-sm">+</a>
+                        </div>
+                        <a href="{% url 'kit:kit_remove' offer_id=item.offer_id %}" class="btn btn-outline-danger btn-sm">Remove</a>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="text-center p-5 bg-light rounded">
+                    <h4>Your kit is empty</h4>
+                    <p>Start by adding some products to build your personalized beauty kit.</p>
+                    <a href="{% url 'kit:kit_home' %}" class="btn btn-primary">Start Building</a>
+                </div>
+            {% endif %}
+        </div>
+        <div class="col-md-4">
+            <div class="kit-summary">
+                <h4>Kit Summary</h4>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <span>Subtotal</span>
+                    <span>₹{{ total_price|floatformat:2 }}</span>
+                </div>
+                <div class="d-flex justify-content-between font-weight-bold mt-3">
+                    <h5>Total</h5>
+                    <h5>₹{{ total_price|floatformat:2 }}</h5>
+                </div>
+                <div class="d-grid gap-2 mt-4">
+                    {% if kit_items %}
+                    <a href="{% url 'kit:kit_add_to_cart' %}" class="btn btn-success">Add Kit to Cart</a>
+                    <a href="{% url 'kit:kit_clear' %}" class="btn btn-danger">Clear Kit</a>
+                    {% endif %}
+                    <a href="{% url 'kit:kit_home' %}" class="btn btn-outline-primary">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

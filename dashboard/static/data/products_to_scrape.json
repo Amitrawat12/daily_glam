@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Maybelline New York Fit Me Foundation",
+        "brand": "Maybelline",
+        "category": "Foundation",
+        "image": "https://placehold.co/300x300?text=Fit+Me+Foundation",
+        "urls": [
+            {
+                "site": "Nykaa",
+                "url": "https://www.nykaa.com/maybelline-new-york-fit-me-matte-poreless-foundation/p/31071",
+                "price_selector": ".css-1d0jf8e"
+            }
+        ]
+    },
+    {
+        "name": "L'Oreal Paris Revitalift Hyaluronic Acid Serum",
+        "brand": "L’Oreal Paris",
+        "category": "Serum",
+        "image": "https://placehold.co/300x300?text=Revitalift+Serum",
+        "urls": [
+            {
+                "site": "Nykaa",
+                "url": "https://www.nykaa.com/l-oreal-paris-revitalift-1-5-hyaluronic-acid-serum/p/269203",
+                "price_selector": ".css-1d0jf8e"
+            }
+        ]
+    }
+]

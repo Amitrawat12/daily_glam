@@ -1,0 +1,124 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Compare Products - Daily Glam{% endblock %}
+
+{% block content %}
+<style>
+    .compare-table th, .compare-table td {
+        vertical-align: middle;
+    }
+    .compare-table img {
+        max-width: 120px;
+        height: auto;
+        border-radius: 8px;
+    }
+    .offer-list {
+        list-style: none;
+        padding-left: 0;
+    }
+    .offer-list li {
+        margin-bottom: 5px;
+    }
+    .review-list-item {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+    .review-list-item blockquote {
+        font-style: italic;
+        color: #6c757d;
+    }
+</style>
+
+<div class="container mt-5">
+    <h1 class="mb-4">Compare Products</h1>
+    {% if compare_list %}
+    <div class="table-responsive">
+        <table class="table table-bordered compare-table">
+            <thead class="table-light">
+                <tr>
+                    <th style="width: 15%;">Feature</th>
+                    {% for product in compare_list %}
+                    <th class="text-center">
+                        <h5>{{ product.name }}</h5>
+                        <p class="text-muted mb-0">{{ product.brand }}</p>
+                    </th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Image</th>
+                    {% for product in compare_list %}
+                    <td class="text-center">
+                        <img src="{{ product.image }}" alt="{{ product.name }}">
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th scope="row">Description</th>
+                    {% for product in compare_list %}
+                    <td><p>{{ product.description }}</p></td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th scope="row">Offers</th>
+                    {% for product in compare_list %}
+                    <td>
+                        <ul class="offer-list">
+                            {% for offer in product.offers %}
+                                <li>
+                                    <a href="{{ offer.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary w-100">
+                                        {{ offer.site }}: <strong>₹{{ offer.price|floatformat:2 }}</strong>
+                                        {% if offer.rating %}
+                                            <span class="ms-2">({{ offer.rating|floatformat:1 }} <i class="bi bi-star-fill text-warning"></i>)</span>
+                                        {% endif %}
+                                    </a>
+                                </li>
+                            {% empty %}
+                                <li>No offers found</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th scope="row">Reviews</th>
+                    {% for product in compare_list %}
+                    <td>
+                        <ul class="offer-list">
+                            {% for offer in product.offers %}
+                                {% if offer.review %}
+                                <li class="review-list-item">
+                                    <strong>{{ offer.site }}:</strong>
+                                    <blockquote class="mb-0 mt-1">"{{ offer.review }}"</blockquote>
+                                </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                     <th scope="row">Actions</th>
+                    {% for product in compare_list %}
+                         <td class="text-center">
+                            <a href="{% url 'compare:remove_from_compare' product_id=product.id %}" class="btn btn-danger btn-sm">Remove</a>
+                        </td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-4">
+        <a href="{% url 'compare:clear_compare' %}" class="btn btn-secondary">Clear All</a>
+        <a href="{% url 'compare:compare_home' %}" class="btn btn-primary">Add More Products</a>
+    </div>
+    {% else %}
+    <div class="text-center p-5 bg-light rounded">
+        <h4>Your comparison list is empty.</h4>
+        <p>Add some products to see how they stack up against each other.</p>
+        <a href="{% url 'compare:compare_home' %}" class="btn btn-primary mt-3">Browse Products</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+{% block title %}All Brands - Daily Glam{% endblock %}
+
+{% block content %}
+<style>
+    .brand-list-item {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        border-bottom: 1px solid #f0f0f0;
+        transition: background-color .2s ease;
+        text-decoration: none;
+        color: inherit;
+    }
+    .brand-list-item:hover {
+        background-color: #f8f9fa;
+    }
+    .brand-list-item img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin-right: 20px;
+        border-radius: 8px;
+        border: 1px solid #eee;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h2 class="mb-2">All Brands</h2>
+        <p class="text-muted">Browse all the brands available on Daily Glam.</p>
+    </div>
+
+    <div class="list-group">
+        {% for brand in brands %}
+        <a href="{% url 'dashboard:brand_detail' brand_name=brand.name %}" class="list-group-item list-group-item-action brand-list-item">
+            {% if brand.logo_url %}
+                <img src="{% static brand.logo_url %}" alt="{{ brand.name }} logo">
+            {% else %}
+                <img src="https://placehold.co/200x200?text={{ brand.name|urlencode }}" alt="{{ brand.name }} logo">
+            {% endif %}
+            <h5 class="mb-1">{{ brand.name }}</h5>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

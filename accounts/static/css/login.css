@@ -1,0 +1,20 @@
+body {
+    background: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    height: 100vh;
+  }
+  
+  .login-box {
+    background-color: white;
+    width: 100%;
+    max-width: 500px; /* ✅ This controls how big the box can get */
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  

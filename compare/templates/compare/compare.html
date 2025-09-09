@@ -1,0 +1,41 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Compare Products - Daily Glam{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="text-center">
+        <h2 class="mb-2">Select a Category to Compare</h2>
+        <p class="text-muted">Choose a category to see sub-categories and start comparing products.</p>
+    </div>
+
+    <div class="row mt-5">
+        {% for category in categories %}
+        <div class="col-md-4 mb-4">
+            <a href="{% url 'dashboard:category_detail' category_name=category.name %}" class="text-decoration-none text-dark">
+                <div class="card icon-card h-100 text-center">
+                    <div class="card-body">
+                        {% if category.name == 'Makeup' %}
+                            <i class="bi bi-brush icon"></i>
+                        {% elif category.name == 'Skincare' %}
+                            <i class="bi bi-droplet-half icon"></i>
+                        {% elif category.name == 'Haircare' %}
+                            <i class="bi bi-scissors icon"></i>
+                        {% elif category.name == 'Appliances' %}
+                            <i class="bi bi-outlet icon"></i>
+                        {% elif category.name == 'Bath & Body' %}
+                            <i class="bi bi-droplet icon"></i>
+                        {% elif category.name == 'Natural' %}
+                            <i class="bi bi-leaf icon"></i>
+                        {% else %}
+                            <i class="bi bi-gem icon"></i>
+                        {% endif %}
+                        <h5 class="card-title mt-3">{{ category.name }}</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
