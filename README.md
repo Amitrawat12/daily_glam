@@ -10,6 +10,11 @@ Daily Glam is a modern, AI-driven web application designed to help users find th
 *   **Real-Time Price Comparison:** View and compare prices for the same product across multiple online retailers like Amazon, Nykaa, and Flipkart.
 *   **Personalized User Accounts:** Users can register, log in, and manage their profiles.
 *   **Shopping Cart & Wishlist:** Save products for later in your wishlist or add them to your cart directly from the product pages.
+*   **Checkout and Payments:** A seamless checkout process with multiple payment options, including:
+    *   Cash on Delivery (COD)
+    *   Credit Card
+    *   Debit Card
+    *   UPI
 *   **Contact Form:** A functional contact form that sends user queries directly to the site administrator's email.
 *   **Static Pages:** Includes informative FAQ and Return Policy pages.
 
