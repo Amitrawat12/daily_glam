@@ -66,11 +66,13 @@
             background-color: #f8f9fa;
             border-bottom: 1px solid #ddd;
         }
-        .footer {
-            background-color: #343a40;
+        .footer a {
+            text-decoration: none;
             color: #fff;
-            padding: 40px 0;
-            margin-top: 40px;
+            transition: color .2s ease-in-out;
+        }
+        .footer a:hover {
+            color: #ff69b4;
         }
         .category-navbar {
             background-color: #fff;
@@ -177,6 +179,7 @@
                                     <strong>Welcome, </strong>{% if user.first_name %}{{ user.first_name }}{% else %}{{ user.username }}{% endif %}</span></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="{% url 'accounts:profile' %}">My Profile</a></li>
+                                <li><a class="dropdown-item" href="{% url 'dashboard:order_history' %}">My Orders</a></li>
                                 <li><a class="dropdown-item" href="{% url 'dashboard:wishlist' %}">My Wishlist</a></li>
                                 <li><a class="dropdown-item" href="{% url 'dashboard:price_alert_list' %}">Price Alerts</a></li>
                                 <li>
@@ -238,8 +241,46 @@
         {% endblock %}
     </div>
 
-    <footer class="footer">
-        <div class="container">
+    <footer class="footer bg-dark text-white pt-5 pb-4 mt-auto">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-danger">Daily Glam</h5>
+                    <p>
+                        Your one-stop destination for price comparison on the latest and greatest in beauty. We help you find the best deals on makeup, skincare, and more.
+                    </p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 footer-links">
+                    <h5 class="text-uppercase mb-4 font-weight-bold">Quick Links</h5>
+                    <p><a href="{% url 'dashboard:dashboard_home' %}">Home</a></p>
+                    <p><a href="{% url 'dashboard:all_brands' %}">Brands</a></p>
+                    <p><a href="{% url 'compare:compare_home' %}">Compare</a></p>
+                    <p><a href="{% url 'kit:kit_home' %}">Create Your Kit</a></p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 footer-links">
+                    <h5 class="text-uppercase mb-4 font-weight-bold">Customer Service</h5>
+                    <p><a href="{% url 'dashboard:contact' %}">Contact Us</a></p>
+                    <p><a href="{% url 'dashboard:faq' %}">FAQs</a></p>
+                    <p><a href="{% url 'dashboard:order_history' %}">Track Order</a></p>
+                    <p><a href="{% url 'dashboard:return_policy' %}">Return Policy</a></p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold">Follow Us</h5>
+                    <div>
+                        <a href="#" class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" role="button"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-primary btn-floating m-1" style="background-color: #55acee" role="button"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" role="button"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" role="button"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
             <div class="text-center">
                 <p>&copy; {% now "Y" %} Daily Glam. All Rights Reserved.</p>
             </div>
@@ -349,7 +390,7 @@
             });
         });
     </script>
-    {% block scripts %}{% endblock %}
+    {% block extra_js %}{% endblock %}
 </body>
 
 </html>

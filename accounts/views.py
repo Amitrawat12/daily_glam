@@ -14,7 +14,7 @@ def register_view(request):
         if form.is_valid():
             user = form.save()
             messages.success(request, "Registered successfully! Please log in.")
-            return redirect('login')
+            return redirect('accounts:login')
     else:
         form = RegisterForm()
     return render(request, 'register.html', {'form': form})
@@ -28,7 +28,7 @@ def login_view(request):
             user = authenticate(request, username=username, password=password)
             if user:
                 login(request, user)
-                return redirect('dashboard_home')
+                return redirect('dashboard:dashboard_home')
     else:
         form = LoginForm()
     return render(request, 'login.html', {'form': form})
@@ -38,7 +38,7 @@ def custom_logout_view(request):
     if request.method == "POST":
         logout(request)
         return render(request, 'logged_out.html')
-    return redirect('dashboard_home')
+    return redirect('dashboard:dashboard_home')
 
 @login_required
 @transaction.atomic
@@ -53,7 +53,7 @@ def profile_view(request):
             user_form.save()
             profile_form.save()
             messages.success(request, 'Your profile has been updated successfully!')
-            return redirect('profile')
+            return redirect('accounts:profile')
         else:
             messages.error(request, 'Please correct the error below.')
     else:

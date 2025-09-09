@@ -135,10 +135,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'static',
+# ]
 
 # Media files (User-uploaded content)
 MEDIA_URL = '/media/'
@@ -150,14 +149,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Email settings (for development)
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
 # Email settings (for production)
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'your-email@gmail.com'  # Replace with your Gmail
-# EMAIL_HOST_PASSWORD = 'your-app-password'  # Paste the 16-character App Password here
-# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'pallavikumari2623@gmail.com'  # Replace with your Gmail
+EMAIL_HOST_PASSWORD = 'pufmykzrurenbgcg'  # Paste the 16-character App Password here
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+# Gemini API Key
+GEMINI_API_KEY = 'AIzaSyCKcp7o7IbcPaRuERWGGgu6C-YzmwNzoc0'
+

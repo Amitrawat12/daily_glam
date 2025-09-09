@@ -3,13 +3,16 @@ from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
-from django.db.models import Min, Max
+from django.utils.html import strip_tags
+from django.db.models import Min, Max, Count, Q
+from django.contrib import messages
 import json
 import os
 import re
 import math
 from django.conf import settings
-from .models import Brand, Product, ProductOffer, Cart, CartItem, Wishlist, PriceAlert
+from .models import Brand, Product, ProductOffer, Cart, CartItem, Wishlist, PriceAlert, Order, OrderItem
+from .forms import ContactForm
 from urllib.parse import quote_plus
 
 def normalize_brand_name(name):
@@ -19,7 +22,7 @@ def normalize_brand_name(name):
 
 def get_base_context():
     """Loads the context required by the base template, fetching data from the database."""
-    brands = Brand.objects.all().order_by('name')
+    brands = Brand.objects.annotate(num_products=Count('products')).filter(num_products__gt=0).order_by('name')
     
     num_brands = len(brands)
     num_columns = 4
@@ -40,7 +43,7 @@ def get_base_context():
 @login_required
 def dashboard_home(request):
     context = get_base_context()
-    featured_brands = Brand.objects.all()[:18]
+    featured_brands = Brand.objects.annotate(num_products=Count('products')).filter(num_products__gt=0).order_by('-num_products')[:18]
     context['featured_brands'] = featured_brands
     return render(request, 'dashboard/dashboard.html', context)
 
@@ -53,37 +56,84 @@ def all_brands_view(request):
 def brand_detail_view(request, brand_name):
     context = get_base_context()
     brand = get_object_or_404(Brand, name=brand_name)
-    
-    products = Product.objects.filter(brand=brand).prefetch_related('offers')
-    subcategories = products.values_list('subcategory', flat=True).distinct().order_by('subcategory')
+    products_for_brand = Product.objects.filter(brand=brand).prefetch_related('offers')
 
-    all_min_prices = [p.offers.first().price for p in products if p.offers.exists()]
-    min_price = min(all_min_prices) if all_min_prices else 0
-    max_price = max(all_min_prices) if all_min_prices else 100
+    # Get available subcategories for filtering
+    available_subcategories = products_for_brand.values_list('subcategory', flat=True).distinct().order_by('subcategory')
+
+    # Calculate min and max price for the entire brand
+    price_range = products_for_brand.aggregate(min_price=Min('offers__price'), max_price=Max('offers__price'))
+    min_price = price_range.get('min_price') or 0
+    max_price = price_range.get('max_price') or 1000
+
+    # Get filter parameters from request
+    selected_subcategory = request.GET.get('subcategory')
+    selected_rating = request.GET.get('rating')
+    selected_max_price = request.GET.get('max_price', max_price)
+
+    # Apply filters
+    filtered_products = products_for_brand
+    if selected_subcategory:
+        filtered_products = filtered_products.filter(subcategory=selected_subcategory)
+    if selected_rating:
+        filtered_products = filtered_products.annotate(max_rating=Max('offers__rating')).filter(max_rating__gte=selected_rating)
+    if selected_max_price:
+        filtered_products = filtered_products.annotate(min_offer_price=Min('offers__price')).filter(min_offer_price__lte=selected_max_price)
 
     context.update({
         'brand_name': brand_name,
-        'products': products,
-        'subcategories': subcategories,
+        'products': filtered_products,
+        'available_subcategories': available_subcategories,
         'min_price': min_price,
         'max_price': max_price,
+        'selected_subcategory': selected_subcategory,
+        'selected_rating': selected_rating,
+        'selected_max_price': selected_max_price,
     })
     return render(request, 'dashboard/brand_detail.html', context)
 
 @login_required
 def category_detail_view(request, category_name):
     context = get_base_context()
-    products = Product.objects.filter(category=category_name).prefetch_related('offers', 'brand')
+    products_in_category = Product.objects.filter(category=category_name).prefetch_related('offers', 'brand')
 
-    all_min_prices = [p.offers.first().price for p in products if p.offers.exists()]
-    min_price = min(all_min_prices) if all_min_prices else 0
-    max_price = max(all_min_prices) if all_min_prices else 100
+    # Get available brands and subcategories for filtering
+    available_brands = Brand.objects.filter(products__in=products_in_category).distinct().order_by('name')
+    available_subcategories = products_in_category.values_list('subcategory', flat=True).distinct().order_by('subcategory')
+
+    # Calculate min and max price for the entire category
+    price_range = products_in_category.aggregate(min_price=Min('offers__price'), max_price=Max('offers__price'))
+    min_price = price_range.get('min_price') or 0
+    max_price = price_range.get('max_price') or 1000
+
+    # Get filter parameters from request
+    selected_brands = request.GET.getlist('brand')
+    selected_subcategory = request.GET.get('subcategory')
+    selected_rating = request.GET.get('rating')
+    selected_max_price = request.GET.get('max_price', max_price)
+
+    # Apply filters
+    filtered_products = products_in_category
+    if selected_brands:
+        filtered_products = filtered_products.filter(brand__name__in=selected_brands)
+    if selected_subcategory:
+        filtered_products = filtered_products.filter(subcategory=selected_subcategory)
+    if selected_rating:
+        filtered_products = filtered_products.annotate(max_rating=Max('offers__rating')).filter(max_rating__gte=selected_rating)
+    if selected_max_price:
+        filtered_products = filtered_products.annotate(min_offer_price=Min('offers__price')).filter(min_offer_price__lte=selected_max_price)
 
     context.update({
         'category_name': category_name,
-        'products': products,
+        'products': filtered_products,
+        'available_brands': available_brands,
+        'available_subcategories': available_subcategories,
         'min_price': min_price,
         'max_price': max_price,
+        'selected_brands': selected_brands,
+        'selected_subcategory': selected_subcategory,
+        'selected_rating': selected_rating,
+        'selected_max_price': selected_max_price,
     })
     return render(request, 'dashboard/category_detail.html', context)
 
@@ -132,6 +182,7 @@ def add_to_cart_view(request):
 
     return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
 
+# ... (rest of the views remain the same)
 @login_required
 def increase_cart_item_quantity(request, item_id):
     cart_item = get_object_or_404(CartItem, id=item_id, cart__user=request.user)
@@ -157,19 +208,37 @@ def checkout_view(request):
 
     if request.method == 'POST':
         email = request.POST.get('email')
+
+        # Create the order
+        order = Order.objects.create(
+            user=request.user,
+            total_price=total_price
+        )
+
+        for item in cart_items:
+            OrderItem.objects.create(
+                order=order,
+                product_offer=item.product_offer,
+                quantity=item.quantity,
+                price=item.product_offer.price
+            )
+
         email_context = {
             'user': request.user,
             'cart_items': cart_items,
-            'total_price': total_price
+            'total_price': total_price,
+            'order': order
         }
-        email_body = render_to_string('dashboard/order_confirmation_email.html', email_context)
+        html_message = render_to_string('dashboard/order_confirmation_email.html', email_context)
+        plain_message = strip_tags(html_message)
         
         send_mail(
-            'Your Daily Glam Order Confirmation',
-            email_body,
+            f'Your Daily Glam Order Confirmation #{order.order_id}',
+            plain_message,
             settings.DEFAULT_FROM_EMAIL,
             [email],
             fail_silently=False,
+            html_message=html_message
         )
 
         cart.items.all().delete()
@@ -185,6 +254,20 @@ def checkout_view(request):
 @login_required
 def order_successful_view(request):
     return render(request, 'dashboard/order_successful.html')
+
+@login_required
+def order_history_view(request):
+    orders = Order.objects.filter(user=request.user).order_by('-created_at')
+    context = get_base_context()
+    context['orders'] = orders
+    return render(request, 'dashboard/order_history.html', context)
+
+@login_required
+def order_detail_view(request, order_id):
+    order = get_object_or_404(Order, order_id=order_id, user=request.user)
+    context = get_base_context()
+    context['order'] = order
+    return render(request, 'dashboard/order_detail.html', context)
 
 @login_required
 def wishlist_view(request):
@@ -248,3 +331,43 @@ def remove_price_alert_view(request, alert_id):
     alert = get_object_or_404(PriceAlert, id=alert_id, user=request.user)
     alert.delete()
     return redirect('dashboard:price_alert_list')
+
+def faq_view(request):
+    context = get_base_context()
+    return render(request, 'dashboard/faq.html', context)
+
+def return_policy_view(request):
+    context = get_base_context()
+    return render(request, 'dashboard/return_policy.html', context)
+
+def contact_view(request):
+    context = get_base_context()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+            from_email = form.cleaned_data['email']
+            
+            email_body = f"You have a new query from {form.cleaned_data['name']}.\n\n"
+            email_body += f"Email: {from_email}\n\n"
+            email_body += f"Message:\n{message}"
+
+            try:
+                send_mail(
+                    f"[Contact Form] {subject}",
+                    email_body,
+                    settings.DEFAULT_FROM_EMAIL, # This will be your gmail address
+                    [settings.EMAIL_HOST_USER], # Send to yourself
+                    fail_silently=False,
+                )
+                messages.success(request, 'Your message has been sent successfully! We will get back to you shortly.')
+                return redirect('dashboard:contact')
+            except Exception as e:
+                messages.error(request, f'An error occurred while sending your message: {e}')
+
+    else:
+        form = ContactForm()
+    
+    context['form'] = form
+    return render(request, 'dashboard/contact.html', context)

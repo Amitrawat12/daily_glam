@@ -5,7 +5,9 @@ from .views import (
     checkout_view, order_successful_view, category_detail_view,
     wishlist_view, add_to_wishlist_view, remove_from_wishlist_view,
     price_alert_view, add_price_alert_view, remove_price_alert_view,
-    increase_cart_item_quantity, decrease_cart_item_quantity
+    increase_cart_item_quantity, decrease_cart_item_quantity,
+    order_history_view, order_detail_view, faq_view, return_policy_view,
+    contact_view
 )
 from accounts.views import custom_logout_view
 
@@ -30,4 +32,9 @@ urlpatterns = [
     path('price-alerts/', price_alert_view, name='price_alert_list'),
     path('price-alerts/add/<int:product_id>/', add_price_alert_view, name='add_price_alert'),
     path('price-alerts/remove/<int:alert_id>/', remove_price_alert_view, name='remove_price_alert'),
+    path('orders/', order_history_view, name='order_history'),
+    path('order/<uuid:order_id>/', order_detail_view, name='order_detail'),
+    path('faq/', faq_view, name='faq'),
+    path('return-policy/', return_policy_view, name='return_policy'),
+    path('contact/', contact_view, name='contact'),
 ]

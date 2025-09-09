@@ -1,0 +1,135 @@
+[
+  {
+    "brand": "MAC",
+    "categories": {
+      "Makeup": ["Lipstick", "Foundation", "Fix+", "Blush", "Eyeshadow"]
+    }
+  },
+  {
+    "brand": "Dior",
+    "categories": {
+      "Makeup": ["Lip Glow", "Foundation"],
+      "Fragrance": ["Eau de Parfum", "Eau de Toilette"]
+    }
+  },
+  {
+    "brand": "Gucci",
+    "categories": {
+      "Makeup": ["Bloom", "Mascara"],
+      "Fragrance": ["Eau de Parfum"]
+    }
+  },
+  {
+    "brand": "Lakme",
+    "categories": {
+      "Makeup": ["Lipstick", "Kajal", "Mousse", "Eyeliner", "Foundation"]
+    }
+  },
+  {
+    "brand": "Chanel",
+    "categories": {
+      "Fragrance": ["No. 5 Eau de Parfum"],
+      "Makeup": ["Lipstick", "Foundation"]
+    }
+  },
+  {
+    "brand": "Nykaa",
+    "categories": {
+      "Makeup": ["Lipstick", "Foundation", "Kajal", "Eyeliner"],
+      "Skincare": ["Serum", "Moisturizer"]
+    }
+  },
+  {
+    "brand": "Biotique",
+    "categories": {
+      "Skincare": ["Toner", "Moisturizer", "Face Wash"],
+      "Haircare": ["Shampoo"]
+    }
+  },
+  {
+    "brand": "Cetaphil",
+    "categories": {
+      "Skincare": ["Gentle Skin Cleanser", "Moisturizing Lotion"]
+    }
+  },
+  {
+    "brand": "Clinique",
+    "categories": {
+      "Skincare": ["Moisture Surge Hydrator", "Clarifying Lotion", "Face Wash"]
+    }
+  },
+  {
+    "brand": "Colorbar",
+    "categories": {
+      "Makeup": ["Velvet Matte Lipstick", "Nail Polish", "Foundation"]
+    }
+  },
+  {
+    "brand": "Innisfree",
+    "categories": {
+      "Skincare": ["Green Tea Seed Serum", "Volcanic Clay Mask", "Cleansing Foam"]
+    }
+  },
+  {
+    "brand": "L'Oreal",
+    "categories": {
+      "Haircare": ["Shampoo", "Conditioner", "Hair Serum"],
+      "Makeup": ["Revitalift Serum", "Lash Paradise Mascara", "Infallible Foundation"]
+    }
+  },
+  {
+    "brand": "Huda Beauty",
+    "categories": {
+      "Makeup": ["#FauxFilter Foundation", "Eyeshadow Palette", "Liquid Matte Lipstick"]
+    }
+  },
+  {
+    "brand": "Bobbi Brown",
+    "categories": {
+      "Makeup": ["Vitamin Enriched Face Base", "Long-Wear Gel Eyeliner", "Lipstick"]
+    }
+  },
+  {
+    "brand": "Calvin Klein",
+    "categories": {
+      "Fragrance": ["CK One Eau de Toilette", "Eternity Eau de Parfum"]
+    }
+  },
+  {
+    "brand": "Estee Lauder",
+    "categories": {
+      "Skincare": ["Advanced Night Repair Serum"],
+      "Makeup": ["Double Wear Foundation"]
+    }
+  },
+  {
+    "brand": "Faces Canada",
+    "categories": {
+      "Makeup": ["Ultime Pro HD Foundation", "Weightless Matte Lipstick"]
+    }
+  },
+  {
+    "brand": "Giorgio Armani",
+    "categories": {
+      "Fragrance": ["Acqua di Gio", "Si Eau de Parfum"]
+    }
+  },
+  {
+    "brand": "Bath & Body Works",
+    "categories": {
+      "Fragrance": ["Japanese Cherry Blossom Mist", "A Thousand Wishes Body Cream"]
+    }
+  },
+  {
+    "brand": "Forest Essentials",
+    "categories": {
+      "Skincare": ["Soundarya Radiance Cream", "Facial Ubtan", "Lip Balm"]
+    }
+  },
+  {
+    "brand": "Maybelline",
+    "categories": {
+      "Makeup": ["Fit Me Foundation", "Colossal Mascara", "SuperStay Matte Ink Lipstick"]
+    }
+  }
+]

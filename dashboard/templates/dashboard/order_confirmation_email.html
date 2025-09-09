@@ -1,17 +1,72 @@
-Subject: Your Daily Glam Order Confirmation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Daily Glam Order Confirmation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    </style>
+</head>
+<body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #f4f4f4;">
+        <tr>
+            <td align="center">
+                <table width="600" border="0" cellspacing="0" cellpadding="0" style="background-color: #ffffff; margin: 20px 0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <!-- Header -->
+                    <tr>
+                        <td align="center" style="background-color: #fff; padding: 20px; border-bottom: 1px solid #eee;">
+                            <h1 style="color: #333; margin: 0; font-weight: 600;">Daily Glam</h1>
+                        </td>
+                    </tr>
 
-Hi {{ user.username }},
+                    <!-- Body -->
+                    <tr>
+                        <td style="padding: 30px;">
+                            <h2 style="color: #333; font-weight: 500;">Thank You for Your Order, {{ user.username }}!</h2>
+                            <p style="color: #555;">We've received your order and will process it shortly. Here are the details:</p>
 
-Thank you for your order!
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top: 20px;">
+                                {% for item in cart_items %}
+                                <tr>
+                                    <td style="padding: 15px; border-bottom: 1px solid #eee;">
+                                        <img src="{{ item.product_offer.product.image }}" alt="{{ item.product_offer.product.name }}" width="60" style="vertical-align: middle; margin-right: 15px; border-radius: 4px;">
+                                        <span style="color: #555; font-size: 14px;">{{ item.product_offer.product.name }} (ID: {{ item.product_offer.product.id }})</span>
+                                    </td>
+                                    <td align="right" style="padding: 15px; border-bottom: 1px solid #eee;">
+                                        <span style="color: #555; font-size: 14px;">{{ item.quantity }} x ₹{{ item.product_offer.price|floatformat:2 }}</span>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </table>
 
-Here is a summary of your purchase:
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top: 20px;">
+                                <tr>
+                                    <td align="right">
+                                        <h3 style="margin: 0; font-weight: 600;">Total: ₹{{ total_price|floatformat:2 }}</h3>
+                                    </td>
+                                </tr>
+                            </table>
 
-{% for item in cart_items %}
-- {{ item.product.name }} ({{ item.quantity }} x ₹{{ item.product.price }})
-{% endfor %}
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top: 30px;">
+                                <tr>
+                                    <td align="center">
+                                        <a href="{% url 'dashboard:dashboard_home' %}" style="background-color: #333; color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: 500;">Continue Shopping</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
 
-Total: ₹{{ total_price|floatformat:2 }}
-
-We'll notify you again once your order has shipped.
-
-Thanks for shopping with Daily Glam!
+                    <!-- Footer -->
+                    <tr>
+                        <td align="center" style="background-color: #f9f9f9; padding: 20px; border-top: 1px solid #eee;">
+                            <p style="margin: 0; color: #777; font-size: 12px;">Thanks for shopping with Daily Glam!</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

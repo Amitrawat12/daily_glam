@@ -222,60 +222,64 @@ document.getElementById('adviceForm').addEventListener('submit', function(event)
         },
         body: JSON.stringify(requestBody)
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            // If the response is not OK (e.g., 500 error), get the text and throw it as an error
+            return response.text().then(text => { 
+                // Clean up the HTML for better readability
+                const cleanedText = text.replace(/<style>[\s\S]*?<\/style>/, '').replace(/<[^>]+>/g, '\n').replace(/\n\s*\n/g, '\n');
+                throw new Error(cleanedText);
+            });
+        }
+        // If response is OK, try to parse it as JSON
+        return response.json();
+    })
     .then(data => {
         if (data.error) {
             recommendationsContainer.innerHTML = `<p class="text-center text-danger">${data.error}</p>`;
         } else {
-            displayRecommendations(data.recommendations);
+            displayRecommendations(data);
         }
     })
     .catch(error => {
         console.error('Error:', error);
-        recommendationsContainer.innerHTML = '<p class="text-center text-danger">An error occurred. Please try again.</p>';
+        recommendationsContainer.innerHTML = `<div class="text-center text-danger">
+            <p>An error occurred. Please try again.</p>
+            <pre style="white-space: pre-wrap; text-align: left; background: #f1f1f1; padding: 10px; border-radius: 5px;">${error.message}</pre>
+        </div>`;
     })
     .finally(() => {
         submitButton.disabled = false;
     });
 });
 
-function displayRecommendations(text) {
+function displayRecommendations(data) {
     const container = document.getElementById('recommendations');
     container.innerHTML = '<h3 class="text-center mb-5">Your Personalized AI Routine</h3>';
 
-    const sections = text.split(/###\s*(.*?)\s*###/g).filter(Boolean);
+    const sectionDiv = document.createElement('div');
+    sectionDiv.className = 'recommendation-section mb-5';
+    
+    if (data.detected_concern) {
+        sectionDiv.innerHTML = `<h4>${data.detected_concern}</h4>`;
+    }
 
-    for (let i = 0; i < sections.length; i += 2) {
-        const title = sections[i];
-        const content = sections[i+1];
-
-        const sectionDiv = document.createElement('div');
-        sectionDiv.className = 'recommendation-section mb-5';
-        sectionDiv.innerHTML = `<h4>${title}</h4>`;
-
-        const products = content.trim().split(/\*\s/g).filter(Boolean);
-        products.forEach(productText => {
-            const [productType, ...descriptionParts] = productText.split(':');
-            let description = descriptionParts.join(':').trim();
-            
-            // Definitive cleaning for both title and description
-            const cleanedProductType = productType.trim().replace(/[\*\_#]/g, '');
-            const cleanedDescription = description.replace(/[\*\_#]/g, '').trim();
-
+    if (data.suggested_products && Array.isArray(data.suggested_products)) {
+        data.suggested_products.forEach(product => {
             const productCard = `
                 <div class="product-card">
-                    <i class="${getIconForProduct(cleanedProductType)} product-icon"></i>
+                    <i class="${getIconForProduct(product.name)} product-icon"></i>
                     <div>
-                        <strong>${cleanedProductType}:</strong>
-                        <span>${cleanedDescription}</span>
+                        <strong>${product.name}:</strong>
+                        <span>${product.reason}</span>
                     </div>
                 </div>
             `;
             sectionDiv.innerHTML += productCard;
         });
-
-        container.appendChild(sectionDiv);
     }
+
+    container.appendChild(sectionDiv);
 }
 
 function getIconForProduct(productType) {

@@ -27,12 +27,25 @@
         border-radius: 8px;
         margin-bottom: 20px;
     }
+    #camera-modal .modal-body {
+        padding: 0;
+    }
+    #camera-feed {
+        width: 100%;
+        height: auto;
+    }
+    #capture-preview {
+        max-width: 150px;
+        margin-top: 15px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+    }
 </style>
 
 <div class="container mt-5">
     <div class="text-center">
         <h2 class="mb-2">Visual Advice Finder</h2>
-        <p class="text-muted">Upload a photo of your face, and our AI will suggest products for you.</p>
+        <p class="text-muted">Upload a photo of your face, or use your camera, and our AI will suggest products for you.</p>
     </div>
 
     <div class="row justify-content-center mt-5">
@@ -40,17 +53,26 @@
             {% if not recommendations and not error %}
             <div class="card upload-card">
                 <div class="card-body text-center">
-                    <form action="{% url 'advice:visual_advice' %}" method="post" enctype="multipart/form-data">
+                    <form id="visual-advice-form" action="{% url 'advice:visual_advice' %}" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
-                        <i class="bi bi-camera" style="font-size: 4rem; color: #ff69b4;"></i>
+                        <i class="bi bi-cloud-upload" style="font-size: 4rem; color: #ff69b4;"></i>
                         <h5 class="mt-3">Upload Your Photo</h5>
                         <p class="text-muted">For best results, use a clear, well-lit photo.</p>
-                        <input type="file" name="user_image" class="form-control" required>
-                        <button type="submit" class="btn btn-primary mt-3">Get Recommendations</button>
+                        
+                        <input type="file" name="user_image" id="file-input" class="form-control" required accept="image/*">
+                        
+                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
+                            <button type="button" id="use-camera-btn" class="btn btn-secondary btn-lg">Use Camera</button>
+                            <button type="submit" class="btn btn-primary btn-lg">Get Recommendations</button>
+                        </div>
+                        <div id="preview-container" class="mt-3">
+                            <img id="capture-preview" class="d-none" alt="Captured image preview">
+                        </div>
                     </form>
                 </div>
             </div>
             {% elif recommendations %}
+            <!-- Results display remains the same -->
             <div class="card results-card">
                 <div class="card-header">Analysis Complete!</div>
                 <div class="card-body">
@@ -75,6 +97,7 @@
                 </div>
             </div>
             {% elif error %}
+            <!-- Error display remains the same -->
             <div class="alert alert-danger">
                 <h5 class="alert-heading">An Error Occurred</h5>
                 <p>{{ error }}</p>
@@ -85,4 +108,91 @@
         </div>
     </div>
 </div>
+
+<!-- Camera Modal -->
+<div class="modal fade" id="camera-modal" tabindex="-1" aria-labelledby="cameraModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cameraModalLabel">Capture Your Photo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-camera-btn"></button>
+      </div>
+      <div class="modal-body">
+        <video id="camera-feed" autoplay playsinline></video>
+        <canvas id="camera-canvas" class="d-none"></canvas>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="capture-btn">Capture</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const useCameraBtn = document.getElementById('use-camera-btn');
+        const captureBtn = document.getElementById('capture-btn');
+        const cameraModal = new bootstrap.Modal(document.getElementById('camera-modal'));
+        const video = document.getElementById('camera-feed');
+        const canvas = document.getElementById('camera-canvas');
+        const fileInput = document.getElementById('file-input');
+        const capturePreview = document.getElementById('capture-preview');
+        const form = document.getElementById('visual-advice-form');
+
+        let stream;
+
+        useCameraBtn.addEventListener('click', async () => {
+            cameraModal.show();
+            try {
+                stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+                video.srcObject = stream;
+            } catch (err) {
+                console.error("Error accessing camera: ", err);
+                alert("Could not access the camera. Please ensure you have a camera connected and have granted permission.");
+                cameraModal.hide();
+            }
+        });
+
+        function stopCamera() {
+            if (stream) {
+                stream.getTracks().forEach(track => track.stop());
+            }
+            video.srcObject = null;
+        }
+
+        captureBtn.addEventListener('click', () => {
+            const context = canvas.getContext('2d');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            
+            const dataUrl = canvas.toDataURL('image/jpeg');
+            capturePreview.src = dataUrl;
+            capturePreview.classList.remove('d-none');
+
+            canvas.toBlob(blob => {
+                const file = new File([blob], "camera_capture.jpg", { type: "image/jpeg" });
+                const dataTransfer = new DataTransfer();
+                dataTransfer.items.add(file);
+                fileInput.files = dataTransfer.files;
+                fileInput.removeAttribute('required');
+            }, 'image/jpeg');
+
+            cameraModal.hide();
+        });
+
+        document.getElementById('camera-modal').addEventListener('hidden.bs.modal', stopCamera);
+
+        form.addEventListener('submit', function(event) {
+            if (!fileInput.files.length) {
+                alert('Please select a file or capture a photo first.');
+                event.preventDefault();
+            }
+        });
+    });
+</script>
 {% endblock %}

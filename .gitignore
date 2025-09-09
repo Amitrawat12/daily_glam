@@ -6,9 +6,6 @@ service-account.json
 *.pot
 *.pyc
 __pycache__/
-db.sqlite3
-/static/
-/media/
 
 # Env
 .env

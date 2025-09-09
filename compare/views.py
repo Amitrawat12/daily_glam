@@ -8,9 +8,6 @@ from django.db.models import Min, Max
 def compare_home(request):
     """Displays the main page for the compare feature, showing product categories."""
     context = get_base_context()
-    if 'compare_list' in request.session:
-        del request.session['compare_list']
-        request.session.modified = True
     return render(request, 'compare/compare.html', context)
 
 def category_view(request, category_name):

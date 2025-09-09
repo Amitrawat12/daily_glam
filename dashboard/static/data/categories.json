@@ -1,277 +1,45 @@
 [
-    {
-        "name": "Makeup",
-        "columns": [
-            {
-                "header": "Face",
-                "links": [
-                    "Foundation",
-                    "Concealer",
-                    "Primer",
-                    "Blush",
-                    "Bronzer",
-                    "Highlighter"
-                ]
-            },
-            {
-                "header": "Eyes",
-                "links": [
-                    "Eyeliner",
-                    "Mascara",
-                    "Eyeshadow",
-                    "Eyebrows",
-                    "Kajal"
-                ]
-            },
-            {
-                "header": "Lips",
-                "links": [
-                    "Lipstick",
-                    "Liquid Lipstick",
-                    "Lip Gloss",
-                    "Lip Liner",
-                    "Lip Balm"
-                ]
-            },
-            {
-                "header": "Nails",
-                "links": [
-                    "Nail Polish",
-                    "Nail Art",
-                    "Nail Care",
-                    "Manicure & Pedicure"
-                ]
-            }
-        ],
-        "sub_categories": [
-            {"name": "Foundation"},
-            {"name": "Concealer"},
-            {"name": "Primer"},
-            {"name": "Blush"},
-            {"name": "Bronzer"},
-            {"name": "Highlighter"},
-            {"name": "Eyeliner"},
-            {"name": "Mascara"},
-            {"name": "Eyeshadow"},
-            {"name": "Eyebrows"},
-            {"name": "Kajal"},
-            {"name": "Lipstick"},
-            {"name": "Liquid Lipstick"},
-            {"name": "Lip Gloss"},
-            {"name": "Lip Liner"},
-            {"name": "Lip Balm"},
-            {"name": "Nail Polish"},
-            {"name": "Nail Art"},
-            {"name": "Nail Care"},
-            {"name": "Manicure & Pedicure"}
-        ]
-    },
-    {
-        "name": "Skincare",
-        "columns": [
-            {
-                "header": "Cleansers",
-                "links": [
-                    "Face Wash",
-                    "Micellar Water",
-                    "Makeup Remover",
-                    "Scrubs & Exfoliators"
-                ]
-            },
-            {
-                "header": "Moisturizers",
-                "links": [
-                    "Face Cream",
-                    "Night Cream",
-                    "Face Mist",
-                    "Serums & Essences"
-                ]
-            },
-            {
-                "header": "Masks & Treatments",
-                "links": [
-                    "Sheet Masks",
-                    "Face Masks",
-                    "Face Oils",
-                    "Under Eye Care"
-                ]
-            },
-            {
-                "header": "Sunscreen",
-                "links": [
-                    "SPF 30",
-                    "SPF 50",
-                    "Body Sunscreen",
-                    "After Sun Care"
-                ]
-            }
-        ],
-        "sub_categories": [
-            {"name": "Face Wash"},
-            {"name": "Micellar Water"},
-            {"name": "Makeup Remover"},
-            {"name": "Scrubs & Exfoliators"},
-            {"name": "Face Cream"},
-            {"name": "Night Cream"},
-            {"name": "Face Mist"},
-            {"name": "Serums & Essences"},
-            {"name": "Sheet Masks"},
-            {"name": "Face Masks"},
-            {"name": "Face Oils"},
-            {"name": "Under Eye Care"},
-            {"name": "SPF 30"},
-            {"name": "SPF 50"},
-            {"name": "Body Sunscreen"},
-            {"name": "After Sun Care"}
-        ]
-    },
-    {
-        "name": "Haircare",
-        "columns": [
-            {
-                "header": "Shampoo & Conditioner",
-                "links": [
-                    "Shampoo",
-                    "Conditioner",
-                    "Dry Shampoo",
-                    "Hair Masks"
-                ]
-            },
-            {
-                "header": "Hair Styling",
-                "links": [
-                    "Hair Spray",
-                    "Hair Gel & Wax",
-                    "Mousse",
-                    "Heat Protectant"
-                ]
-            },
-            {
-                "header": "Hair Oil & Treatments",
-                "links": [
-                    "Hair Oil",
-                    "Hair Serum",
-                    "Hair Spa & Masks",
-                    "Hair Growth"
-                ]
-            },
-            {
-                "header": "Tools & Accessories",
-                "links": [
-                    "Hair Brushes",
-                    "Hair Combs",
-                    "Hair Ties",
-                    "Hair Accessories"
-                ]
-            }
-        ],
-        "sub_categories": [
-            {"name": "Shampoo"},
-            {"name": "Conditioner"},
-            {"name": "Dry Shampoo"},
-            {"name": "Hair Masks"},
-            {"name": "Hair Spray"},
-            {"name": "Hair Gel & Wax"},
-            {"name": "Mousse"},
-            {"name": "Heat Protectant"},
-            {"name": "Hair Oil"},
-            {"name": "Hair Serum"},
-            {"name": "Hair Spa & Masks"},
-            {"name": "Hair Growth"},
-            {"name": "Hair Brushes"},
-            {"name": "Hair Combs"},
-            {"name": "Hair Ties"},
-            {"name": "Hair Accessories"}
-        ]
-    },
-    {
-        "name": "Appliances",
-        "columns": [
-            {
-                "header": "Hair Styling Tools",
-                "links": [
-                    "Hair Dryers",
-                    "Straighteners",
-                    "Curling Irons",
-                    "Multi-stylers"
-                ]
-            },
-            {
-                "header": "Grooming Tools",
-                "links": [
-                    "Trimmers & Clippers",
-                    "Epilators",
-                    "Shavers",
-                    "Nose & Ear Trimmers"
-                ]
-            },
-            {
-                "header": "Skincare Tools",
-                "links": [
-                    "Face Cleansing Brushes",
-                    "Face Massagers",
-                    "Dermarollers",
-                    "Steamers"
-                ]
-            }
-        ],
-        "sub_categories": [
-            {"name": "Hair Dryers"},
-            {"name": "Straighteners"},
-            {"name": "Curling Irons"},
-            {"name": "Multi-stylers"},
-            {"name": "Trimmers & Clippers"},
-            {"name": "Epilators"},
-            {"name": "Shavers"},
-            {"name": "Nose & Ear Trimmers"},
-            {"name": "Face Cleansing Brushes"},
-            {"name": "Face Massagers"},
-            {"name": "Dermarollers"},
-            {"name": "Steamers"}
-        ]
-    },
-    {
-        "name": "Bath & Body",
-        "columns": [
-            {
-                "header": "Shower & Bath",
-                "links": [
-                    "Shower Gel & Body Wash",
-                    "Soaps",
-                    "Scrubs & Exfoliants",
-                    "Bath Salts & Oils"
-                ]
-            },
-            {
-                "header": "Lotions & Creams",
-                "links": [
-                    "Body Lotions",
-                    "Hand Creams",
-                    "Foot Creams",
-                    "Body Butters"
-                ]
-            },
-            {
-                "header": "Sun Care",
-                "links": [
-                    "Sunscreen",
-                    "After Sun",
-                    "Self Tanners"
-                ]
-            }
-        ],
-        "sub_categories": [
-            {"name": "Shower Gel & Body Wash"},
-            {"name": "Soaps"},
-            {"name": "Scrubs & Exfoliants"},
-            {"name": "Bath Salts & Oils"},
-            {"name": "Body Lotions"},
-            {"name": "Hand Creams"},
-            {"name": "Foot Creams"},
-            {"name": "Body Butters"},
-            {"name": "Sunscreen"},
-            {"name": "After Sun"},
-            {"name": "Self Tanners"}
-        ]
-    }
+  {
+    "name": "Makeup",
+    "sub_categories": [
+      { "name": "Face" },
+      { "name": "Eyes" },
+      { "name": "Lips" },
+      { "name": "Nails" }
+    ]
+  },
+  {
+    "name": "Skincare",
+    "sub_categories": [
+      { "name": "Moisturizers" },
+      { "name": "Cleansers" },
+      { "name": "Serums" },
+      { "name": "Masks" }
+    ]
+  },
+  {
+    "name": "Haircare",
+    "sub_categories": [
+      { "name": "Shampoo" },
+      { "name": "Conditioner" },
+      { "name": "Hair Oil" },
+      { "name": "Hair Masks" }
+    ]
+  },
+  {
+    "name": "Fragrance",
+    "sub_categories": [
+      { "name": "Perfumes" },
+      { "name": "Body Mists" },
+      { "name": "Deodorants" }
+    ]
+  },
+  {
+    "name": "Bath & Body",
+    "sub_categories": [
+      { "name": "Body Lotions" },
+      { "name": "Shower Gels" },
+      { "name": "Soaps" }
+    ]
+  }
 ]

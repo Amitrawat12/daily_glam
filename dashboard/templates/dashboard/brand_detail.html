@@ -1,6 +1,6 @@
 {% extends 'dashboard/base.html' %}
 
-{% block title %}{{ brand_name }} - Price Comparison{% endblock %}
+{% block title %}{{ brand_name }} - Products - Daily Glam{% endblock %}
 
 {% block content %}
 <style>
@@ -9,47 +9,87 @@
         border-radius: 8px;
         margin-bottom: 25px;
         overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0,0,0,.05);
+        box-shadow: 0 2px 5px rgba(0,0,0,.05);
         display: flex;
         flex-direction: column;
+        transition: all .3s ease;
+    }
+    .product-comparison-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0,0,0,.1) !important;
     }
     .product-info {
-        padding: 20px;
-        background-color: #f8f9fa;
+        padding: 15px;
+        background-color: #fff;
         border-bottom: 1px solid #dee2e6;
+        flex-shrink: 0; 
     }
-    .product-info img {
+    .product-info h5 {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .product-info .text-muted {
+        font-size: 0.85rem;
+    }
+    .product-image-container {
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f9fa;
+    }
+    .product-image-container img {
+        max-height: 100%;
         max-width: 100%;
-        border-radius: 8px;
+        object-fit: cover;
     }
     .offer-list {
         padding: 0;
         margin: 0;
-        flex-grow: 1; /* Allow list to grow */
+        flex-grow: 1; 
     }
     .offer-list-item {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        padding: 10px 15px;
+        padding: 8px 12px;
         border-bottom: 1px solid #f0f0f0;
     }
     .offer-list-item:last-child {
         border-bottom: none;
     }
+    .offer-price {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .offer-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .rating {
+        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+    }
+    .rating .bi-star-fill { color: #ffc107; }
+    .btn-add-to-cart {
+        font-size: 0.8rem;
+        padding: .2rem .5rem;
+    }
     .site-badge {
-        display: inline-block;
         padding: 3px 8px;
         border-radius: 5px;
         color: #fff;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         font-weight: bold;
     }
     .site-badge.amazon { background-color: #ff9900; }
     .site-badge.nykaa { background-color: #ff69b4; }
     .site-badge.purplle { background-color: #6a0dad; }
     .site-badge.flipkart { background-color: #2874f0; }
-
     .page-header {
         border-bottom: 2px solid #f0f0f0;
         padding-bottom: 15px;
@@ -59,112 +99,118 @@
         background-color: #f8f9fa;
         font-weight: bold;
     }
-    .product-actions .btn {
-        margin-right: 5px;
-    }
-    .rating {
-        display: flex;
-        align-items: center;
-        font-size: 0.9rem;
-    }
-    .rating i {
-        margin-left: 4px;
-    }
+    .rating-filter .bi-star-fill { color: #ffc107; }
 </style>
 
 <div class="container mt-5">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-lg-3">
             <div class="filter-sidebar">
-                <h4 class="mb-4">Filters</h4>
-                <div class="card mb-3">
-                    <div class="card-header">Price</div>
-                    <div class="card-body">
-                        <input type="range" class="form-range" min="{{ min_price|floatformat:0 }}" max="{{ max_price|floatformat:0 }}" value="{{ max_price|floatformat:0 }}" id="priceRange">
-                        <div class="d-flex justify-content-between">
-                            <span>₹{{ min_price|floatformat:0 }}</span>
-                            <span id="price-range-value">₹{{ max_price|floatformat:0 }}</span>
+                <form method="GET" action="">
+                    <h4 class="mb-3">Filters</h4>
+
+                    <!-- Price Filter -->
+                    <div class="card mb-3">
+                        <div class="card-header">Price</div>
+                        <div class="card-body">
+                            <input type="range" class="form-range" name="max_price" min="{{ min_price|floatformat:0 }}" max="{{ max_price|floatformat:0 }}" value="{{ selected_max_price|floatformat:0 }}" id="priceRange">
+                            <div class="d-flex justify-content-between">
+                                <span>₹{{ min_price|floatformat:0 }}</span>
+                                <span id="price-range-value">₹{{ selected_max_price|floatformat:0 }}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="card-header">Subcategory</div>
-                    <div class="card-body" id="subcategory-filter">
-                        {% for subcategory in subcategories %}
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="{{ subcategory }}" id="sub-{{ forloop.counter }}">
-                            <label class="form-check-label" for="sub-{{ forloop.counter }}">{{ subcategory }}</label>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="card-header">Rating</div>
-                    <div class="card-body" id="rating-filter">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="rating" value="4" id="rating-4">
-                            <label class="form-check-label" for="rating-4">4 <i class="bi bi-star-fill text-warning"></i> & up</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="rating" value="3" id="rating-3">
-                            <label class="form-check-label" for="rating-3">3 <i class="bi bi-star-fill text-warning"></i> & up</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="rating" value="0" id="rating-all" checked>
-                            <label class="form-check-label" for="rating-all">All</label>
+
+                    <!-- Subcategory Filter -->
+                    <div class="card mb-3">
+                        <div class="card-header">Subcategory</div>
+                        <div class="card-body" style="max-height: 200px; overflow-y: auto;">
+                            {% for subcategory in available_subcategories %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="subcategory" value="{{ subcategory }}" id="sub-{{ forloop.counter }}" {% if subcategory == selected_subcategory %}checked{% endif %}>
+                                <label class="form-check-label" for="sub-{{ forloop.counter }}">{{ subcategory }}</label>
+                            </div>
+                            {% endfor %}
                         </div>
                     </div>
-                </div>
+
+                    <!-- Rating Filter -->
+                    <div class="card mb-3 rating-filter">
+                        <div class="card-header">Rating</div>
+                        <div class="card-body">
+                            {% for i in "54321"|make_list %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="rating" value="{{ i }}" id="rating-{{ i }}" {% if i == selected_rating %}checked{% endif %}>
+                                <label class="form-check-label" for="rating-{{ i }}">
+                                    {% for j in "12345"|make_list %}
+                                        <i class="bi {% if j|add:0 <= i|add:0 %}bi-star-fill{% else %}bi-star{% endif %}"></i>
+                                    {% endfor %}
+                                    & Up
+                                </label>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Apply Filters</button>
+                        <a href="{% url 'dashboard:brand_detail' brand_name=brand_name %}" class="btn btn-secondary">Clear Filters</a>
+                    </div>
+                </form>
             </div>
         </div>
 
-        <div class="col-md-9">
+        <div class="col-lg-9">
             <div class="d-flex justify-content-between align-items-center page-header">
                 <h2 class="mb-0">{{ brand_name }}</h2>
-                <div class="d-flex align-items-center">
-                    <label for="sortBy" class="form-label me-2 mb-0">Sort By:</label>
-                    <select class="form-select w-auto" id="sortBy">
-                        <option value="default">Relevance</option>
-                        <option value="price-asc">Price: Low to High</option>
-                        <option value="price-desc">Price: High to Low</option>
-                    </select>
-                </div>
+                <span class="text-muted">{{ products.count }} Products</span>
             </div>
 
             <div class="row" id="product-grid">
                 {% for product in products %}
-                <div class="col-md-6 product-item" data-price="{{ product.offers.first.price|default:0 }}" data-name="{{ product.name }}" data-subcategory="{{ product.subcategory }}" data-rating="{{ product.offers.first.rating|default:0 }}">
-                    <div class="product-comparison-card">
+                <div class="col-xl-4 col-lg-6 col-md-6 product-item mb-4">
+                    <div class="product-comparison-card h-100">
                         <div class="product-info text-center">
-                            <img src="{{ product.image }}" alt="{{ product.name }}" class="mb-3">
-                            <h5 class="mt-3">{{ product.name }}</h5>
-                            <p class="text-muted">{{ product.description }}</p>
+                            <div class="product-image-container mb-3">
+                                {% if product.image %}
+                                    <img src="{{ product.image }}" alt="{{ product.name }}" class="product-image">
+                                {% else %}
+                                    <img src="https://placehold.co/300x180/fce4ec/333333?text={{ product.name|urlencode }}" alt="{{ product.name }} placeholder" class="product-image">
+                                {% endif %}
+                            </div>
+                            <h5 title="{{ product.name }}">{{ product.name }}</h5>
+                            <p class="text-muted mb-2">{{ product.brand.name }}</p>
                             <div class="product-actions mt-2">
                                 <button class="btn btn-sm btn-outline-warning btn-set-alert" data-product-id="{{ product.id }}"><i class="bi bi-bell"></i></button>
                                 <a href="{% url 'dashboard:add_to_wishlist' product_id=product.id %}" class="btn btn-sm btn-outline-danger btn-add-to-wishlist"><i class="bi bi-heart"></i></a>
-                                <button class="btn btn-sm btn-outline-primary btn-add-to-kit" data-offer-id="{{ product.offers.first.id }}">Add to Kit</button>
                                 <button class="btn btn-sm btn-outline-secondary btn-add-to-compare" data-product-id="{{ product.id }}">Add to Compare</button>
                             </div>
                         </div>
                         <ul class="offer-list list-group list-group-flush">
                             {% for offer in product.offers.all %}
                             <li class="offer-list-item">
-                                <div>
-                                    <span class="site-badge {{ offer.site|slugify }}">{{ offer.site }}</span>
-                                    <strong class="ms-3 fs-5">₹{{ offer.price }}</strong>
-                                </div>
-                                <div class="d-flex align-items-center">
+                                <span class="site-badge {{ offer.site|slugify }}">{{ offer.site }}</span>
+                                <strong class="ms-2 offer-price">₹{{ offer.price }}</strong>
+                                <div class="offer-actions ms-auto">
                                     {% if offer.rating %}
-                                    <div class="rating me-3">
+                                    <div class="rating">
                                         <span class="fw-bold">{{ offer.rating|floatformat:1 }}</span>
-                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill"></i>
                                     </div>
                                     {% endif %}
                                     <button class="btn btn-sm btn-success btn-add-to-cart" data-offer-id="{{ offer.id }}">Add to Cart</button>
                                 </div>
                             </li>
+                            {% empty %}
+                            <li class="list-group-item text-muted text-center">No online offers found.</li>
                             {% endfor %}
                         </ul>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="col-12">
+                    <div class="alert alert-info text-center">
+                        No products found matching your criteria. Try clearing the filters.
                     </div>
                 </div>
                 {% endfor %}
@@ -173,7 +219,7 @@
     </div>
 </div>
 
-<!-- Price Alert Modal -->
+<!-- Modals and Toasts remain the same -->
 <div class="modal fade" id="priceAlertModal" tabindex="-1" aria-labelledby="priceAlertModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -196,22 +242,19 @@
   </div>
 </div>
 
-<!-- Toast Notification -->
 <div class="position-fixed top-50 start-50 translate-middle p-3" style="z-index: 11">
   <div id="notificationToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       <strong class="me-auto">Notification</strong>
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
-    <div class="toast-body">
-      <!-- Message will be inserted here -->
-    </div>
+    <div class="toast-body"></div>
   </div>
 </div>
 
 {% endblock %}
 
-{% block scripts %}
+{% block extra_js %}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
@@ -228,12 +271,11 @@ document.addEventListener('DOMContentLoaded', function() {
         notificationToast.show();
     }
 
-    // --- Set Price Alert Logic ---
     document.querySelectorAll('.btn-set-alert').forEach(button => {
         button.addEventListener('click', function() {
             const productId = this.dataset.productId;
             alertProductIdInput.value = productId;
-            priceAlertForm.action = "{% url 'dashboard:add_price_alert' product_id=0 %}".replace('0', productId);
+            priceAlertForm.action = `{% url 'dashboard:add_price_alert' product_id=0 %}`.replace('0', productId);
             priceAlertModal.show();
         });
     });
@@ -241,41 +283,29 @@ document.addEventListener('DOMContentLoaded', function() {
     priceAlertForm.addEventListener('submit', function(event) {
         event.preventDefault();
         const form = event.target;
-        const url = form.action;
-        const formData = new FormData(form);
-
-        fetch(url, {
+        fetch(form.action, {
             method: 'POST',
-            headers: {
-                'X-CSRFToken': csrftoken
-            },
-            body: formData
+            headers: { 'X-CSRFToken': csrftoken },
+            body: new FormData(form)
         })
         .then(response => response.json())
         .then(data => {
             showToast(data.message);
-            if (data.status === 'success') {
-                priceAlertModal.hide();
-            }
+            if (data.status === 'success') priceAlertModal.hide();
         });
     });
 
-    // --- Add to Cart Logic ---
     document.querySelectorAll('.btn-add-to-cart').forEach(button => {
         button.addEventListener('click', function() {
             const offerId = this.dataset.offerId;
             fetch("{% url 'dashboard:add_to_cart' %}", {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRFToken': csrftoken
-                },
+                headers: { 'Content-Type': 'application/json', 'X-CSRFToken': csrftoken },
                 body: JSON.stringify({ 'offer_id': offerId })
             })
             .then(response => response.json())
             .then(data => {
                 if (data.status === 'success') {
-                    document.querySelector('.cart-badge').textContent = data.cart_item_count;
                     showToast('Product added to cart!');
                 } else {
                     showToast('Error: ' + data.message);
@@ -284,133 +314,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // --- Add to Wishlist Logic ---
-    document.querySelectorAll('.btn-add-to-wishlist').forEach(a => {
-        a.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default link navigation
-            const url = this.href;
-
-            fetch(url, {
-                method: 'POST',
-                headers: {
-                    'X-CSRFToken': csrftoken
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === 'success' || data.status === 'info') {
-                    if(data.wishlist_item_count) {
-                        document.querySelector('.wishlist-badge').textContent = data.wishlist_item_count;
-                    }
-                    showToast(data.message);
-                } else {
-                    showToast('Error: ' + data.message);
-                }
-            });
-        });
-    });
-
-    // --- Add to Kit Logic ---
-    document.querySelectorAll('.btn-add-to-kit').forEach(button => {
-        button.addEventListener('click', function() {
-            const offerId = this.dataset.offerId;
-            fetch("{% url 'kit:add_to_kit' %}", {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRFToken': csrftoken
-                },
-                body: JSON.stringify({ 'offer_id': offerId })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    document.querySelector('.kit-badge').textContent = data.kit_item_count;
-                    showToast('Product added to kit!');
-                } else {
-                    showToast('Error: ' + data.message);
-                }
-            });
-        });
-    });
-
-    // --- Add to Compare Logic ---
-    document.querySelectorAll('.btn-add-to-compare').forEach(button => {
-        button.addEventListener('click', function() {
-            const productId = this.dataset.productId;
-            fetch("{% url 'compare:add_to_compare' %}", {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRFToken': csrftoken
-                },
-                body: JSON.stringify({ 'product_id': productId })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    const compareBadge = document.querySelector('.compare-badge');
-                    if (compareBadge) {
-                        compareBadge.textContent = data.compare_item_count;
-                    }
-                    showToast(data.message);
-                } else {
-                    showToast(data.message);
-                }
-            });
-        });
-    });
-
-    // --- Filter and Sort Logic ---
+    // Update price range display
     const priceRange = document.getElementById('priceRange');
     const priceRangeValue = document.getElementById('price-range-value');
-    const subcategoryFilters = document.querySelectorAll('#subcategory-filter .form-check-input');
-    const ratingFilters = document.querySelectorAll('#rating-filter .form-check-input');
-    const sortBy = document.getElementById('sortBy');
-    const productGrid = document.getElementById('product-grid');
-    const productItems = Array.from(productGrid.querySelectorAll('.product-item'));
-
-    function filterAndSortProducts() {
-        const maxPrice = parseFloat(priceRange.value);
-        const selectedSubcategories = Array.from(subcategoryFilters).filter(i => i.checked).map(i => i.value);
-        const selectedRating = parseFloat(document.querySelector('#rating-filter .form-check-input:checked').value);
-        const sortOrder = sortBy.value;
-
-        productItems.forEach(item => {
-            const itemPrice = parseFloat(item.dataset.price);
-            const itemSubcategory = item.dataset.subcategory;
-            const itemRating = parseFloat(item.dataset.rating);
-
-            const priceMatch = itemPrice <= maxPrice;
-            const subcategoryMatch = selectedSubcategories.length === 0 || selectedSubcategories.includes(itemSubcategory);
-            const ratingMatch = itemRating >= selectedRating;
-
-            if (priceMatch && subcategoryMatch && ratingMatch) {
-                item.style.display = '';
-            } else {
-                item.style.display = 'none';
-            }
+    if (priceRange) {
+        priceRange.addEventListener('input', function() {
+            priceRangeValue.textContent = `₹${this.value}`;
         });
-
-        const visibleItems = productItems.filter(item => item.style.display !== 'none');
-        
-        if (sortOrder === 'price-asc') {
-            visibleItems.sort((a, b) => parseFloat(a.dataset.price) - parseFloat(b.dataset.price));
-        } else if (sortOrder === 'price-desc') {
-            visibleItems.sort((a, b) => parseFloat(b.dataset.price) - parseFloat(a.dataset.price));
-        } else {
-            visibleItems.sort((a, b) => a.dataset.name.localeCompare(b.dataset.name));
-        }
-
-        visibleItems.forEach(item => productGrid.appendChild(item));
     }
-
-    priceRange.addEventListener('input', filterAndSortProducts);
-    subcategoryFilters.forEach(input => input.addEventListener('change', filterAndSortProducts));
-    ratingFilters.forEach(input => input.addEventListener('change', filterAndSortProducts));
-    sortBy.addEventListener('change', filterAndSortProducts);
-
-    filterAndSortProducts();
 });
 </script>
 {% endblock %}

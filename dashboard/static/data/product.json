@@ -1,116 +1,4852 @@
 [
   {
     "id": 1,
-    "name": "Test Lipstick Pro",
-    "brand": "TestBrand Beauty",
-    "description": "A test lipstick with a matte finish.",
-    "image": "https://placehold.co/300x300/E57373/ffffff?text=Test+Lipstick",
+    "name": "MAC Silk Lipstick",
+    "brand": "MAC",
+    "description": "A high-quality Lipstick from MAC to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lipstick",
     "offers": [
       {
-        "site": "Nykaa",
-        "price": 500.00,
-        "url": "http://example.com/nykaa/lipstick",
-        "rating": 4.5,
-        "review": "This is a fantastic test lipstick!"
+        "site": "Amazon",
+        "price": 4312.66,
+        "url": "http://example.com/amazon/mac-silk-lipstick",
+        "rating": 4.9,
+        "review": "A great Lipstick from MAC."
       },
       {
-        "site": "Amazon",
-        "price": 490.00,
-        "url": "http://example.com/amazon/lipstick",
-        "rating": 4.3,
-        "review": "Pretty good for a test product."
+        "site": "Purplle",
+        "price": 4457.58,
+        "url": "http://example.com/purplle/mac-silk-lipstick",
+        "rating": 4.4,
+        "review": "A great Lipstick from MAC."
+      },
+      {
+        "site": "Flipkart",
+        "price": 4373.12,
+        "url": "http://example.com/flipkart/mac-silk-lipstick",
+        "rating": 4.8,
+        "review": "A great Lipstick from MAC."
       }
     ]
   },
   {
     "id": 2,
-    "name": "Test Foundation HD",
-    "brand": "TestBrand Beauty",
-    "description": "A test foundation with full coverage.",
-    "image": "https://placehold.co/300x300/FFB74D/ffffff?text=Test+Foundation",
+    "name": "MAC Silk Blush",
+    "brand": "MAC",
+    "description": "A high-quality Blush from MAC to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Blush",
     "offers": [
       {
         "site": "Nykaa",
-        "price": 1200.00,
-        "url": "http://example.com/nykaa/foundation",
-        "rating": 4.8,
-        "review": "Excellent coverage, a great test."
-      },
-      {
-        "site": "Purplle",
-        "price": 1150.00,
-        "url": "http://example.com/purplle/foundation",
-        "rating": 4.7,
-        "review": "Blends very well for a test foundation."
+        "price": 1339.0,
+        "url": "http://example.com/nykaa/mac-silk-blush",
+        "rating": 4.1,
+        "review": "A great Blush from MAC."
       }
     ]
   },
   {
     "id": 3,
-    "name": "Test & Go Shampoo",
-    "brand": "TestCare Hair",
-    "description": "A cleansing shampoo for testing purposes.",
-    "image": "https://placehold.co/300x300/81C784/ffffff?text=Test+Shampoo",
+    "name": "MAC 24H Foundation",
+    "brand": "MAC",
+    "description": "A high-quality Foundation from MAC to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
     "offers": [
       {
-        "site": "Amazon",
-        "price": 350.00,
-        "url": "http://example.com/amazon/shampoo",
-        "rating": 4.1,
-        "review": "My hair felt clean after this test."
+        "site": "Flipkart",
+        "price": 3295.73,
+        "url": "http://example.com/flipkart/mac-24h-foundation",
+        "rating": 4.9,
+        "review": "A great Foundation from MAC."
       },
       {
-        "site": "Flipkart",
-        "price": 340.00,
-        "url": "http://example.com/flipkart/shampoo",
-        "rating": 4.0,
-        "review": "Good lather, decent test product."
+        "site": "Amazon",
+        "price": 3396.85,
+        "url": "http://example.com/amazon/mac-24h-foundation",
+        "rating": 4.3,
+        "review": "A great Foundation from MAC."
       }
     ]
   },
   {
     "id": 4,
-    "name": "HydraTest Face Cream",
-    "brand": "TestCare Skin",
-    "description": "A daily moisturizer for testing hydration.",
-    "image": "https://placehold.co/300x300/64B5F6/ffffff?text=Test+Cream",
+    "name": "MAC Luminous Blush",
+    "brand": "MAC",
+    "description": "A high-quality Blush from MAC to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Blush",
     "offers": [
       {
-        "site": "Nykaa",
-        "price": 800.00,
-        "url": "http://example.com/nykaa/cream",
-        "rating": 4.9,
-        "review": "Super hydrating! Best test cream ever."
+        "site": "Flipkart",
+        "price": 5695.97,
+        "url": "http://example.com/flipkart/mac-luminous-blush",
+        "rating": 4.2,
+        "review": "A great Blush from MAC."
       },
       {
-        "site": "Amazon",
-        "price": 790.00,
-        "url": "http://example.com/amazon/cream",
-        "rating": 4.8,
-        "review": "My skin feels soft after the test."
+        "site": "Nykaa",
+        "price": 5693.56,
+        "url": "http://example.com/nykaa/mac-luminous-blush",
+        "rating": 4.2,
+        "review": "A great Blush from MAC."
       }
     ]
   },
   {
     "id": 5,
-    "name": "Precision Test Liner",
-    "brand": "TestBrand Beauty",
-    "description": "A liquid eyeliner for sharp, tested lines.",
-    "image": "https://placehold.co/300x300/BA68C8/ffffff?text=Test+Eyeliner",
+    "name": "MAC Intense Eyeshadow",
+    "brand": "MAC",
+    "description": "A high-quality Eyeshadow from MAC to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eyeshadow",
     "offers": [
       {
-        "site": "Purplle",
-        "price": 450.00,
-        "url": "http://example.com/purplle/eyeliner",
-        "rating": 4.6,
-        "review": "Very black and precise. A successful test."
+        "site": "Nykaa",
+        "price": 5731.65,
+        "url": "http://example.com/nykaa/mac-intense-eyeshadow",
+        "rating": 3.8,
+        "review": "A great Eyeshadow from MAC."
+      },
+      {
+        "site": "Amazon",
+        "price": 5427.44,
+        "url": "http://example.com/amazon/mac-intense-eyeshadow",
+        "rating": 4.4,
+        "review": "A great Eyeshadow from MAC."
+      },
+      {
+        "site": "Flipkart",
+        "price": 5641.39,
+        "url": "http://example.com/flipkart/mac-intense-eyeshadow",
+        "rating": 4.9,
+        "review": "A great Eyeshadow from MAC."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "MAC Sheer Fix+",
+    "brand": "MAC",
+    "description": "A high-quality Fix+ from MAC to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Fix+",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 5809.94,
+        "url": "http://example.com/nykaa/mac-sheer-fix+",
+        "rating": 4.9,
+        "review": "A great Fix+ from MAC."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "MAC Velvet Fix+",
+    "brand": "MAC",
+    "description": "A high-quality Fix+ from MAC to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Fix+",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 4786.84,
+        "url": "http://example.com/flipkart/mac-velvet-fix+",
+        "rating": 4.0,
+        "review": "A great Fix+ from MAC."
       },
       {
         "site": "Nykaa",
-        "price": 455.00,
-        "url": "http://example.com/nykaa/eyeliner",
+        "price": 4598.89,
+        "url": "http://example.com/nykaa/mac-velvet-fix+",
+        "rating": 4.4,
+        "review": "A great Fix+ from MAC."
+      },
+      {
+        "site": "Amazon",
+        "price": 4813.7,
+        "url": "http://example.com/amazon/mac-velvet-fix+",
+        "rating": 4.1,
+        "review": "A great Fix+ from MAC."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "MAC Radiant Lipstick",
+    "brand": "MAC",
+    "description": "A high-quality Lipstick from MAC to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lipstick",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 1220.61,
+        "url": "http://example.com/nykaa/mac-radiant-lipstick",
+        "rating": 4.1,
+        "review": "A great Lipstick from MAC."
+      },
+      {
+        "site": "Flipkart",
+        "price": 1222.87,
+        "url": "http://example.com/flipkart/mac-radiant-lipstick",
+        "rating": 4.1,
+        "review": "A great Lipstick from MAC."
+      },
+      {
+        "site": "Amazon",
+        "price": 1268.86,
+        "url": "http://example.com/amazon/mac-radiant-lipstick",
+        "rating": 4.6,
+        "review": "A great Lipstick from MAC."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "MAC Sheer Foundation",
+    "brand": "MAC",
+    "description": "A high-quality Foundation from MAC to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 6444.11,
+        "url": "http://example.com/flipkart/mac-sheer-foundation",
+        "rating": 4.8,
+        "review": "A great Foundation from MAC."
+      },
+      {
+        "site": "Purplle",
+        "price": 6634.88,
+        "url": "http://example.com/purplle/mac-sheer-foundation",
+        "rating": 5.0,
+        "review": "A great Foundation from MAC."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "MAC Pro Eyeshadow",
+    "brand": "MAC",
+    "description": "A high-quality Eyeshadow from MAC to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eyeshadow",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 2894.17,
+        "url": "http://example.com/nykaa/mac-pro-eyeshadow",
+        "rating": 4.5,
+        "review": "A great Eyeshadow from MAC."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Dior Luminous Eau de Parfum",
+    "brand": "Dior",
+    "description": "A high-quality Eau de Parfum from Dior to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 1842.63,
+        "url": "http://example.com/purplle/dior-luminous-eau-de-parfum",
         "rating": 4.7,
-        "review": "Lasted all day, even during testing."
+        "review": "A great Eau de Parfum from Dior."
+      },
+      {
+        "site": "Amazon",
+        "price": 1926.78,
+        "url": "http://example.com/amazon/dior-luminous-eau-de-parfum",
+        "rating": 4.4,
+        "review": "A great Eau de Parfum from Dior."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Dior 24H Foundation",
+    "brand": "Dior",
+    "description": "A high-quality Foundation from Dior to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 921.33,
+        "url": "http://example.com/flipkart/dior-24h-foundation",
+        "rating": 4.1,
+        "review": "A great Foundation from Dior."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Dior Silk Lip Glow",
+    "brand": "Dior",
+    "description": "A high-quality Lip Glow from Dior to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lip+Glow",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 7560.33,
+        "url": "http://example.com/nykaa/dior-silk-lip-glow",
+        "rating": 4.1,
+        "review": "A great Lip Glow from Dior."
+      },
+      {
+        "site": "Flipkart",
+        "price": 7541.89,
+        "url": "http://example.com/flipkart/dior-silk-lip-glow",
+        "rating": 3.9,
+        "review": "A great Lip Glow from Dior."
+      },
+      {
+        "site": "Purplle",
+        "price": 7536.37,
+        "url": "http://example.com/purplle/dior-silk-lip-glow",
+        "rating": 4.9,
+        "review": "A great Lip Glow from Dior."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Dior Sheer Foundation",
+    "brand": "Dior",
+    "description": "A high-quality Foundation from Dior to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 7384.41,
+        "url": "http://example.com/purplle/dior-sheer-foundation",
+        "rating": 4.9,
+        "review": "A great Foundation from Dior."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Dior Ultimate Eau de Toilette",
+    "brand": "Dior",
+    "description": "A high-quality Eau de Toilette from Dior to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eau+de+Toilette",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 3993.94,
+        "url": "http://example.com/nykaa/dior-ultimate-eau-de-toilette",
+        "rating": 4.9,
+        "review": "A great Eau de Toilette from Dior."
+      },
+      {
+        "site": "Purplle",
+        "price": 3964.53,
+        "url": "http://example.com/purplle/dior-ultimate-eau-de-toilette",
+        "rating": 4.5,
+        "review": "A great Eau de Toilette from Dior."
+      },
+      {
+        "site": "Amazon",
+        "price": 3856.34,
+        "url": "http://example.com/amazon/dior-ultimate-eau-de-toilette",
+        "rating": 4.6,
+        "review": "A great Eau de Toilette from Dior."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Dior Ultimate Eau de Parfum",
+    "brand": "Dior",
+    "description": "A high-quality Eau de Parfum from Dior to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 2926.41,
+        "url": "http://example.com/purplle/dior-ultimate-eau-de-parfum",
+        "rating": 4.6,
+        "review": "A great Eau de Parfum from Dior."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Dior Pro Lip Glow",
+    "brand": "Dior",
+    "description": "A high-quality Lip Glow from Dior to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lip+Glow",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 5098.04,
+        "url": "http://example.com/nykaa/dior-pro-lip-glow",
+        "rating": 4.7,
+        "review": "A great Lip Glow from Dior."
+      },
+      {
+        "site": "Flipkart",
+        "price": 4753.29,
+        "url": "http://example.com/flipkart/dior-pro-lip-glow",
+        "rating": 4.5,
+        "review": "A great Lip Glow from Dior."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Dior HD Eau de Parfum",
+    "brand": "Dior",
+    "description": "A high-quality Eau de Parfum from Dior to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 7097.64,
+        "url": "http://example.com/purplle/dior-hd-eau-de-parfum",
+        "rating": 4.8,
+        "review": "A great Eau de Parfum from Dior."
+      },
+      {
+        "site": "Amazon",
+        "price": 7031.79,
+        "url": "http://example.com/amazon/dior-hd-eau-de-parfum",
+        "rating": 4.5,
+        "review": "A great Eau de Parfum from Dior."
+      },
+      {
+        "site": "Flipkart",
+        "price": 7297.38,
+        "url": "http://example.com/flipkart/dior-hd-eau-de-parfum",
+        "rating": 4.0,
+        "review": "A great Eau de Parfum from Dior."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Dior Radiant Foundation",
+    "brand": "Dior",
+    "description": "A high-quality Foundation from Dior to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 5135.97,
+        "url": "http://example.com/amazon/dior-radiant-foundation",
+        "rating": 4.6,
+        "review": "A great Foundation from Dior."
+      },
+      {
+        "site": "Flipkart",
+        "price": 5237.78,
+        "url": "http://example.com/flipkart/dior-radiant-foundation",
+        "rating": 4.2,
+        "review": "A great Foundation from Dior."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Dior Velvet Eau de Toilette",
+    "brand": "Dior",
+    "description": "A high-quality Eau de Toilette from Dior to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eau+de+Toilette",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 6970.95,
+        "url": "http://example.com/flipkart/dior-velvet-eau-de-toilette",
+        "rating": 3.9,
+        "review": "A great Eau de Toilette from Dior."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Gucci 24H Eau de Parfum",
+    "brand": "Gucci",
+    "description": "A high-quality Eau de Parfum from Gucci to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 5278.0,
+        "url": "http://example.com/nykaa/gucci-24h-eau-de-parfum",
+        "rating": 4.0,
+        "review": "A great Eau de Parfum from Gucci."
+      },
+      {
+        "site": "Flipkart",
+        "price": 5620.05,
+        "url": "http://example.com/flipkart/gucci-24h-eau-de-parfum",
+        "rating": 5.0,
+        "review": "A great Eau de Parfum from Gucci."
+      },
+      {
+        "site": "Amazon",
+        "price": 5416.34,
+        "url": "http://example.com/amazon/gucci-24h-eau-de-parfum",
+        "rating": 4.2,
+        "review": "A great Eau de Parfum from Gucci."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Gucci HD Eau de Parfum",
+    "brand": "Gucci",
+    "description": "A high-quality Eau de Parfum from Gucci to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 6466.41,
+        "url": "http://example.com/nykaa/gucci-hd-eau-de-parfum",
+        "rating": 4.1,
+        "review": "A great Eau de Parfum from Gucci."
+      },
+      {
+        "site": "Purplle",
+        "price": 6495.53,
+        "url": "http://example.com/purplle/gucci-hd-eau-de-parfum",
+        "rating": 4.4,
+        "review": "A great Eau de Parfum from Gucci."
+      },
+      {
+        "site": "Flipkart",
+        "price": 6100.43,
+        "url": "http://example.com/flipkart/gucci-hd-eau-de-parfum",
+        "rating": 4.0,
+        "review": "A great Eau de Parfum from Gucci."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Gucci Silk Mascara",
+    "brand": "Gucci",
+    "description": "A high-quality Mascara from Gucci to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Mascara",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 6934.35,
+        "url": "http://example.com/amazon/gucci-silk-mascara",
+        "rating": 3.9,
+        "review": "A great Mascara from Gucci."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Gucci Matte Bloom",
+    "brand": "Gucci",
+    "description": "A high-quality Bloom from Gucci to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Bloom",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 3661.06,
+        "url": "http://example.com/amazon/gucci-matte-bloom",
+        "rating": 4.7,
+        "review": "A great Bloom from Gucci."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Gucci Velvet Eau de Parfum",
+    "brand": "Gucci",
+    "description": "A high-quality Eau de Parfum from Gucci to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 964.29,
+        "url": "http://example.com/amazon/gucci-velvet-eau-de-parfum",
+        "rating": 4.2,
+        "review": "A great Eau de Parfum from Gucci."
+      },
+      {
+        "site": "Nykaa",
+        "price": 945.08,
+        "url": "http://example.com/nykaa/gucci-velvet-eau-de-parfum",
+        "rating": 4.4,
+        "review": "A great Eau de Parfum from Gucci."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Gucci Radiant Mascara",
+    "brand": "Gucci",
+    "description": "A high-quality Mascara from Gucci to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Mascara",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 3661.28,
+        "url": "http://example.com/purplle/gucci-radiant-mascara",
+        "rating": 4.2,
+        "review": "A great Mascara from Gucci."
+      },
+      {
+        "site": "Amazon",
+        "price": 3903.0,
+        "url": "http://example.com/amazon/gucci-radiant-mascara",
+        "rating": 4.9,
+        "review": "A great Mascara from Gucci."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Gucci Ultimate Bloom",
+    "brand": "Gucci",
+    "description": "A high-quality Bloom from Gucci to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Bloom",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 2853.94,
+        "url": "http://example.com/nykaa/gucci-ultimate-bloom",
+        "rating": 4.2,
+        "review": "A great Bloom from Gucci."
+      },
+      {
+        "site": "Purplle",
+        "price": 2862.91,
+        "url": "http://example.com/purplle/gucci-ultimate-bloom",
+        "rating": 4.9,
+        "review": "A great Bloom from Gucci."
+      },
+      {
+        "site": "Flipkart",
+        "price": 2903.56,
+        "url": "http://example.com/flipkart/gucci-ultimate-bloom",
+        "rating": 3.9,
+        "review": "A great Bloom from Gucci."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Gucci Ultimate Eau de Parfum",
+    "brand": "Gucci",
+    "description": "A high-quality Eau de Parfum from Gucci to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 1606.74,
+        "url": "http://example.com/nykaa/gucci-ultimate-eau-de-parfum",
+        "rating": 4.6,
+        "review": "A great Eau de Parfum from Gucci."
+      },
+      {
+        "site": "Flipkart",
+        "price": 1592.47,
+        "url": "http://example.com/flipkart/gucci-ultimate-eau-de-parfum",
+        "rating": 3.9,
+        "review": "A great Eau de Parfum from Gucci."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Gucci Sheer Eau de Parfum",
+    "brand": "Gucci",
+    "description": "A high-quality Eau de Parfum from Gucci to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 2314.36,
+        "url": "http://example.com/purplle/gucci-sheer-eau-de-parfum",
+        "rating": 3.9,
+        "review": "A great Eau de Parfum from Gucci."
+      },
+      {
+        "site": "Flipkart",
+        "price": 2334.84,
+        "url": "http://example.com/flipkart/gucci-sheer-eau-de-parfum",
+        "rating": 4.7,
+        "review": "A great Eau de Parfum from Gucci."
+      },
+      {
+        "site": "Nykaa",
+        "price": 2237.63,
+        "url": "http://example.com/nykaa/gucci-sheer-eau-de-parfum",
+        "rating": 4.0,
+        "review": "A great Eau de Parfum from Gucci."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Gucci Silk Mascara",
+    "brand": "Gucci",
+    "description": "A high-quality Mascara from Gucci to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Mascara",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 3873.56,
+        "url": "http://example.com/purplle/gucci-silk-mascara",
+        "rating": 4.8,
+        "review": "A great Mascara from Gucci."
+      },
+      {
+        "site": "Nykaa",
+        "price": 3944.53,
+        "url": "http://example.com/nykaa/gucci-silk-mascara",
+        "rating": 4.5,
+        "review": "A great Mascara from Gucci."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Lakme Matte Lipstick",
+    "brand": "Lakme",
+    "description": "A high-quality Lipstick from Lakme to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lipstick",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 4378.67,
+        "url": "http://example.com/nykaa/lakme-matte-lipstick",
+        "rating": 4.9,
+        "review": "A great Lipstick from Lakme."
+      },
+      {
+        "site": "Amazon",
+        "price": 4608.7,
+        "url": "http://example.com/amazon/lakme-matte-lipstick",
+        "rating": 4.5,
+        "review": "A great Lipstick from Lakme."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Lakme Ultimate Eyeliner",
+    "brand": "Lakme",
+    "description": "A high-quality Eyeliner from Lakme to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eyeliner",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 2910.33,
+        "url": "http://example.com/amazon/lakme-ultimate-eyeliner",
+        "rating": 4.3,
+        "review": "A great Eyeliner from Lakme."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Lakme Ultimate Mousse",
+    "brand": "Lakme",
+    "description": "A high-quality Mousse from Lakme to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Mousse",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 2612.73,
+        "url": "http://example.com/amazon/lakme-ultimate-mousse",
+        "rating": 4.9,
+        "review": "A great Mousse from Lakme."
+      },
+      {
+        "site": "Purplle",
+        "price": 2592.24,
+        "url": "http://example.com/purplle/lakme-ultimate-mousse",
+        "rating": 4.9,
+        "review": "A great Mousse from Lakme."
+      },
+      {
+        "site": "Flipkart",
+        "price": 2754.9,
+        "url": "http://example.com/flipkart/lakme-ultimate-mousse",
+        "rating": 4.9,
+        "review": "A great Mousse from Lakme."
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Lakme Pro Mousse",
+    "brand": "Lakme",
+    "description": "A high-quality Mousse from Lakme to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Mousse",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 6970.43,
+        "url": "http://example.com/purplle/lakme-pro-mousse",
+        "rating": 4.5,
+        "review": "A great Mousse from Lakme."
+      },
+      {
+        "site": "Nykaa",
+        "price": 6976.58,
+        "url": "http://example.com/nykaa/lakme-pro-mousse",
+        "rating": 4.1,
+        "review": "A great Mousse from Lakme."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Lakme Ultimate Foundation",
+    "brand": "Lakme",
+    "description": "A high-quality Foundation from Lakme to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 1432.4,
+        "url": "http://example.com/nykaa/lakme-ultimate-foundation",
+        "rating": 4.2,
+        "review": "A great Foundation from Lakme."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Lakme Matte Lipstick",
+    "brand": "Lakme",
+    "description": "A high-quality Lipstick from Lakme to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lipstick",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 1494.33,
+        "url": "http://example.com/flipkart/lakme-matte-lipstick",
+        "rating": 4.0,
+        "review": "A great Lipstick from Lakme."
+      },
+      {
+        "site": "Nykaa",
+        "price": 1547.95,
+        "url": "http://example.com/nykaa/lakme-matte-lipstick",
+        "rating": 4.0,
+        "review": "A great Lipstick from Lakme."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Lakme Luminous Foundation",
+    "brand": "Lakme",
+    "description": "A high-quality Foundation from Lakme to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 7393.98,
+        "url": "http://example.com/amazon/lakme-luminous-foundation",
+        "rating": 4.7,
+        "review": "A great Foundation from Lakme."
+      },
+      {
+        "site": "Purplle",
+        "price": 7265.6,
+        "url": "http://example.com/purplle/lakme-luminous-foundation",
+        "rating": 4.3,
+        "review": "A great Foundation from Lakme."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Lakme Radiant Foundation",
+    "brand": "Lakme",
+    "description": "A high-quality Foundation from Lakme to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 7592.66,
+        "url": "http://example.com/amazon/lakme-radiant-foundation",
+        "rating": 4.9,
+        "review": "A great Foundation from Lakme."
+      },
+      {
+        "site": "Purplle",
+        "price": 7218.54,
+        "url": "http://example.com/purplle/lakme-radiant-foundation",
+        "rating": 4.8,
+        "review": "A great Foundation from Lakme."
+      },
+      {
+        "site": "Flipkart",
+        "price": 7309.43,
+        "url": "http://example.com/flipkart/lakme-radiant-foundation",
+        "rating": 4.9,
+        "review": "A great Foundation from Lakme."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Lakme Aqua Foundation",
+    "brand": "Lakme",
+    "description": "A high-quality Foundation from Lakme to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 7412.22,
+        "url": "http://example.com/nykaa/lakme-aqua-foundation",
+        "rating": 4.4,
+        "review": "A great Foundation from Lakme."
+      },
+      {
+        "site": "Amazon",
+        "price": 7831.22,
+        "url": "http://example.com/amazon/lakme-aqua-foundation",
+        "rating": 4.3,
+        "review": "A great Foundation from Lakme."
+      },
+      {
+        "site": "Purplle",
+        "price": 7517.34,
+        "url": "http://example.com/purplle/lakme-aqua-foundation",
+        "rating": 4.8,
+        "review": "A great Foundation from Lakme."
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Lakme Silk Kajal",
+    "brand": "Lakme",
+    "description": "A high-quality Kajal from Lakme to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Kajal",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 6264.03,
+        "url": "http://example.com/nykaa/lakme-silk-kajal",
+        "rating": 4.2,
+        "review": "A great Kajal from Lakme."
+      },
+      {
+        "site": "Purplle",
+        "price": 6417.64,
+        "url": "http://example.com/purplle/lakme-silk-kajal",
+        "rating": 4.4,
+        "review": "A great Kajal from Lakme."
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Chanel HD Foundation",
+    "brand": "Chanel",
+    "description": "A high-quality Foundation from Chanel to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 7091.66,
+        "url": "http://example.com/purplle/chanel-hd-foundation",
+        "rating": 3.9,
+        "review": "A great Foundation from Chanel."
+      },
+      {
+        "site": "Nykaa",
+        "price": 7129.44,
+        "url": "http://example.com/nykaa/chanel-hd-foundation",
+        "rating": 4.5,
+        "review": "A great Foundation from Chanel."
+      },
+      {
+        "site": "Amazon",
+        "price": 7103.4,
+        "url": "http://example.com/amazon/chanel-hd-foundation",
+        "rating": 4.4,
+        "review": "A great Foundation from Chanel."
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Chanel Aqua Foundation",
+    "brand": "Chanel",
+    "description": "A high-quality Foundation from Chanel to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 6462.77,
+        "url": "http://example.com/purplle/chanel-aqua-foundation",
+        "rating": 4.9,
+        "review": "A great Foundation from Chanel."
+      },
+      {
+        "site": "Flipkart",
+        "price": 6795.3,
+        "url": "http://example.com/flipkart/chanel-aqua-foundation",
+        "rating": 4.1,
+        "review": "A great Foundation from Chanel."
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Chanel Intense Lipstick",
+    "brand": "Chanel",
+    "description": "A high-quality Lipstick from Chanel to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lipstick",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 3032.21,
+        "url": "http://example.com/purplle/chanel-intense-lipstick",
+        "rating": 4.4,
+        "review": "A great Lipstick from Chanel."
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Chanel Pro Foundation",
+    "brand": "Chanel",
+    "description": "A high-quality Foundation from Chanel to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 3501.28,
+        "url": "http://example.com/flipkart/chanel-pro-foundation",
+        "rating": 4.5,
+        "review": "A great Foundation from Chanel."
+      },
+      {
+        "site": "Nykaa",
+        "price": 3570.93,
+        "url": "http://example.com/nykaa/chanel-pro-foundation",
+        "rating": 3.9,
+        "review": "A great Foundation from Chanel."
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Chanel Aqua No. 5 Eau de Parfum",
+    "brand": "Chanel",
+    "description": "A high-quality No. 5 Eau de Parfum from Chanel to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=No.+5+Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 2484.61,
+        "url": "http://example.com/flipkart/chanel-aqua-no.-5-eau-de-parfum",
+        "rating": 4.3,
+        "review": "A great No. 5 Eau de Parfum from Chanel."
+      },
+      {
+        "site": "Nykaa",
+        "price": 2683.58,
+        "url": "http://example.com/nykaa/chanel-aqua-no.-5-eau-de-parfum",
+        "rating": 4.0,
+        "review": "A great No. 5 Eau de Parfum from Chanel."
+      },
+      {
+        "site": "Amazon",
+        "price": 2589.95,
+        "url": "http://example.com/amazon/chanel-aqua-no.-5-eau-de-parfum",
+        "rating": 4.0,
+        "review": "A great No. 5 Eau de Parfum from Chanel."
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Chanel Silk No. 5 Eau de Parfum",
+    "brand": "Chanel",
+    "description": "A high-quality No. 5 Eau de Parfum from Chanel to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=No.+5+Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 4208.11,
+        "url": "http://example.com/flipkart/chanel-silk-no.-5-eau-de-parfum",
+        "rating": 3.8,
+        "review": "A great No. 5 Eau de Parfum from Chanel."
+      },
+      {
+        "site": "Nykaa",
+        "price": 4196.85,
+        "url": "http://example.com/nykaa/chanel-silk-no.-5-eau-de-parfum",
+        "rating": 4.8,
+        "review": "A great No. 5 Eau de Parfum from Chanel."
+      },
+      {
+        "site": "Purplle",
+        "price": 4098.59,
+        "url": "http://example.com/purplle/chanel-silk-no.-5-eau-de-parfum",
+        "rating": 4.2,
+        "review": "A great No. 5 Eau de Parfum from Chanel."
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Chanel Sheer No. 5 Eau de Parfum",
+    "brand": "Chanel",
+    "description": "A high-quality No. 5 Eau de Parfum from Chanel to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=No.+5+Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 3026.32,
+        "url": "http://example.com/flipkart/chanel-sheer-no.-5-eau-de-parfum",
+        "rating": 4.5,
+        "review": "A great No. 5 Eau de Parfum from Chanel."
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Chanel Silk No. 5 Eau de Parfum",
+    "brand": "Chanel",
+    "description": "A high-quality No. 5 Eau de Parfum from Chanel to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=No.+5+Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 2802.79,
+        "url": "http://example.com/nykaa/chanel-silk-no.-5-eau-de-parfum",
+        "rating": 4.8,
+        "review": "A great No. 5 Eau de Parfum from Chanel."
+      },
+      {
+        "site": "Amazon",
+        "price": 2608.18,
+        "url": "http://example.com/amazon/chanel-silk-no.-5-eau-de-parfum",
+        "rating": 4.9,
+        "review": "A great No. 5 Eau de Parfum from Chanel."
+      },
+      {
+        "site": "Flipkart",
+        "price": 2663.51,
+        "url": "http://example.com/flipkart/chanel-silk-no.-5-eau-de-parfum",
+        "rating": 4.3,
+        "review": "A great No. 5 Eau de Parfum from Chanel."
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Chanel Matte Foundation",
+    "brand": "Chanel",
+    "description": "A high-quality Foundation from Chanel to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 7799.21,
+        "url": "http://example.com/nykaa/chanel-matte-foundation",
+        "rating": 3.9,
+        "review": "A great Foundation from Chanel."
+      },
+      {
+        "site": "Amazon",
+        "price": 8168.6,
+        "url": "http://example.com/amazon/chanel-matte-foundation",
+        "rating": 4.0,
+        "review": "A great Foundation from Chanel."
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Chanel Luminous No. 5 Eau de Parfum",
+    "brand": "Chanel",
+    "description": "A high-quality No. 5 Eau de Parfum from Chanel to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=No.+5+Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 3195.4,
+        "url": "http://example.com/flipkart/chanel-luminous-no.-5-eau-de-parfum",
+        "rating": 4.3,
+        "review": "A great No. 5 Eau de Parfum from Chanel."
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Nykaa Radiant Lipstick",
+    "brand": "Nykaa",
+    "description": "A high-quality Lipstick from Nykaa to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lipstick",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 4274.67,
+        "url": "http://example.com/purplle/nykaa-radiant-lipstick",
+        "rating": 4.1,
+        "review": "A great Lipstick from Nykaa."
+      },
+      {
+        "site": "Amazon",
+        "price": 4079.31,
+        "url": "http://example.com/amazon/nykaa-radiant-lipstick",
+        "rating": 4.7,
+        "review": "A great Lipstick from Nykaa."
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Nykaa 24H Lipstick",
+    "brand": "Nykaa",
+    "description": "A high-quality Lipstick from Nykaa to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lipstick",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 6573.91,
+        "url": "http://example.com/amazon/nykaa-24h-lipstick",
+        "rating": 4.5,
+        "review": "A great Lipstick from Nykaa."
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Nykaa Sheer Serum",
+    "brand": "Nykaa",
+    "description": "A high-quality Serum from Nykaa to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Serum",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 3731.9,
+        "url": "http://example.com/purplle/nykaa-sheer-serum",
+        "rating": 4.7,
+        "review": "A great Serum from Nykaa."
+      },
+      {
+        "site": "Nykaa",
+        "price": 3788.6,
+        "url": "http://example.com/nykaa/nykaa-sheer-serum",
+        "rating": 3.8,
+        "review": "A great Serum from Nykaa."
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Nykaa Matte Moisturizer",
+    "brand": "Nykaa",
+    "description": "A high-quality Moisturizer from Nykaa to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Moisturizer",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 3275.86,
+        "url": "http://example.com/amazon/nykaa-matte-moisturizer",
+        "rating": 4.0,
+        "review": "A great Moisturizer from Nykaa."
+      },
+      {
+        "site": "Purplle",
+        "price": 3021.06,
+        "url": "http://example.com/purplle/nykaa-matte-moisturizer",
+        "rating": 4.7,
+        "review": "A great Moisturizer from Nykaa."
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Nykaa Luminous Foundation",
+    "brand": "Nykaa",
+    "description": "A high-quality Foundation from Nykaa to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 2644.62,
+        "url": "http://example.com/nykaa/nykaa-luminous-foundation",
+        "rating": 4.3,
+        "review": "A great Foundation from Nykaa."
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Nykaa Sheer Serum",
+    "brand": "Nykaa",
+    "description": "A high-quality Serum from Nykaa to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Serum",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 6338.22,
+        "url": "http://example.com/amazon/nykaa-sheer-serum",
+        "rating": 4.0,
+        "review": "A great Serum from Nykaa."
+      },
+      {
+        "site": "Flipkart",
+        "price": 6147.8,
+        "url": "http://example.com/flipkart/nykaa-sheer-serum",
+        "rating": 4.9,
+        "review": "A great Serum from Nykaa."
+      },
+      {
+        "site": "Purplle",
+        "price": 6180.78,
+        "url": "http://example.com/purplle/nykaa-sheer-serum",
+        "rating": 4.0,
+        "review": "A great Serum from Nykaa."
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Nykaa 24H Serum",
+    "brand": "Nykaa",
+    "description": "A high-quality Serum from Nykaa to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Serum",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 5489.86,
+        "url": "http://example.com/purplle/nykaa-24h-serum",
+        "rating": 4.1,
+        "review": "A great Serum from Nykaa."
+      },
+      {
+        "site": "Amazon",
+        "price": 5519.0,
+        "url": "http://example.com/amazon/nykaa-24h-serum",
+        "rating": 4.6,
+        "review": "A great Serum from Nykaa."
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Nykaa Matte Lipstick",
+    "brand": "Nykaa",
+    "description": "A high-quality Lipstick from Nykaa to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lipstick",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 5261.48,
+        "url": "http://example.com/amazon/nykaa-matte-lipstick",
+        "rating": 4.5,
+        "review": "A great Lipstick from Nykaa."
+      },
+      {
+        "site": "Flipkart",
+        "price": 5112.27,
+        "url": "http://example.com/flipkart/nykaa-matte-lipstick",
+        "rating": 3.9,
+        "review": "A great Lipstick from Nykaa."
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Nykaa Pro Lipstick",
+    "brand": "Nykaa",
+    "description": "A high-quality Lipstick from Nykaa to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lipstick",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 2379.25,
+        "url": "http://example.com/flipkart/nykaa-pro-lipstick",
+        "rating": 4.7,
+        "review": "A great Lipstick from Nykaa."
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Nykaa Velvet Eyeliner",
+    "brand": "Nykaa",
+    "description": "A high-quality Eyeliner from Nykaa to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eyeliner",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 7742.32,
+        "url": "http://example.com/purplle/nykaa-velvet-eyeliner",
+        "rating": 4.4,
+        "review": "A great Eyeliner from Nykaa."
+      },
+      {
+        "site": "Amazon",
+        "price": 7512.67,
+        "url": "http://example.com/amazon/nykaa-velvet-eyeliner",
+        "rating": 4.2,
+        "review": "A great Eyeliner from Nykaa."
+      },
+      {
+        "site": "Nykaa",
+        "price": 7583.25,
+        "url": "http://example.com/nykaa/nykaa-velvet-eyeliner",
+        "rating": 4.2,
+        "review": "A great Eyeliner from Nykaa."
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Biotique Intense Toner",
+    "brand": "Biotique",
+    "description": "A high-quality Toner from Biotique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Toner",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 6167.49,
+        "url": "http://example.com/amazon/biotique-intense-toner",
+        "rating": 3.9,
+        "review": "A great Toner from Biotique."
+      },
+      {
+        "site": "Purplle",
+        "price": 5987.99,
+        "url": "http://example.com/purplle/biotique-intense-toner",
+        "rating": 4.5,
+        "review": "A great Toner from Biotique."
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Biotique Matte Shampoo",
+    "brand": "Biotique",
+    "description": "A high-quality Shampoo from Biotique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Shampoo",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 5600.22,
+        "url": "http://example.com/purplle/biotique-matte-shampoo",
+        "rating": 4.7,
+        "review": "A great Shampoo from Biotique."
+      },
+      {
+        "site": "Nykaa",
+        "price": 5482.17,
+        "url": "http://example.com/nykaa/biotique-matte-shampoo",
+        "rating": 4.2,
+        "review": "A great Shampoo from Biotique."
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Biotique Radiant Shampoo",
+    "brand": "Biotique",
+    "description": "A high-quality Shampoo from Biotique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Shampoo",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 3758.01,
+        "url": "http://example.com/amazon/biotique-radiant-shampoo",
+        "rating": 4.4,
+        "review": "A great Shampoo from Biotique."
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Biotique Intense Toner",
+    "brand": "Biotique",
+    "description": "A high-quality Toner from Biotique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Toner",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 2704.7,
+        "url": "http://example.com/nykaa/biotique-intense-toner",
+        "rating": 4.0,
+        "review": "A great Toner from Biotique."
+      },
+      {
+        "site": "Amazon",
+        "price": 2865.37,
+        "url": "http://example.com/amazon/biotique-intense-toner",
+        "rating": 4.1,
+        "review": "A great Toner from Biotique."
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Biotique Sheer Moisturizer",
+    "brand": "Biotique",
+    "description": "A high-quality Moisturizer from Biotique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Moisturizer",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 3060.04,
+        "url": "http://example.com/nykaa/biotique-sheer-moisturizer",
+        "rating": 4.8,
+        "review": "A great Moisturizer from Biotique."
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Biotique Aqua Moisturizer",
+    "brand": "Biotique",
+    "description": "A high-quality Moisturizer from Biotique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Moisturizer",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 2817.84,
+        "url": "http://example.com/amazon/biotique-aqua-moisturizer",
+        "rating": 3.8,
+        "review": "A great Moisturizer from Biotique."
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Biotique Sheer Face Wash",
+    "brand": "Biotique",
+    "description": "A high-quality Face Wash from Biotique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Face+Wash",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 6469.2,
+        "url": "http://example.com/purplle/biotique-sheer-face-wash",
+        "rating": 4.8,
+        "review": "A great Face Wash from Biotique."
+      },
+      {
+        "site": "Amazon",
+        "price": 6722.57,
+        "url": "http://example.com/amazon/biotique-sheer-face-wash",
+        "rating": 3.9,
+        "review": "A great Face Wash from Biotique."
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Biotique Aqua Shampoo",
+    "brand": "Biotique",
+    "description": "A high-quality Shampoo from Biotique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Shampoo",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 7790.83,
+        "url": "http://example.com/nykaa/biotique-aqua-shampoo",
+        "rating": 4.5,
+        "review": "A great Shampoo from Biotique."
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Biotique Matte Face Wash",
+    "brand": "Biotique",
+    "description": "A high-quality Face Wash from Biotique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Face+Wash",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 655.68,
+        "url": "http://example.com/nykaa/biotique-matte-face-wash",
+        "rating": 4.4,
+        "review": "A great Face Wash from Biotique."
+      },
+      {
+        "site": "Amazon",
+        "price": 654.19,
+        "url": "http://example.com/amazon/biotique-matte-face-wash",
+        "rating": 4.3,
+        "review": "A great Face Wash from Biotique."
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Biotique Aqua Shampoo",
+    "brand": "Biotique",
+    "description": "A high-quality Shampoo from Biotique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Shampoo",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 824.2,
+        "url": "http://example.com/nykaa/biotique-aqua-shampoo",
+        "rating": 4.9,
+        "review": "A great Shampoo from Biotique."
+      },
+      {
+        "site": "Amazon",
+        "price": 820.88,
+        "url": "http://example.com/amazon/biotique-aqua-shampoo",
+        "rating": 4.0,
+        "review": "A great Shampoo from Biotique."
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Cetaphil HD Moisturizing Lotion",
+    "brand": "Cetaphil",
+    "description": "A high-quality Moisturizing Lotion from Cetaphil to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Moisturizing+Lotion",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 6953.76,
+        "url": "http://example.com/purplle/cetaphil-hd-moisturizing-lotion",
+        "rating": 4.6,
+        "review": "A great Moisturizing Lotion from Cetaphil."
+      },
+      {
+        "site": "Nykaa",
+        "price": 6896.13,
+        "url": "http://example.com/nykaa/cetaphil-hd-moisturizing-lotion",
+        "rating": 3.9,
+        "review": "A great Moisturizing Lotion from Cetaphil."
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Cetaphil Ultimate Moisturizing Lotion",
+    "brand": "Cetaphil",
+    "description": "A high-quality Moisturizing Lotion from Cetaphil to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Moisturizing+Lotion",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 2372.19,
+        "url": "http://example.com/purplle/cetaphil-ultimate-moisturizing-lotion",
+        "rating": 4.6,
+        "review": "A great Moisturizing Lotion from Cetaphil."
+      },
+      {
+        "site": "Amazon",
+        "price": 2455.33,
+        "url": "http://example.com/amazon/cetaphil-ultimate-moisturizing-lotion",
+        "rating": 3.9,
+        "review": "A great Moisturizing Lotion from Cetaphil."
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Cetaphil HD Moisturizing Lotion",
+    "brand": "Cetaphil",
+    "description": "A high-quality Moisturizing Lotion from Cetaphil to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Moisturizing+Lotion",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 5422.73,
+        "url": "http://example.com/purplle/cetaphil-hd-moisturizing-lotion",
+        "rating": 4.1,
+        "review": "A great Moisturizing Lotion from Cetaphil."
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Cetaphil Velvet Gentle Skin Cleanser",
+    "brand": "Cetaphil",
+    "description": "A high-quality Gentle Skin Cleanser from Cetaphil to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Gentle+Skin+Cleanser",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 1247.62,
+        "url": "http://example.com/flipkart/cetaphil-velvet-gentle-skin-cleanser",
+        "rating": 4.1,
+        "review": "A great Gentle Skin Cleanser from Cetaphil."
+      },
+      {
+        "site": "Purplle",
+        "price": 1157.09,
+        "url": "http://example.com/purplle/cetaphil-velvet-gentle-skin-cleanser",
+        "rating": 4.5,
+        "review": "A great Gentle Skin Cleanser from Cetaphil."
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Cetaphil HD Moisturizing Lotion",
+    "brand": "Cetaphil",
+    "description": "A high-quality Moisturizing Lotion from Cetaphil to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Moisturizing+Lotion",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 6828.47,
+        "url": "http://example.com/purplle/cetaphil-hd-moisturizing-lotion",
+        "rating": 4.8,
+        "review": "A great Moisturizing Lotion from Cetaphil."
+      },
+      {
+        "site": "Nykaa",
+        "price": 6996.63,
+        "url": "http://example.com/nykaa/cetaphil-hd-moisturizing-lotion",
+        "rating": 4.1,
+        "review": "A great Moisturizing Lotion from Cetaphil."
+      },
+      {
+        "site": "Flipkart",
+        "price": 6969.01,
+        "url": "http://example.com/flipkart/cetaphil-hd-moisturizing-lotion",
+        "rating": 4.4,
+        "review": "A great Moisturizing Lotion from Cetaphil."
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Cetaphil 24H Gentle Skin Cleanser",
+    "brand": "Cetaphil",
+    "description": "A high-quality Gentle Skin Cleanser from Cetaphil to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Gentle+Skin+Cleanser",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 2292.28,
+        "url": "http://example.com/amazon/cetaphil-24h-gentle-skin-cleanser",
+        "rating": 4.4,
+        "review": "A great Gentle Skin Cleanser from Cetaphil."
+      },
+      {
+        "site": "Flipkart",
+        "price": 2355.12,
+        "url": "http://example.com/flipkart/cetaphil-24h-gentle-skin-cleanser",
+        "rating": 4.2,
+        "review": "A great Gentle Skin Cleanser from Cetaphil."
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Cetaphil Radiant Gentle Skin Cleanser",
+    "brand": "Cetaphil",
+    "description": "A high-quality Gentle Skin Cleanser from Cetaphil to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Gentle+Skin+Cleanser",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 5601.37,
+        "url": "http://example.com/purplle/cetaphil-radiant-gentle-skin-cleanser",
+        "rating": 4.4,
+        "review": "A great Gentle Skin Cleanser from Cetaphil."
+      },
+      {
+        "site": "Nykaa",
+        "price": 5328.33,
+        "url": "http://example.com/nykaa/cetaphil-radiant-gentle-skin-cleanser",
+        "rating": 4.8,
+        "review": "A great Gentle Skin Cleanser from Cetaphil."
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Cetaphil Radiant Gentle Skin Cleanser",
+    "brand": "Cetaphil",
+    "description": "A high-quality Gentle Skin Cleanser from Cetaphil to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Gentle+Skin+Cleanser",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 6340.12,
+        "url": "http://example.com/flipkart/cetaphil-radiant-gentle-skin-cleanser",
+        "rating": 4.4,
+        "review": "A great Gentle Skin Cleanser from Cetaphil."
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "name": "Cetaphil Intense Moisturizing Lotion",
+    "brand": "Cetaphil",
+    "description": "A high-quality Moisturizing Lotion from Cetaphil to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Moisturizing+Lotion",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 1802.24,
+        "url": "http://example.com/amazon/cetaphil-intense-moisturizing-lotion",
+        "rating": 4.0,
+        "review": "A great Moisturizing Lotion from Cetaphil."
+      },
+      {
+        "site": "Nykaa",
+        "price": 1700.18,
+        "url": "http://example.com/nykaa/cetaphil-intense-moisturizing-lotion",
+        "rating": 4.8,
+        "review": "A great Moisturizing Lotion from Cetaphil."
+      },
+      {
+        "site": "Flipkart",
+        "price": 1782.2,
+        "url": "http://example.com/flipkart/cetaphil-intense-moisturizing-lotion",
+        "rating": 4.4,
+        "review": "A great Moisturizing Lotion from Cetaphil."
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "name": "Cetaphil Ultimate Moisturizing Lotion",
+    "brand": "Cetaphil",
+    "description": "A high-quality Moisturizing Lotion from Cetaphil to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Moisturizing+Lotion",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 2956.44,
+        "url": "http://example.com/amazon/cetaphil-ultimate-moisturizing-lotion",
+        "rating": 5.0,
+        "review": "A great Moisturizing Lotion from Cetaphil."
+      },
+      {
+        "site": "Purplle",
+        "price": 3190.93,
+        "url": "http://example.com/purplle/cetaphil-ultimate-moisturizing-lotion",
+        "rating": 4.4,
+        "review": "A great Moisturizing Lotion from Cetaphil."
+      },
+      {
+        "site": "Nykaa",
+        "price": 3084.11,
+        "url": "http://example.com/nykaa/cetaphil-ultimate-moisturizing-lotion",
+        "rating": 4.6,
+        "review": "A great Moisturizing Lotion from Cetaphil."
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "name": "Clinique Matte Moisture Surge Hydrator",
+    "brand": "Clinique",
+    "description": "A high-quality Moisture Surge Hydrator from Clinique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Moisture+Surge+Hydrator",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 2260.35,
+        "url": "http://example.com/flipkart/clinique-matte-moisture-surge-hydrator",
+        "rating": 5.0,
+        "review": "A great Moisture Surge Hydrator from Clinique."
+      },
+      {
+        "site": "Nykaa",
+        "price": 2340.48,
+        "url": "http://example.com/nykaa/clinique-matte-moisture-surge-hydrator",
+        "rating": 4.4,
+        "review": "A great Moisture Surge Hydrator from Clinique."
+      },
+      {
+        "site": "Purplle",
+        "price": 2283.24,
+        "url": "http://example.com/purplle/clinique-matte-moisture-surge-hydrator",
+        "rating": 3.9,
+        "review": "A great Moisture Surge Hydrator from Clinique."
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "name": "Clinique Luminous Moisture Surge Hydrator",
+    "brand": "Clinique",
+    "description": "A high-quality Moisture Surge Hydrator from Clinique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Moisture+Surge+Hydrator",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 2363.69,
+        "url": "http://example.com/amazon/clinique-luminous-moisture-surge-hydrator",
+        "rating": 4.5,
+        "review": "A great Moisture Surge Hydrator from Clinique."
+      },
+      {
+        "site": "Nykaa",
+        "price": 2465.21,
+        "url": "http://example.com/nykaa/clinique-luminous-moisture-surge-hydrator",
+        "rating": 4.6,
+        "review": "A great Moisture Surge Hydrator from Clinique."
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "name": "Clinique Aqua Moisture Surge Hydrator",
+    "brand": "Clinique",
+    "description": "A high-quality Moisture Surge Hydrator from Clinique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Moisture+Surge+Hydrator",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 1578.14,
+        "url": "http://example.com/purplle/clinique-aqua-moisture-surge-hydrator",
+        "rating": 3.9,
+        "review": "A great Moisture Surge Hydrator from Clinique."
+      },
+      {
+        "site": "Nykaa",
+        "price": 1567.18,
+        "url": "http://example.com/nykaa/clinique-aqua-moisture-surge-hydrator",
+        "rating": 4.3,
+        "review": "A great Moisture Surge Hydrator from Clinique."
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "name": "Clinique Sheer Moisture Surge Hydrator",
+    "brand": "Clinique",
+    "description": "A high-quality Moisture Surge Hydrator from Clinique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Moisture+Surge+Hydrator",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 5703.92,
+        "url": "http://example.com/amazon/clinique-sheer-moisture-surge-hydrator",
+        "rating": 4.2,
+        "review": "A great Moisture Surge Hydrator from Clinique."
+      },
+      {
+        "site": "Purplle",
+        "price": 5953.75,
+        "url": "http://example.com/purplle/clinique-sheer-moisture-surge-hydrator",
+        "rating": 4.0,
+        "review": "A great Moisture Surge Hydrator from Clinique."
+      },
+      {
+        "site": "Nykaa",
+        "price": 6046.63,
+        "url": "http://example.com/nykaa/clinique-sheer-moisture-surge-hydrator",
+        "rating": 3.9,
+        "review": "A great Moisture Surge Hydrator from Clinique."
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "name": "Clinique Radiant Moisture Surge Hydrator",
+    "brand": "Clinique",
+    "description": "A high-quality Moisture Surge Hydrator from Clinique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Moisture+Surge+Hydrator",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 4049.53,
+        "url": "http://example.com/purplle/clinique-radiant-moisture-surge-hydrator",
+        "rating": 5.0,
+        "review": "A great Moisture Surge Hydrator from Clinique."
+      },
+      {
+        "site": "Nykaa",
+        "price": 4182.23,
+        "url": "http://example.com/nykaa/clinique-radiant-moisture-surge-hydrator",
+        "rating": 4.9,
+        "review": "A great Moisture Surge Hydrator from Clinique."
+      },
+      {
+        "site": "Amazon",
+        "price": 4105.91,
+        "url": "http://example.com/amazon/clinique-radiant-moisture-surge-hydrator",
+        "rating": 5.0,
+        "review": "A great Moisture Surge Hydrator from Clinique."
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "name": "Clinique 24H Moisture Surge Hydrator",
+    "brand": "Clinique",
+    "description": "A high-quality Moisture Surge Hydrator from Clinique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Moisture+Surge+Hydrator",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 7810.82,
+        "url": "http://example.com/purplle/clinique-24h-moisture-surge-hydrator",
+        "rating": 4.2,
+        "review": "A great Moisture Surge Hydrator from Clinique."
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "name": "Clinique Matte Moisture Surge Hydrator",
+    "brand": "Clinique",
+    "description": "A high-quality Moisture Surge Hydrator from Clinique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Moisture+Surge+Hydrator",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 1172.69,
+        "url": "http://example.com/flipkart/clinique-matte-moisture-surge-hydrator",
+        "rating": 4.4,
+        "review": "A great Moisture Surge Hydrator from Clinique."
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "name": "Clinique Silk Clarifying Lotion",
+    "brand": "Clinique",
+    "description": "A high-quality Clarifying Lotion from Clinique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Clarifying+Lotion",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 3484.92,
+        "url": "http://example.com/purplle/clinique-silk-clarifying-lotion",
+        "rating": 4.5,
+        "review": "A great Clarifying Lotion from Clinique."
+      },
+      {
+        "site": "Nykaa",
+        "price": 3465.87,
+        "url": "http://example.com/nykaa/clinique-silk-clarifying-lotion",
+        "rating": 4.4,
+        "review": "A great Clarifying Lotion from Clinique."
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Clinique HD Face Wash",
+    "brand": "Clinique",
+    "description": "A high-quality Face Wash from Clinique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Face+Wash",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 2410.31,
+        "url": "http://example.com/purplle/clinique-hd-face-wash",
+        "rating": 3.8,
+        "review": "A great Face Wash from Clinique."
+      },
+      {
+        "site": "Amazon",
+        "price": 2408.33,
+        "url": "http://example.com/amazon/clinique-hd-face-wash",
+        "rating": 4.2,
+        "review": "A great Face Wash from Clinique."
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "name": "Clinique Velvet Face Wash",
+    "brand": "Clinique",
+    "description": "A high-quality Face Wash from Clinique to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Face+Wash",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 2843.92,
+        "url": "http://example.com/purplle/clinique-velvet-face-wash",
+        "rating": 5.0,
+        "review": "A great Face Wash from Clinique."
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "name": "Colorbar Aqua Foundation",
+    "brand": "Colorbar",
+    "description": "A high-quality Foundation from Colorbar to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 6253.54,
+        "url": "http://example.com/purplle/colorbar-aqua-foundation",
+        "rating": 4.9,
+        "review": "A great Foundation from Colorbar."
+      },
+      {
+        "site": "Flipkart",
+        "price": 6753.98,
+        "url": "http://example.com/flipkart/colorbar-aqua-foundation",
+        "rating": 4.9,
+        "review": "A great Foundation from Colorbar."
+      },
+      {
+        "site": "Amazon",
+        "price": 6350.94,
+        "url": "http://example.com/amazon/colorbar-aqua-foundation",
+        "rating": 4.4,
+        "review": "A great Foundation from Colorbar."
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Colorbar Pro Nail Polish",
+    "brand": "Colorbar",
+    "description": "A high-quality Nail Polish from Colorbar to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Nail+Polish",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 6019.56,
+        "url": "http://example.com/purplle/colorbar-pro-nail-polish",
+        "rating": 5.0,
+        "review": "A great Nail Polish from Colorbar."
+      },
+      {
+        "site": "Nykaa",
+        "price": 5826.99,
+        "url": "http://example.com/nykaa/colorbar-pro-nail-polish",
+        "rating": 4.0,
+        "review": "A great Nail Polish from Colorbar."
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "name": "Colorbar HD Nail Polish",
+    "brand": "Colorbar",
+    "description": "A high-quality Nail Polish from Colorbar to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Nail+Polish",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 587.67,
+        "url": "http://example.com/purplle/colorbar-hd-nail-polish",
+        "rating": 4.4,
+        "review": "A great Nail Polish from Colorbar."
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "name": "Colorbar Sheer Foundation",
+    "brand": "Colorbar",
+    "description": "A high-quality Foundation from Colorbar to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 3892.86,
+        "url": "http://example.com/amazon/colorbar-sheer-foundation",
+        "rating": 4.5,
+        "review": "A great Foundation from Colorbar."
+      },
+      {
+        "site": "Flipkart",
+        "price": 3772.99,
+        "url": "http://example.com/flipkart/colorbar-sheer-foundation",
+        "rating": 4.6,
+        "review": "A great Foundation from Colorbar."
+      },
+      {
+        "site": "Nykaa",
+        "price": 3997.63,
+        "url": "http://example.com/nykaa/colorbar-sheer-foundation",
+        "rating": 4.2,
+        "review": "A great Foundation from Colorbar."
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "name": "Colorbar Pro Nail Polish",
+    "brand": "Colorbar",
+    "description": "A high-quality Nail Polish from Colorbar to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Nail+Polish",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 1415.96,
+        "url": "http://example.com/purplle/colorbar-pro-nail-polish",
+        "rating": 4.8,
+        "review": "A great Nail Polish from Colorbar."
+      },
+      {
+        "site": "Amazon",
+        "price": 1466.64,
+        "url": "http://example.com/amazon/colorbar-pro-nail-polish",
+        "rating": 4.2,
+        "review": "A great Nail Polish from Colorbar."
+      },
+      {
+        "site": "Flipkart",
+        "price": 1509.14,
+        "url": "http://example.com/flipkart/colorbar-pro-nail-polish",
+        "rating": 4.7,
+        "review": "A great Nail Polish from Colorbar."
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "name": "Colorbar Velvet Foundation",
+    "brand": "Colorbar",
+    "description": "A high-quality Foundation from Colorbar to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 3068.87,
+        "url": "http://example.com/nykaa/colorbar-velvet-foundation",
+        "rating": 4.3,
+        "review": "A great Foundation from Colorbar."
+      },
+      {
+        "site": "Purplle",
+        "price": 3214.98,
+        "url": "http://example.com/purplle/colorbar-velvet-foundation",
+        "rating": 4.9,
+        "review": "A great Foundation from Colorbar."
+      },
+      {
+        "site": "Flipkart",
+        "price": 3084.67,
+        "url": "http://example.com/flipkart/colorbar-velvet-foundation",
+        "rating": 3.9,
+        "review": "A great Foundation from Colorbar."
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "name": "Colorbar HD Nail Polish",
+    "brand": "Colorbar",
+    "description": "A high-quality Nail Polish from Colorbar to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Nail+Polish",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 2673.9,
+        "url": "http://example.com/nykaa/colorbar-hd-nail-polish",
+        "rating": 3.9,
+        "review": "A great Nail Polish from Colorbar."
+      },
+      {
+        "site": "Flipkart",
+        "price": 2500.33,
+        "url": "http://example.com/flipkart/colorbar-hd-nail-polish",
+        "rating": 4.3,
+        "review": "A great Nail Polish from Colorbar."
+      },
+      {
+        "site": "Amazon",
+        "price": 2589.22,
+        "url": "http://example.com/amazon/colorbar-hd-nail-polish",
+        "rating": 4.1,
+        "review": "A great Nail Polish from Colorbar."
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "name": "Colorbar Matte Nail Polish",
+    "brand": "Colorbar",
+    "description": "A high-quality Nail Polish from Colorbar to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Nail+Polish",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 1252.91,
+        "url": "http://example.com/flipkart/colorbar-matte-nail-polish",
+        "rating": 4.0,
+        "review": "A great Nail Polish from Colorbar."
+      },
+      {
+        "site": "Amazon",
+        "price": 1250.05,
+        "url": "http://example.com/amazon/colorbar-matte-nail-polish",
+        "rating": 4.2,
+        "review": "A great Nail Polish from Colorbar."
+      },
+      {
+        "site": "Nykaa",
+        "price": 1263.76,
+        "url": "http://example.com/nykaa/colorbar-matte-nail-polish",
+        "rating": 4.8,
+        "review": "A great Nail Polish from Colorbar."
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "name": "Colorbar Pro Foundation",
+    "brand": "Colorbar",
+    "description": "A high-quality Foundation from Colorbar to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 6934.82,
+        "url": "http://example.com/nykaa/colorbar-pro-foundation",
+        "rating": 5.0,
+        "review": "A great Foundation from Colorbar."
+      },
+      {
+        "site": "Flipkart",
+        "price": 7095.38,
+        "url": "http://example.com/flipkart/colorbar-pro-foundation",
+        "rating": 4.1,
+        "review": "A great Foundation from Colorbar."
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "name": "Colorbar 24H Foundation",
+    "brand": "Colorbar",
+    "description": "A high-quality Foundation from Colorbar to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Foundation",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 5266.67,
+        "url": "http://example.com/flipkart/colorbar-24h-foundation",
+        "rating": 4.4,
+        "review": "A great Foundation from Colorbar."
+      },
+      {
+        "site": "Nykaa",
+        "price": 5602.02,
+        "url": "http://example.com/nykaa/colorbar-24h-foundation",
+        "rating": 4.1,
+        "review": "A great Foundation from Colorbar."
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "name": "Innisfree Radiant Cleansing Foam",
+    "brand": "Innisfree",
+    "description": "A high-quality Cleansing Foam from Innisfree to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Cleansing+Foam",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 5674.38,
+        "url": "http://example.com/purplle/innisfree-radiant-cleansing-foam",
+        "rating": 4.2,
+        "review": "A great Cleansing Foam from Innisfree."
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Innisfree Matte Volcanic Clay Mask",
+    "brand": "Innisfree",
+    "description": "A high-quality Volcanic Clay Mask from Innisfree to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Volcanic+Clay+Mask",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 6522.09,
+        "url": "http://example.com/amazon/innisfree-matte-volcanic-clay-mask",
+        "rating": 4.9,
+        "review": "A great Volcanic Clay Mask from Innisfree."
+      },
+      {
+        "site": "Purplle",
+        "price": 6677.47,
+        "url": "http://example.com/purplle/innisfree-matte-volcanic-clay-mask",
+        "rating": 4.8,
+        "review": "A great Volcanic Clay Mask from Innisfree."
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Innisfree Silk Volcanic Clay Mask",
+    "brand": "Innisfree",
+    "description": "A high-quality Volcanic Clay Mask from Innisfree to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Volcanic+Clay+Mask",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 6941.77,
+        "url": "http://example.com/flipkart/innisfree-silk-volcanic-clay-mask",
+        "rating": 4.7,
+        "review": "A great Volcanic Clay Mask from Innisfree."
+      },
+      {
+        "site": "Nykaa",
+        "price": 6949.07,
+        "url": "http://example.com/nykaa/innisfree-silk-volcanic-clay-mask",
+        "rating": 4.1,
+        "review": "A great Volcanic Clay Mask from Innisfree."
+      },
+      {
+        "site": "Amazon",
+        "price": 7260.18,
+        "url": "http://example.com/amazon/innisfree-silk-volcanic-clay-mask",
+        "rating": 4.1,
+        "review": "A great Volcanic Clay Mask from Innisfree."
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Innisfree Luminous Volcanic Clay Mask",
+    "brand": "Innisfree",
+    "description": "A high-quality Volcanic Clay Mask from Innisfree to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Volcanic+Clay+Mask",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 774.89,
+        "url": "http://example.com/flipkart/innisfree-luminous-volcanic-clay-mask",
+        "rating": 4.0,
+        "review": "A great Volcanic Clay Mask from Innisfree."
+      },
+      {
+        "site": "Amazon",
+        "price": 803.36,
+        "url": "http://example.com/amazon/innisfree-luminous-volcanic-clay-mask",
+        "rating": 4.8,
+        "review": "A great Volcanic Clay Mask from Innisfree."
+      },
+      {
+        "site": "Nykaa",
+        "price": 815.61,
+        "url": "http://example.com/nykaa/innisfree-luminous-volcanic-clay-mask",
+        "rating": 4.3,
+        "review": "A great Volcanic Clay Mask from Innisfree."
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Innisfree Pro Volcanic Clay Mask",
+    "brand": "Innisfree",
+    "description": "A high-quality Volcanic Clay Mask from Innisfree to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Volcanic+Clay+Mask",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 3655.78,
+        "url": "http://example.com/nykaa/innisfree-pro-volcanic-clay-mask",
+        "rating": 4.4,
+        "review": "A great Volcanic Clay Mask from Innisfree."
+      },
+      {
+        "site": "Flipkart",
+        "price": 3683.39,
+        "url": "http://example.com/flipkart/innisfree-pro-volcanic-clay-mask",
+        "rating": 4.1,
+        "review": "A great Volcanic Clay Mask from Innisfree."
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "name": "Innisfree HD Volcanic Clay Mask",
+    "brand": "Innisfree",
+    "description": "A high-quality Volcanic Clay Mask from Innisfree to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Volcanic+Clay+Mask",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 4072.8,
+        "url": "http://example.com/amazon/innisfree-hd-volcanic-clay-mask",
+        "rating": 4.5,
+        "review": "A great Volcanic Clay Mask from Innisfree."
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "name": "Innisfree Sheer Green Tea Seed Serum",
+    "brand": "Innisfree",
+    "description": "A high-quality Green Tea Seed Serum from Innisfree to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Green+Tea+Seed+Serum",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 6227.6,
+        "url": "http://example.com/nykaa/innisfree-sheer-green-tea-seed-serum",
+        "rating": 4.1,
+        "review": "A great Green Tea Seed Serum from Innisfree."
+      },
+      {
+        "site": "Purplle",
+        "price": 6227.46,
+        "url": "http://example.com/purplle/innisfree-sheer-green-tea-seed-serum",
+        "rating": 4.2,
+        "review": "A great Green Tea Seed Serum from Innisfree."
+      },
+      {
+        "site": "Amazon",
+        "price": 6396.62,
+        "url": "http://example.com/amazon/innisfree-sheer-green-tea-seed-serum",
+        "rating": 4.8,
+        "review": "A great Green Tea Seed Serum from Innisfree."
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "name": "Innisfree Intense Volcanic Clay Mask",
+    "brand": "Innisfree",
+    "description": "A high-quality Volcanic Clay Mask from Innisfree to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Volcanic+Clay+Mask",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 6082.99,
+        "url": "http://example.com/amazon/innisfree-intense-volcanic-clay-mask",
+        "rating": 4.0,
+        "review": "A great Volcanic Clay Mask from Innisfree."
+      },
+      {
+        "site": "Flipkart",
+        "price": 5914.19,
+        "url": "http://example.com/flipkart/innisfree-intense-volcanic-clay-mask",
+        "rating": 4.8,
+        "review": "A great Volcanic Clay Mask from Innisfree."
+      },
+      {
+        "site": "Purplle",
+        "price": 6100.4,
+        "url": "http://example.com/purplle/innisfree-intense-volcanic-clay-mask",
+        "rating": 4.3,
+        "review": "A great Volcanic Clay Mask from Innisfree."
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "name": "Innisfree Radiant Volcanic Clay Mask",
+    "brand": "Innisfree",
+    "description": "A high-quality Volcanic Clay Mask from Innisfree to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Volcanic+Clay+Mask",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 1522.25,
+        "url": "http://example.com/amazon/innisfree-radiant-volcanic-clay-mask",
+        "rating": 4.1,
+        "review": "A great Volcanic Clay Mask from Innisfree."
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "name": "Innisfree Aqua Green Tea Seed Serum",
+    "brand": "Innisfree",
+    "description": "A high-quality Green Tea Seed Serum from Innisfree to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Green+Tea+Seed+Serum",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 4427.25,
+        "url": "http://example.com/purplle/innisfree-aqua-green-tea-seed-serum",
+        "rating": 4.8,
+        "review": "A great Green Tea Seed Serum from Innisfree."
+      },
+      {
+        "site": "Nykaa",
+        "price": 4522.62,
+        "url": "http://example.com/nykaa/innisfree-aqua-green-tea-seed-serum",
+        "rating": 3.9,
+        "review": "A great Green Tea Seed Serum from Innisfree."
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "name": "L'Oreal Matte Shampoo",
+    "brand": "L'Oreal",
+    "description": "A high-quality Shampoo from L'Oreal to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Shampoo",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 2248.95,
+        "url": "http://example.com/purplle/l'oreal-matte-shampoo",
+        "rating": 4.9,
+        "review": "A great Shampoo from L'Oreal."
+      },
+      {
+        "site": "Amazon",
+        "price": 2344.6,
+        "url": "http://example.com/amazon/l'oreal-matte-shampoo",
+        "rating": 4.8,
+        "review": "A great Shampoo from L'Oreal."
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "name": "L'Oreal Matte Revitalift Serum",
+    "brand": "L'Oreal",
+    "description": "A high-quality Revitalift Serum from L'Oreal to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Revitalift+Serum",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 1941.95,
+        "url": "http://example.com/nykaa/l'oreal-matte-revitalift-serum",
+        "rating": 4.3,
+        "review": "A great Revitalift Serum from L'Oreal."
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "name": "L'Oreal Luminous Lash Paradise Mascara",
+    "brand": "L'Oreal",
+    "description": "A high-quality Lash Paradise Mascara from L'Oreal to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lash+Paradise+Mascara",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 6517.89,
+        "url": "http://example.com/purplle/l'oreal-luminous-lash-paradise-mascara",
+        "rating": 4.6,
+        "review": "A great Lash Paradise Mascara from L'Oreal."
+      },
+      {
+        "site": "Nykaa",
+        "price": 6732.5,
+        "url": "http://example.com/nykaa/l'oreal-luminous-lash-paradise-mascara",
+        "rating": 4.9,
+        "review": "A great Lash Paradise Mascara from L'Oreal."
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "name": "L'Oreal Velvet Lash Paradise Mascara",
+    "brand": "L'Oreal",
+    "description": "A high-quality Lash Paradise Mascara from L'Oreal to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lash+Paradise+Mascara",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 1250.59,
+        "url": "http://example.com/nykaa/l'oreal-velvet-lash-paradise-mascara",
+        "rating": 4.4,
+        "review": "A great Lash Paradise Mascara from L'Oreal."
+      },
+      {
+        "site": "Purplle",
+        "price": 1251.96,
+        "url": "http://example.com/purplle/l'oreal-velvet-lash-paradise-mascara",
+        "rating": 3.9,
+        "review": "A great Lash Paradise Mascara from L'Oreal."
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "name": "L'Oreal Silk Infallible Foundation",
+    "brand": "L'Oreal",
+    "description": "A high-quality Infallible Foundation from L'Oreal to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Infallible+Foundation",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 5727.35,
+        "url": "http://example.com/purplle/l'oreal-silk-infallible-foundation",
+        "rating": 3.9,
+        "review": "A great Infallible Foundation from L'Oreal."
+      },
+      {
+        "site": "Amazon",
+        "price": 5419.48,
+        "url": "http://example.com/amazon/l'oreal-silk-infallible-foundation",
+        "rating": 4.7,
+        "review": "A great Infallible Foundation from L'Oreal."
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "name": "L'Oreal 24H Lash Paradise Mascara",
+    "brand": "L'Oreal",
+    "description": "A high-quality Lash Paradise Mascara from L'Oreal to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lash+Paradise+Mascara",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 7291.39,
+        "url": "http://example.com/flipkart/l'oreal-24h-lash-paradise-mascara",
+        "rating": 4.1,
+        "review": "A great Lash Paradise Mascara from L'Oreal."
+      },
+      {
+        "site": "Amazon",
+        "price": 7317.39,
+        "url": "http://example.com/amazon/l'oreal-24h-lash-paradise-mascara",
+        "rating": 3.9,
+        "review": "A great Lash Paradise Mascara from L'Oreal."
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "name": "L'Oreal Sheer Revitalift Serum",
+    "brand": "L'Oreal",
+    "description": "A high-quality Revitalift Serum from L'Oreal to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Revitalift+Serum",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 4559.6,
+        "url": "http://example.com/nykaa/l'oreal-sheer-revitalift-serum",
+        "rating": 4.3,
+        "review": "A great Revitalift Serum from L'Oreal."
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "name": "L'Oreal Radiant Infallible Foundation",
+    "brand": "L'Oreal",
+    "description": "A high-quality Infallible Foundation from L'Oreal to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Infallible+Foundation",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 813.67,
+        "url": "http://example.com/purplle/l'oreal-radiant-infallible-foundation",
+        "rating": 4.6,
+        "review": "A great Infallible Foundation from L'Oreal."
+      },
+      {
+        "site": "Nykaa",
+        "price": 773.53,
+        "url": "http://example.com/nykaa/l'oreal-radiant-infallible-foundation",
+        "rating": 4.0,
+        "review": "A great Infallible Foundation from L'Oreal."
+      },
+      {
+        "site": "Flipkart",
+        "price": 830.47,
+        "url": "http://example.com/flipkart/l'oreal-radiant-infallible-foundation",
+        "rating": 4.1,
+        "review": "A great Infallible Foundation from L'Oreal."
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "name": "L'Oreal Aqua Hair Serum",
+    "brand": "L'Oreal",
+    "description": "A high-quality Hair Serum from L'Oreal to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Hair+Serum",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 4161.03,
+        "url": "http://example.com/purplle/l'oreal-aqua-hair-serum",
+        "rating": 4.1,
+        "review": "A great Hair Serum from L'Oreal."
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "name": "L'Oreal HD Infallible Foundation",
+    "brand": "L'Oreal",
+    "description": "A high-quality Infallible Foundation from L'Oreal to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Infallible+Foundation",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 763.77,
+        "url": "http://example.com/nykaa/l'oreal-hd-infallible-foundation",
+        "rating": 4.3,
+        "review": "A great Infallible Foundation from L'Oreal."
+      },
+      {
+        "site": "Purplle",
+        "price": 750.52,
+        "url": "http://example.com/purplle/l'oreal-hd-infallible-foundation",
+        "rating": 4.5,
+        "review": "A great Infallible Foundation from L'Oreal."
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "name": "Huda Beauty Matte Eyeshadow Palette",
+    "brand": "Huda Beauty",
+    "description": "A high-quality Eyeshadow Palette from Huda Beauty to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eyeshadow+Palette",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 4287.93,
+        "url": "http://example.com/nykaa/huda-beauty-matte-eyeshadow-palette",
+        "rating": 4.2,
+        "review": "A great Eyeshadow Palette from Huda Beauty."
+      },
+      {
+        "site": "Flipkart",
+        "price": 3964.91,
+        "url": "http://example.com/flipkart/huda-beauty-matte-eyeshadow-palette",
+        "rating": 4.6,
+        "review": "A great Eyeshadow Palette from Huda Beauty."
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "name": "Huda Beauty Radiant Liquid Matte Lipstick",
+    "brand": "Huda Beauty",
+    "description": "A high-quality Liquid Matte Lipstick from Huda Beauty to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Liquid+Matte+Lipstick",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 1388.92,
+        "url": "http://example.com/nykaa/huda-beauty-radiant-liquid-matte-lipstick",
+        "rating": 4.5,
+        "review": "A great Liquid Matte Lipstick from Huda Beauty."
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "name": "Huda Beauty Matte Liquid Matte Lipstick",
+    "brand": "Huda Beauty",
+    "description": "A high-quality Liquid Matte Lipstick from Huda Beauty to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Liquid+Matte+Lipstick",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 3680.59,
+        "url": "http://example.com/amazon/huda-beauty-matte-liquid-matte-lipstick",
+        "rating": 3.9,
+        "review": "A great Liquid Matte Lipstick from Huda Beauty."
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "name": "Huda Beauty HD Eyeshadow Palette",
+    "brand": "Huda Beauty",
+    "description": "A high-quality Eyeshadow Palette from Huda Beauty to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eyeshadow+Palette",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 3159.31,
+        "url": "http://example.com/purplle/huda-beauty-hd-eyeshadow-palette",
+        "rating": 4.0,
+        "review": "A great Eyeshadow Palette from Huda Beauty."
+      },
+      {
+        "site": "Flipkart",
+        "price": 3124.06,
+        "url": "http://example.com/flipkart/huda-beauty-hd-eyeshadow-palette",
+        "rating": 4.0,
+        "review": "A great Eyeshadow Palette from Huda Beauty."
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "name": "Huda Beauty Velvet #FauxFilter Foundation",
+    "brand": "Huda Beauty",
+    "description": "A high-quality #FauxFilter Foundation from Huda Beauty to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=#FauxFilter+Foundation",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 1532.1,
+        "url": "http://example.com/purplle/huda-beauty-velvet-#fauxfilter-foundation",
+        "rating": 4.3,
+        "review": "A great #FauxFilter Foundation from Huda Beauty."
+      },
+      {
+        "site": "Nykaa",
+        "price": 1563.33,
+        "url": "http://example.com/nykaa/huda-beauty-velvet-#fauxfilter-foundation",
+        "rating": 4.9,
+        "review": "A great #FauxFilter Foundation from Huda Beauty."
+      },
+      {
+        "site": "Amazon",
+        "price": 1475.5,
+        "url": "http://example.com/amazon/huda-beauty-velvet-#fauxfilter-foundation",
+        "rating": 4.5,
+        "review": "A great #FauxFilter Foundation from Huda Beauty."
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "name": "Huda Beauty HD Eyeshadow Palette",
+    "brand": "Huda Beauty",
+    "description": "A high-quality Eyeshadow Palette from Huda Beauty to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eyeshadow+Palette",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 4216.0,
+        "url": "http://example.com/amazon/huda-beauty-hd-eyeshadow-palette",
+        "rating": 4.4,
+        "review": "A great Eyeshadow Palette from Huda Beauty."
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "name": "Huda Beauty Sheer Liquid Matte Lipstick",
+    "brand": "Huda Beauty",
+    "description": "A high-quality Liquid Matte Lipstick from Huda Beauty to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Liquid+Matte+Lipstick",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 6709.43,
+        "url": "http://example.com/amazon/huda-beauty-sheer-liquid-matte-lipstick",
+        "rating": 4.5,
+        "review": "A great Liquid Matte Lipstick from Huda Beauty."
+      },
+      {
+        "site": "Purplle",
+        "price": 7012.32,
+        "url": "http://example.com/purplle/huda-beauty-sheer-liquid-matte-lipstick",
+        "rating": 5.0,
+        "review": "A great Liquid Matte Lipstick from Huda Beauty."
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "name": "Huda Beauty Ultimate Liquid Matte Lipstick",
+    "brand": "Huda Beauty",
+    "description": "A high-quality Liquid Matte Lipstick from Huda Beauty to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Liquid+Matte+Lipstick",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 2320.35,
+        "url": "http://example.com/amazon/huda-beauty-ultimate-liquid-matte-lipstick",
+        "rating": 5.0,
+        "review": "A great Liquid Matte Lipstick from Huda Beauty."
+      },
+      {
+        "site": "Purplle",
+        "price": 2296.54,
+        "url": "http://example.com/purplle/huda-beauty-ultimate-liquid-matte-lipstick",
+        "rating": 3.9,
+        "review": "A great Liquid Matte Lipstick from Huda Beauty."
+      },
+      {
+        "site": "Nykaa",
+        "price": 2469.39,
+        "url": "http://example.com/nykaa/huda-beauty-ultimate-liquid-matte-lipstick",
+        "rating": 4.3,
+        "review": "A great Liquid Matte Lipstick from Huda Beauty."
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "name": "Huda Beauty Radiant Liquid Matte Lipstick",
+    "brand": "Huda Beauty",
+    "description": "A high-quality Liquid Matte Lipstick from Huda Beauty to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Liquid+Matte+Lipstick",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 3533.94,
+        "url": "http://example.com/amazon/huda-beauty-radiant-liquid-matte-lipstick",
+        "rating": 4.8,
+        "review": "A great Liquid Matte Lipstick from Huda Beauty."
+      },
+      {
+        "site": "Flipkart",
+        "price": 3654.7,
+        "url": "http://example.com/flipkart/huda-beauty-radiant-liquid-matte-lipstick",
+        "rating": 4.3,
+        "review": "A great Liquid Matte Lipstick from Huda Beauty."
+      },
+      {
+        "site": "Purplle",
+        "price": 3340.32,
+        "url": "http://example.com/purplle/huda-beauty-radiant-liquid-matte-lipstick",
+        "rating": 4.2,
+        "review": "A great Liquid Matte Lipstick from Huda Beauty."
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "name": "Huda Beauty Luminous Eyeshadow Palette",
+    "brand": "Huda Beauty",
+    "description": "A high-quality Eyeshadow Palette from Huda Beauty to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eyeshadow+Palette",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 1162.61,
+        "url": "http://example.com/amazon/huda-beauty-luminous-eyeshadow-palette",
+        "rating": 4.6,
+        "review": "A great Eyeshadow Palette from Huda Beauty."
+      },
+      {
+        "site": "Nykaa",
+        "price": 1188.21,
+        "url": "http://example.com/nykaa/huda-beauty-luminous-eyeshadow-palette",
+        "rating": 4.8,
+        "review": "A great Eyeshadow Palette from Huda Beauty."
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "name": "Bobbi Brown Matte Long-Wear Gel Eyeliner",
+    "brand": "Bobbi Brown",
+    "description": "A high-quality Long-Wear Gel Eyeliner from Bobbi Brown to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Long-Wear+Gel+Eyeliner",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 1481.24,
+        "url": "http://example.com/amazon/bobbi-brown-matte-long-wear-gel-eyeliner",
+        "rating": 4.7,
+        "review": "A great Long-Wear Gel Eyeliner from Bobbi Brown."
+      },
+      {
+        "site": "Nykaa",
+        "price": 1503.38,
+        "url": "http://example.com/nykaa/bobbi-brown-matte-long-wear-gel-eyeliner",
+        "rating": 4.8,
+        "review": "A great Long-Wear Gel Eyeliner from Bobbi Brown."
+      },
+      {
+        "site": "Purplle",
+        "price": 1438.27,
+        "url": "http://example.com/purplle/bobbi-brown-matte-long-wear-gel-eyeliner",
+        "rating": 4.4,
+        "review": "A great Long-Wear Gel Eyeliner from Bobbi Brown."
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "name": "Bobbi Brown Luminous Vitamin Enriched Face Base",
+    "brand": "Bobbi Brown",
+    "description": "A high-quality Vitamin Enriched Face Base from Bobbi Brown to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Vitamin+Enriched+Face+Base",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 3470.73,
+        "url": "http://example.com/flipkart/bobbi-brown-luminous-vitamin-enriched-face-base",
+        "rating": 4.4,
+        "review": "A great Vitamin Enriched Face Base from Bobbi Brown."
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "name": "Bobbi Brown Radiant Long-Wear Gel Eyeliner",
+    "brand": "Bobbi Brown",
+    "description": "A high-quality Long-Wear Gel Eyeliner from Bobbi Brown to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Long-Wear+Gel+Eyeliner",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 6987.31,
+        "url": "http://example.com/nykaa/bobbi-brown-radiant-long-wear-gel-eyeliner",
+        "rating": 4.6,
+        "review": "A great Long-Wear Gel Eyeliner from Bobbi Brown."
+      },
+      {
+        "site": "Amazon",
+        "price": 6876.15,
+        "url": "http://example.com/amazon/bobbi-brown-radiant-long-wear-gel-eyeliner",
+        "rating": 4.2,
+        "review": "A great Long-Wear Gel Eyeliner from Bobbi Brown."
+      },
+      {
+        "site": "Purplle",
+        "price": 6825.92,
+        "url": "http://example.com/purplle/bobbi-brown-radiant-long-wear-gel-eyeliner",
+        "rating": 4.8,
+        "review": "A great Long-Wear Gel Eyeliner from Bobbi Brown."
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "name": "Bobbi Brown Ultimate Lipstick",
+    "brand": "Bobbi Brown",
+    "description": "A high-quality Lipstick from Bobbi Brown to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lipstick",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 6134.56,
+        "url": "http://example.com/nykaa/bobbi-brown-ultimate-lipstick",
+        "rating": 4.0,
+        "review": "A great Lipstick from Bobbi Brown."
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "name": "Bobbi Brown Velvet Vitamin Enriched Face Base",
+    "brand": "Bobbi Brown",
+    "description": "A high-quality Vitamin Enriched Face Base from Bobbi Brown to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Vitamin+Enriched+Face+Base",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 1970.0,
+        "url": "http://example.com/nykaa/bobbi-brown-velvet-vitamin-enriched-face-base",
+        "rating": 4.4,
+        "review": "A great Vitamin Enriched Face Base from Bobbi Brown."
+      },
+      {
+        "site": "Purplle",
+        "price": 1943.23,
+        "url": "http://example.com/purplle/bobbi-brown-velvet-vitamin-enriched-face-base",
+        "rating": 5.0,
+        "review": "A great Vitamin Enriched Face Base from Bobbi Brown."
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "name": "Bobbi Brown Radiant Vitamin Enriched Face Base",
+    "brand": "Bobbi Brown",
+    "description": "A high-quality Vitamin Enriched Face Base from Bobbi Brown to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Vitamin+Enriched+Face+Base",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 1385.87,
+        "url": "http://example.com/amazon/bobbi-brown-radiant-vitamin-enriched-face-base",
+        "rating": 4.7,
+        "review": "A great Vitamin Enriched Face Base from Bobbi Brown."
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "name": "Bobbi Brown Luminous Lipstick",
+    "brand": "Bobbi Brown",
+    "description": "A high-quality Lipstick from Bobbi Brown to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lipstick",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 2273.85,
+        "url": "http://example.com/flipkart/bobbi-brown-luminous-lipstick",
+        "rating": 4.2,
+        "review": "A great Lipstick from Bobbi Brown."
+      },
+      {
+        "site": "Amazon",
+        "price": 2332.05,
+        "url": "http://example.com/amazon/bobbi-brown-luminous-lipstick",
+        "rating": 4.1,
+        "review": "A great Lipstick from Bobbi Brown."
+      },
+      {
+        "site": "Purplle",
+        "price": 2368.96,
+        "url": "http://example.com/purplle/bobbi-brown-luminous-lipstick",
+        "rating": 4.2,
+        "review": "A great Lipstick from Bobbi Brown."
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "name": "Bobbi Brown Ultimate Vitamin Enriched Face Base",
+    "brand": "Bobbi Brown",
+    "description": "A high-quality Vitamin Enriched Face Base from Bobbi Brown to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Vitamin+Enriched+Face+Base",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 717.98,
+        "url": "http://example.com/amazon/bobbi-brown-ultimate-vitamin-enriched-face-base",
+        "rating": 4.9,
+        "review": "A great Vitamin Enriched Face Base from Bobbi Brown."
+      },
+      {
+        "site": "Purplle",
+        "price": 684.1,
+        "url": "http://example.com/purplle/bobbi-brown-ultimate-vitamin-enriched-face-base",
+        "rating": 4.1,
+        "review": "A great Vitamin Enriched Face Base from Bobbi Brown."
+      },
+      {
+        "site": "Flipkart",
+        "price": 709.75,
+        "url": "http://example.com/flipkart/bobbi-brown-ultimate-vitamin-enriched-face-base",
+        "rating": 4.3,
+        "review": "A great Vitamin Enriched Face Base from Bobbi Brown."
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "name": "Bobbi Brown Ultimate Lipstick",
+    "brand": "Bobbi Brown",
+    "description": "A high-quality Lipstick from Bobbi Brown to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lipstick",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 7359.2,
+        "url": "http://example.com/amazon/bobbi-brown-ultimate-lipstick",
+        "rating": 3.8,
+        "review": "A great Lipstick from Bobbi Brown."
+      },
+      {
+        "site": "Nykaa",
+        "price": 7596.43,
+        "url": "http://example.com/nykaa/bobbi-brown-ultimate-lipstick",
+        "rating": 4.1,
+        "review": "A great Lipstick from Bobbi Brown."
+      },
+      {
+        "site": "Purplle",
+        "price": 7049.79,
+        "url": "http://example.com/purplle/bobbi-brown-ultimate-lipstick",
+        "rating": 4.4,
+        "review": "A great Lipstick from Bobbi Brown."
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "name": "Bobbi Brown Sheer Lipstick",
+    "brand": "Bobbi Brown",
+    "description": "A high-quality Lipstick from Bobbi Brown to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lipstick",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 5301.09,
+        "url": "http://example.com/nykaa/bobbi-brown-sheer-lipstick",
+        "rating": 4.5,
+        "review": "A great Lipstick from Bobbi Brown."
+      },
+      {
+        "site": "Purplle",
+        "price": 5267.94,
+        "url": "http://example.com/purplle/bobbi-brown-sheer-lipstick",
+        "rating": 4.5,
+        "review": "A great Lipstick from Bobbi Brown."
+      },
+      {
+        "site": "Amazon",
+        "price": 5171.57,
+        "url": "http://example.com/amazon/bobbi-brown-sheer-lipstick",
+        "rating": 4.2,
+        "review": "A great Lipstick from Bobbi Brown."
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "name": "Calvin Klein Ultimate CK One Eau de Toilette",
+    "brand": "Calvin Klein",
+    "description": "A high-quality CK One Eau de Toilette from Calvin Klein to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=CK+One+Eau+de+Toilette",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 5165.68,
+        "url": "http://example.com/purplle/calvin-klein-ultimate-ck-one-eau-de-toilette",
+        "rating": 4.1,
+        "review": "A great CK One Eau de Toilette from Calvin Klein."
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "name": "Calvin Klein Silk CK One Eau de Toilette",
+    "brand": "Calvin Klein",
+    "description": "A high-quality CK One Eau de Toilette from Calvin Klein to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=CK+One+Eau+de+Toilette",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 4898.23,
+        "url": "http://example.com/amazon/calvin-klein-silk-ck-one-eau-de-toilette",
+        "rating": 5.0,
+        "review": "A great CK One Eau de Toilette from Calvin Klein."
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "name": "Calvin Klein Aqua CK One Eau de Toilette",
+    "brand": "Calvin Klein",
+    "description": "A high-quality CK One Eau de Toilette from Calvin Klein to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=CK+One+Eau+de+Toilette",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 3708.19,
+        "url": "http://example.com/amazon/calvin-klein-aqua-ck-one-eau-de-toilette",
+        "rating": 4.7,
+        "review": "A great CK One Eau de Toilette from Calvin Klein."
+      },
+      {
+        "site": "Purplle",
+        "price": 3889.05,
+        "url": "http://example.com/purplle/calvin-klein-aqua-ck-one-eau-de-toilette",
+        "rating": 4.1,
+        "review": "A great CK One Eau de Toilette from Calvin Klein."
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "name": "Calvin Klein Intense Eternity Eau de Parfum",
+    "brand": "Calvin Klein",
+    "description": "A high-quality Eternity Eau de Parfum from Calvin Klein to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eternity+Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 1480.26,
+        "url": "http://example.com/nykaa/calvin-klein-intense-eternity-eau-de-parfum",
+        "rating": 4.9,
+        "review": "A great Eternity Eau de Parfum from Calvin Klein."
+      },
+      {
+        "site": "Amazon",
+        "price": 1391.54,
+        "url": "http://example.com/amazon/calvin-klein-intense-eternity-eau-de-parfum",
+        "rating": 4.7,
+        "review": "A great Eternity Eau de Parfum from Calvin Klein."
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "name": "Calvin Klein Radiant Eternity Eau de Parfum",
+    "brand": "Calvin Klein",
+    "description": "A high-quality Eternity Eau de Parfum from Calvin Klein to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eternity+Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 6024.87,
+        "url": "http://example.com/flipkart/calvin-klein-radiant-eternity-eau-de-parfum",
+        "rating": 5.0,
+        "review": "A great Eternity Eau de Parfum from Calvin Klein."
+      },
+      {
+        "site": "Nykaa",
+        "price": 5584.98,
+        "url": "http://example.com/nykaa/calvin-klein-radiant-eternity-eau-de-parfum",
+        "rating": 4.0,
+        "review": "A great Eternity Eau de Parfum from Calvin Klein."
+      },
+      {
+        "site": "Amazon",
+        "price": 5623.69,
+        "url": "http://example.com/amazon/calvin-klein-radiant-eternity-eau-de-parfum",
+        "rating": 4.0,
+        "review": "A great Eternity Eau de Parfum from Calvin Klein."
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "name": "Calvin Klein 24H CK One Eau de Toilette",
+    "brand": "Calvin Klein",
+    "description": "A high-quality CK One Eau de Toilette from Calvin Klein to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=CK+One+Eau+de+Toilette",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 5794.85,
+        "url": "http://example.com/flipkart/calvin-klein-24h-ck-one-eau-de-toilette",
+        "rating": 4.1,
+        "review": "A great CK One Eau de Toilette from Calvin Klein."
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "name": "Calvin Klein Radiant CK One Eau de Toilette",
+    "brand": "Calvin Klein",
+    "description": "A high-quality CK One Eau de Toilette from Calvin Klein to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=CK+One+Eau+de+Toilette",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 4351.6,
+        "url": "http://example.com/purplle/calvin-klein-radiant-ck-one-eau-de-toilette",
+        "rating": 4.4,
+        "review": "A great CK One Eau de Toilette from Calvin Klein."
+      },
+      {
+        "site": "Nykaa",
+        "price": 4133.19,
+        "url": "http://example.com/nykaa/calvin-klein-radiant-ck-one-eau-de-toilette",
+        "rating": 4.1,
+        "review": "A great CK One Eau de Toilette from Calvin Klein."
+      },
+      {
+        "site": "Flipkart",
+        "price": 4221.04,
+        "url": "http://example.com/flipkart/calvin-klein-radiant-ck-one-eau-de-toilette",
+        "rating": 3.8,
+        "review": "A great CK One Eau de Toilette from Calvin Klein."
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "name": "Calvin Klein Sheer Eternity Eau de Parfum",
+    "brand": "Calvin Klein",
+    "description": "A high-quality Eternity Eau de Parfum from Calvin Klein to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eternity+Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 4552.06,
+        "url": "http://example.com/amazon/calvin-klein-sheer-eternity-eau-de-parfum",
+        "rating": 4.9,
+        "review": "A great Eternity Eau de Parfum from Calvin Klein."
+      },
+      {
+        "site": "Purplle",
+        "price": 4547.71,
+        "url": "http://example.com/purplle/calvin-klein-sheer-eternity-eau-de-parfum",
+        "rating": 4.0,
+        "review": "A great Eternity Eau de Parfum from Calvin Klein."
+      },
+      {
+        "site": "Flipkart",
+        "price": 4280.75,
+        "url": "http://example.com/flipkart/calvin-klein-sheer-eternity-eau-de-parfum",
+        "rating": 4.2,
+        "review": "A great Eternity Eau de Parfum from Calvin Klein."
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "name": "Calvin Klein Pro Eternity Eau de Parfum",
+    "brand": "Calvin Klein",
+    "description": "A high-quality Eternity Eau de Parfum from Calvin Klein to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eternity+Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 2402.49,
+        "url": "http://example.com/amazon/calvin-klein-pro-eternity-eau-de-parfum",
+        "rating": 4.5,
+        "review": "A great Eternity Eau de Parfum from Calvin Klein."
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "name": "Calvin Klein 24H Eternity Eau de Parfum",
+    "brand": "Calvin Klein",
+    "description": "A high-quality Eternity Eau de Parfum from Calvin Klein to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Eternity+Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 6714.87,
+        "url": "http://example.com/amazon/calvin-klein-24h-eternity-eau-de-parfum",
+        "rating": 3.9,
+        "review": "A great Eternity Eau de Parfum from Calvin Klein."
+      },
+      {
+        "site": "Purplle",
+        "price": 7197.95,
+        "url": "http://example.com/purplle/calvin-klein-24h-eternity-eau-de-parfum",
+        "rating": 4.0,
+        "review": "A great Eternity Eau de Parfum from Calvin Klein."
+      },
+      {
+        "site": "Flipkart",
+        "price": 6788.95,
+        "url": "http://example.com/flipkart/calvin-klein-24h-eternity-eau-de-parfum",
+        "rating": 4.0,
+        "review": "A great Eternity Eau de Parfum from Calvin Klein."
+      }
+    ]
+  },
+  {
+    "id": 151,
+    "name": "Estee Lauder Aqua Advanced Night Repair Serum",
+    "brand": "Estee Lauder",
+    "description": "A high-quality Advanced Night Repair Serum from Estee Lauder to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Advanced+Night+Repair+Serum",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 6697.43,
+        "url": "http://example.com/flipkart/estee-lauder-aqua-advanced-night-repair-serum",
+        "rating": 4.3,
+        "review": "A great Advanced Night Repair Serum from Estee Lauder."
+      },
+      {
+        "site": "Amazon",
+        "price": 6770.85,
+        "url": "http://example.com/amazon/estee-lauder-aqua-advanced-night-repair-serum",
+        "rating": 3.9,
+        "review": "A great Advanced Night Repair Serum from Estee Lauder."
+      },
+      {
+        "site": "Nykaa",
+        "price": 6797.09,
+        "url": "http://example.com/nykaa/estee-lauder-aqua-advanced-night-repair-serum",
+        "rating": 4.4,
+        "review": "A great Advanced Night Repair Serum from Estee Lauder."
+      }
+    ]
+  },
+  {
+    "id": 152,
+    "name": "Estee Lauder Luminous Advanced Night Repair Serum",
+    "brand": "Estee Lauder",
+    "description": "A high-quality Advanced Night Repair Serum from Estee Lauder to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Advanced+Night+Repair+Serum",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 582.97,
+        "url": "http://example.com/nykaa/estee-lauder-luminous-advanced-night-repair-serum",
+        "rating": 4.8,
+        "review": "A great Advanced Night Repair Serum from Estee Lauder."
+      },
+      {
+        "site": "Amazon",
+        "price": 571.75,
+        "url": "http://example.com/amazon/estee-lauder-luminous-advanced-night-repair-serum",
+        "rating": 4.4,
+        "review": "A great Advanced Night Repair Serum from Estee Lauder."
+      }
+    ]
+  },
+  {
+    "id": 153,
+    "name": "Estee Lauder Sheer Double Wear Foundation",
+    "brand": "Estee Lauder",
+    "description": "A high-quality Double Wear Foundation from Estee Lauder to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Double+Wear+Foundation",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 3994.95,
+        "url": "http://example.com/amazon/estee-lauder-sheer-double-wear-foundation",
+        "rating": 4.1,
+        "review": "A great Double Wear Foundation from Estee Lauder."
+      }
+    ]
+  },
+  {
+    "id": 154,
+    "name": "Estee Lauder Luminous Double Wear Foundation",
+    "brand": "Estee Lauder",
+    "description": "A high-quality Double Wear Foundation from Estee Lauder to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Double+Wear+Foundation",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 4807.33,
+        "url": "http://example.com/purplle/estee-lauder-luminous-double-wear-foundation",
+        "rating": 4.8,
+        "review": "A great Double Wear Foundation from Estee Lauder."
+      }
+    ]
+  },
+  {
+    "id": 155,
+    "name": "Estee Lauder Sheer Double Wear Foundation",
+    "brand": "Estee Lauder",
+    "description": "A high-quality Double Wear Foundation from Estee Lauder to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Double+Wear+Foundation",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 6127.05,
+        "url": "http://example.com/flipkart/estee-lauder-sheer-double-wear-foundation",
+        "rating": 4.4,
+        "review": "A great Double Wear Foundation from Estee Lauder."
+      }
+    ]
+  },
+  {
+    "id": 156,
+    "name": "Estee Lauder HD Double Wear Foundation",
+    "brand": "Estee Lauder",
+    "description": "A high-quality Double Wear Foundation from Estee Lauder to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Double+Wear+Foundation",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 4439.08,
+        "url": "http://example.com/amazon/estee-lauder-hd-double-wear-foundation",
+        "rating": 4.0,
+        "review": "A great Double Wear Foundation from Estee Lauder."
+      },
+      {
+        "site": "Purplle",
+        "price": 4393.96,
+        "url": "http://example.com/purplle/estee-lauder-hd-double-wear-foundation",
+        "rating": 3.8,
+        "review": "A great Double Wear Foundation from Estee Lauder."
+      },
+      {
+        "site": "Flipkart",
+        "price": 4244.6,
+        "url": "http://example.com/flipkart/estee-lauder-hd-double-wear-foundation",
+        "rating": 4.6,
+        "review": "A great Double Wear Foundation from Estee Lauder."
+      }
+    ]
+  },
+  {
+    "id": 157,
+    "name": "Estee Lauder Velvet Double Wear Foundation",
+    "brand": "Estee Lauder",
+    "description": "A high-quality Double Wear Foundation from Estee Lauder to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Double+Wear+Foundation",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 6095.01,
+        "url": "http://example.com/flipkart/estee-lauder-velvet-double-wear-foundation",
+        "rating": 4.9,
+        "review": "A great Double Wear Foundation from Estee Lauder."
+      }
+    ]
+  },
+  {
+    "id": 158,
+    "name": "Estee Lauder Aqua Advanced Night Repair Serum",
+    "brand": "Estee Lauder",
+    "description": "A high-quality Advanced Night Repair Serum from Estee Lauder to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Advanced+Night+Repair+Serum",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 4030.84,
+        "url": "http://example.com/amazon/estee-lauder-aqua-advanced-night-repair-serum",
+        "rating": 4.2,
+        "review": "A great Advanced Night Repair Serum from Estee Lauder."
+      },
+      {
+        "site": "Nykaa",
+        "price": 4179.79,
+        "url": "http://example.com/nykaa/estee-lauder-aqua-advanced-night-repair-serum",
+        "rating": 4.9,
+        "review": "A great Advanced Night Repair Serum from Estee Lauder."
+      },
+      {
+        "site": "Flipkart",
+        "price": 3984.51,
+        "url": "http://example.com/flipkart/estee-lauder-aqua-advanced-night-repair-serum",
+        "rating": 4.0,
+        "review": "A great Advanced Night Repair Serum from Estee Lauder."
+      }
+    ]
+  },
+  {
+    "id": 159,
+    "name": "Estee Lauder Ultimate Double Wear Foundation",
+    "brand": "Estee Lauder",
+    "description": "A high-quality Double Wear Foundation from Estee Lauder to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Double+Wear+Foundation",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 4990.59,
+        "url": "http://example.com/purplle/estee-lauder-ultimate-double-wear-foundation",
+        "rating": 4.3,
+        "review": "A great Double Wear Foundation from Estee Lauder."
+      },
+      {
+        "site": "Amazon",
+        "price": 4850.75,
+        "url": "http://example.com/amazon/estee-lauder-ultimate-double-wear-foundation",
+        "rating": 4.1,
+        "review": "A great Double Wear Foundation from Estee Lauder."
+      },
+      {
+        "site": "Flipkart",
+        "price": 5161.76,
+        "url": "http://example.com/flipkart/estee-lauder-ultimate-double-wear-foundation",
+        "rating": 4.5,
+        "review": "A great Double Wear Foundation from Estee Lauder."
+      }
+    ]
+  },
+  {
+    "id": 160,
+    "name": "Estee Lauder Pro Double Wear Foundation",
+    "brand": "Estee Lauder",
+    "description": "A high-quality Double Wear Foundation from Estee Lauder to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Double+Wear+Foundation",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 7033.75,
+        "url": "http://example.com/amazon/estee-lauder-pro-double-wear-foundation",
+        "rating": 3.9,
+        "review": "A great Double Wear Foundation from Estee Lauder."
+      },
+      {
+        "site": "Nykaa",
+        "price": 6433.75,
+        "url": "http://example.com/nykaa/estee-lauder-pro-double-wear-foundation",
+        "rating": 4.2,
+        "review": "A great Double Wear Foundation from Estee Lauder."
+      }
+    ]
+  },
+  {
+    "id": 161,
+    "name": "Faces Canada 24H Ultime Pro HD Foundation",
+    "brand": "Faces Canada",
+    "description": "A high-quality Ultime Pro HD Foundation from Faces Canada to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Ultime+Pro+HD+Foundation",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 4223.52,
+        "url": "http://example.com/nykaa/faces-canada-24h-ultime-pro-hd-foundation",
+        "rating": 4.1,
+        "review": "A great Ultime Pro HD Foundation from Faces Canada."
+      }
+    ]
+  },
+  {
+    "id": 162,
+    "name": "Faces Canada Ultimate Weightless Matte Lipstick",
+    "brand": "Faces Canada",
+    "description": "A high-quality Weightless Matte Lipstick from Faces Canada to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Weightless+Matte+Lipstick",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 3856.82,
+        "url": "http://example.com/purplle/faces-canada-ultimate-weightless-matte-lipstick",
+        "rating": 4.8,
+        "review": "A great Weightless Matte Lipstick from Faces Canada."
+      },
+      {
+        "site": "Amazon",
+        "price": 3928.61,
+        "url": "http://example.com/amazon/faces-canada-ultimate-weightless-matte-lipstick",
+        "rating": 4.2,
+        "review": "A great Weightless Matte Lipstick from Faces Canada."
+      },
+      {
+        "site": "Flipkart",
+        "price": 4004.69,
+        "url": "http://example.com/flipkart/faces-canada-ultimate-weightless-matte-lipstick",
+        "rating": 4.9,
+        "review": "A great Weightless Matte Lipstick from Faces Canada."
+      }
+    ]
+  },
+  {
+    "id": 163,
+    "name": "Faces Canada Matte Weightless Matte Lipstick",
+    "brand": "Faces Canada",
+    "description": "A high-quality Weightless Matte Lipstick from Faces Canada to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Weightless+Matte+Lipstick",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 7181.53,
+        "url": "http://example.com/flipkart/faces-canada-matte-weightless-matte-lipstick",
+        "rating": 4.7,
+        "review": "A great Weightless Matte Lipstick from Faces Canada."
+      }
+    ]
+  },
+  {
+    "id": 164,
+    "name": "Faces Canada Velvet Ultime Pro HD Foundation",
+    "brand": "Faces Canada",
+    "description": "A high-quality Ultime Pro HD Foundation from Faces Canada to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Ultime+Pro+HD+Foundation",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 8107.84,
+        "url": "http://example.com/amazon/faces-canada-velvet-ultime-pro-hd-foundation",
+        "rating": 4.3,
+        "review": "A great Ultime Pro HD Foundation from Faces Canada."
+      },
+      {
+        "site": "Flipkart",
+        "price": 7519.91,
+        "url": "http://example.com/flipkart/faces-canada-velvet-ultime-pro-hd-foundation",
+        "rating": 4.5,
+        "review": "A great Ultime Pro HD Foundation from Faces Canada."
+      }
+    ]
+  },
+  {
+    "id": 165,
+    "name": "Faces Canada Ultimate Ultime Pro HD Foundation",
+    "brand": "Faces Canada",
+    "description": "A high-quality Ultime Pro HD Foundation from Faces Canada to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Ultime+Pro+HD+Foundation",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 5349.77,
+        "url": "http://example.com/purplle/faces-canada-ultimate-ultime-pro-hd-foundation",
+        "rating": 4.7,
+        "review": "A great Ultime Pro HD Foundation from Faces Canada."
+      },
+      {
+        "site": "Amazon",
+        "price": 5847.53,
+        "url": "http://example.com/amazon/faces-canada-ultimate-ultime-pro-hd-foundation",
+        "rating": 4.0,
+        "review": "A great Ultime Pro HD Foundation from Faces Canada."
+      }
+    ]
+  },
+  {
+    "id": 166,
+    "name": "Faces Canada Intense Ultime Pro HD Foundation",
+    "brand": "Faces Canada",
+    "description": "A high-quality Ultime Pro HD Foundation from Faces Canada to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Ultime+Pro+HD+Foundation",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 4380.7,
+        "url": "http://example.com/flipkart/faces-canada-intense-ultime-pro-hd-foundation",
+        "rating": 4.3,
+        "review": "A great Ultime Pro HD Foundation from Faces Canada."
+      },
+      {
+        "site": "Amazon",
+        "price": 4435.2,
+        "url": "http://example.com/amazon/faces-canada-intense-ultime-pro-hd-foundation",
+        "rating": 4.8,
+        "review": "A great Ultime Pro HD Foundation from Faces Canada."
+      }
+    ]
+  },
+  {
+    "id": 167,
+    "name": "Faces Canada Aqua Ultime Pro HD Foundation",
+    "brand": "Faces Canada",
+    "description": "A high-quality Ultime Pro HD Foundation from Faces Canada to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Ultime+Pro+HD+Foundation",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 4470.4,
+        "url": "http://example.com/nykaa/faces-canada-aqua-ultime-pro-hd-foundation",
+        "rating": 3.9,
+        "review": "A great Ultime Pro HD Foundation from Faces Canada."
+      },
+      {
+        "site": "Amazon",
+        "price": 4663.85,
+        "url": "http://example.com/amazon/faces-canada-aqua-ultime-pro-hd-foundation",
+        "rating": 3.8,
+        "review": "A great Ultime Pro HD Foundation from Faces Canada."
+      }
+    ]
+  },
+  {
+    "id": 168,
+    "name": "Faces Canada Velvet Weightless Matte Lipstick",
+    "brand": "Faces Canada",
+    "description": "A high-quality Weightless Matte Lipstick from Faces Canada to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Weightless+Matte+Lipstick",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 5970.52,
+        "url": "http://example.com/nykaa/faces-canada-velvet-weightless-matte-lipstick",
+        "rating": 4.9,
+        "review": "A great Weightless Matte Lipstick from Faces Canada."
+      }
+    ]
+  },
+  {
+    "id": 169,
+    "name": "Faces Canada 24H Ultime Pro HD Foundation",
+    "brand": "Faces Canada",
+    "description": "A high-quality Ultime Pro HD Foundation from Faces Canada to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Ultime+Pro+HD+Foundation",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 1789.35,
+        "url": "http://example.com/amazon/faces-canada-24h-ultime-pro-hd-foundation",
+        "rating": 4.1,
+        "review": "A great Ultime Pro HD Foundation from Faces Canada."
+      }
+    ]
+  },
+  {
+    "id": 170,
+    "name": "Faces Canada Radiant Ultime Pro HD Foundation",
+    "brand": "Faces Canada",
+    "description": "A high-quality Ultime Pro HD Foundation from Faces Canada to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Ultime+Pro+HD+Foundation",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 1638.43,
+        "url": "http://example.com/purplle/faces-canada-radiant-ultime-pro-hd-foundation",
+        "rating": 4.5,
+        "review": "A great Ultime Pro HD Foundation from Faces Canada."
+      },
+      {
+        "site": "Amazon",
+        "price": 1738.09,
+        "url": "http://example.com/amazon/faces-canada-radiant-ultime-pro-hd-foundation",
+        "rating": 4.7,
+        "review": "A great Ultime Pro HD Foundation from Faces Canada."
+      },
+      {
+        "site": "Flipkart",
+        "price": 1747.83,
+        "url": "http://example.com/flipkart/faces-canada-radiant-ultime-pro-hd-foundation",
+        "rating": 3.9,
+        "review": "A great Ultime Pro HD Foundation from Faces Canada."
+      }
+    ]
+  },
+  {
+    "id": 171,
+    "name": "Giorgio Armani Intense Acqua di Gio",
+    "brand": "Giorgio Armani",
+    "description": "A high-quality Acqua di Gio from Giorgio Armani to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Acqua+di+Gio",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 5648.0,
+        "url": "http://example.com/amazon/giorgio-armani-intense-acqua-di-gio",
+        "rating": 4.3,
+        "review": "A great Acqua di Gio from Giorgio Armani."
+      },
+      {
+        "site": "Nykaa",
+        "price": 5162.04,
+        "url": "http://example.com/nykaa/giorgio-armani-intense-acqua-di-gio",
+        "rating": 4.6,
+        "review": "A great Acqua di Gio from Giorgio Armani."
+      }
+    ]
+  },
+  {
+    "id": 172,
+    "name": "Giorgio Armani HD Acqua di Gio",
+    "brand": "Giorgio Armani",
+    "description": "A high-quality Acqua di Gio from Giorgio Armani to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Acqua+di+Gio",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 4356.8,
+        "url": "http://example.com/purplle/giorgio-armani-hd-acqua-di-gio",
+        "rating": 4.9,
+        "review": "A great Acqua di Gio from Giorgio Armani."
+      },
+      {
+        "site": "Flipkart",
+        "price": 4601.9,
+        "url": "http://example.com/flipkart/giorgio-armani-hd-acqua-di-gio",
+        "rating": 5.0,
+        "review": "A great Acqua di Gio from Giorgio Armani."
+      }
+    ]
+  },
+  {
+    "id": 173,
+    "name": "Giorgio Armani Aqua Si Eau de Parfum",
+    "brand": "Giorgio Armani",
+    "description": "A high-quality Si Eau de Parfum from Giorgio Armani to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Si+Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 2454.03,
+        "url": "http://example.com/flipkart/giorgio-armani-aqua-si-eau-de-parfum",
+        "rating": 4.5,
+        "review": "A great Si Eau de Parfum from Giorgio Armani."
+      }
+    ]
+  },
+  {
+    "id": 174,
+    "name": "Giorgio Armani 24H Si Eau de Parfum",
+    "brand": "Giorgio Armani",
+    "description": "A high-quality Si Eau de Parfum from Giorgio Armani to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Si+Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 7192.76,
+        "url": "http://example.com/nykaa/giorgio-armani-24h-si-eau-de-parfum",
+        "rating": 4.0,
+        "review": "A great Si Eau de Parfum from Giorgio Armani."
+      },
+      {
+        "site": "Flipkart",
+        "price": 7576.44,
+        "url": "http://example.com/flipkart/giorgio-armani-24h-si-eau-de-parfum",
+        "rating": 4.3,
+        "review": "A great Si Eau de Parfum from Giorgio Armani."
+      }
+    ]
+  },
+  {
+    "id": 175,
+    "name": "Giorgio Armani Intense Acqua di Gio",
+    "brand": "Giorgio Armani",
+    "description": "A high-quality Acqua di Gio from Giorgio Armani to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Acqua+di+Gio",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 5464.44,
+        "url": "http://example.com/purplle/giorgio-armani-intense-acqua-di-gio",
+        "rating": 5.0,
+        "review": "A great Acqua di Gio from Giorgio Armani."
+      }
+    ]
+  },
+  {
+    "id": 176,
+    "name": "Giorgio Armani 24H Acqua di Gio",
+    "brand": "Giorgio Armani",
+    "description": "A high-quality Acqua di Gio from Giorgio Armani to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Acqua+di+Gio",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 1542.53,
+        "url": "http://example.com/amazon/giorgio-armani-24h-acqua-di-gio",
+        "rating": 4.3,
+        "review": "A great Acqua di Gio from Giorgio Armani."
+      },
+      {
+        "site": "Nykaa",
+        "price": 1452.78,
+        "url": "http://example.com/nykaa/giorgio-armani-24h-acqua-di-gio",
+        "rating": 4.4,
+        "review": "A great Acqua di Gio from Giorgio Armani."
+      },
+      {
+        "site": "Purplle",
+        "price": 1492.32,
+        "url": "http://example.com/purplle/giorgio-armani-24h-acqua-di-gio",
+        "rating": 3.9,
+        "review": "A great Acqua di Gio from Giorgio Armani."
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "name": "Giorgio Armani HD Si Eau de Parfum",
+    "brand": "Giorgio Armani",
+    "description": "A high-quality Si Eau de Parfum from Giorgio Armani to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Si+Eau+de+Parfum",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 2811.47,
+        "url": "http://example.com/amazon/giorgio-armani-hd-si-eau-de-parfum",
+        "rating": 4.4,
+        "review": "A great Si Eau de Parfum from Giorgio Armani."
+      },
+      {
+        "site": "Nykaa",
+        "price": 2754.81,
+        "url": "http://example.com/nykaa/giorgio-armani-hd-si-eau-de-parfum",
+        "rating": 4.1,
+        "review": "A great Si Eau de Parfum from Giorgio Armani."
+      },
+      {
+        "site": "Flipkart",
+        "price": 2842.62,
+        "url": "http://example.com/flipkart/giorgio-armani-hd-si-eau-de-parfum",
+        "rating": 5.0,
+        "review": "A great Si Eau de Parfum from Giorgio Armani."
+      }
+    ]
+  },
+  {
+    "id": 178,
+    "name": "Giorgio Armani HD Acqua di Gio",
+    "brand": "Giorgio Armani",
+    "description": "A high-quality Acqua di Gio from Giorgio Armani to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Acqua+di+Gio",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 7843.58,
+        "url": "http://example.com/purplle/giorgio-armani-hd-acqua-di-gio",
+        "rating": 4.8,
+        "review": "A great Acqua di Gio from Giorgio Armani."
+      },
+      {
+        "site": "Amazon",
+        "price": 7591.73,
+        "url": "http://example.com/amazon/giorgio-armani-hd-acqua-di-gio",
+        "rating": 4.7,
+        "review": "A great Acqua di Gio from Giorgio Armani."
+      }
+    ]
+  },
+  {
+    "id": 179,
+    "name": "Giorgio Armani HD Acqua di Gio",
+    "brand": "Giorgio Armani",
+    "description": "A high-quality Acqua di Gio from Giorgio Armani to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Acqua+di+Gio",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 2954.04,
+        "url": "http://example.com/flipkart/giorgio-armani-hd-acqua-di-gio",
+        "rating": 5.0,
+        "review": "A great Acqua di Gio from Giorgio Armani."
+      },
+      {
+        "site": "Amazon",
+        "price": 3036.63,
+        "url": "http://example.com/amazon/giorgio-armani-hd-acqua-di-gio",
+        "rating": 4.5,
+        "review": "A great Acqua di Gio from Giorgio Armani."
+      },
+      {
+        "site": "Nykaa",
+        "price": 2942.99,
+        "url": "http://example.com/nykaa/giorgio-armani-hd-acqua-di-gio",
+        "rating": 3.9,
+        "review": "A great Acqua di Gio from Giorgio Armani."
+      }
+    ]
+  },
+  {
+    "id": 180,
+    "name": "Giorgio Armani Radiant Acqua di Gio",
+    "brand": "Giorgio Armani",
+    "description": "A high-quality Acqua di Gio from Giorgio Armani to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Acqua+di+Gio",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 5452.36,
+        "url": "http://example.com/flipkart/giorgio-armani-radiant-acqua-di-gio",
+        "rating": 4.2,
+        "review": "A great Acqua di Gio from Giorgio Armani."
+      }
+    ]
+  },
+  {
+    "id": 181,
+    "name": "Bath & Body Works HD Japanese Cherry Blossom Mist",
+    "brand": "Bath & Body Works",
+    "description": "A high-quality Japanese Cherry Blossom Mist from Bath & Body Works to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Japanese+Cherry+Blossom+Mist",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 1570.45,
+        "url": "http://example.com/flipkart/bath-&-body-works-hd-japanese-cherry-blossom-mist",
+        "rating": 4.8,
+        "review": "A great Japanese Cherry Blossom Mist from Bath & Body Works."
+      },
+      {
+        "site": "Purplle",
+        "price": 1574.35,
+        "url": "http://example.com/purplle/bath-&-body-works-hd-japanese-cherry-blossom-mist",
+        "rating": 4.6,
+        "review": "A great Japanese Cherry Blossom Mist from Bath & Body Works."
+      }
+    ]
+  },
+  {
+    "id": 182,
+    "name": "Bath & Body Works Silk A Thousand Wishes Body Cream",
+    "brand": "Bath & Body Works",
+    "description": "A high-quality A Thousand Wishes Body Cream from Bath & Body Works to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=A+Thousand+Wishes+Body+Cream",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 6611.81,
+        "url": "http://example.com/nykaa/bath-&-body-works-silk-a-thousand-wishes-body-cream",
+        "rating": 4.2,
+        "review": "A great A Thousand Wishes Body Cream from Bath & Body Works."
+      },
+      {
+        "site": "Flipkart",
+        "price": 6940.6,
+        "url": "http://example.com/flipkart/bath-&-body-works-silk-a-thousand-wishes-body-cream",
+        "rating": 4.4,
+        "review": "A great A Thousand Wishes Body Cream from Bath & Body Works."
+      },
+      {
+        "site": "Purplle",
+        "price": 6721.14,
+        "url": "http://example.com/purplle/bath-&-body-works-silk-a-thousand-wishes-body-cream",
+        "rating": 4.4,
+        "review": "A great A Thousand Wishes Body Cream from Bath & Body Works."
+      }
+    ]
+  },
+  {
+    "id": 183,
+    "name": "Bath & Body Works Matte Japanese Cherry Blossom Mist",
+    "brand": "Bath & Body Works",
+    "description": "A high-quality Japanese Cherry Blossom Mist from Bath & Body Works to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Japanese+Cherry+Blossom+Mist",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 2680.33,
+        "url": "http://example.com/amazon/bath-&-body-works-matte-japanese-cherry-blossom-mist",
+        "rating": 4.4,
+        "review": "A great Japanese Cherry Blossom Mist from Bath & Body Works."
+      },
+      {
+        "site": "Purplle",
+        "price": 2797.31,
+        "url": "http://example.com/purplle/bath-&-body-works-matte-japanese-cherry-blossom-mist",
+        "rating": 4.9,
+        "review": "A great Japanese Cherry Blossom Mist from Bath & Body Works."
+      }
+    ]
+  },
+  {
+    "id": 184,
+    "name": "Bath & Body Works 24H A Thousand Wishes Body Cream",
+    "brand": "Bath & Body Works",
+    "description": "A high-quality A Thousand Wishes Body Cream from Bath & Body Works to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=A+Thousand+Wishes+Body+Cream",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 1113.74,
+        "url": "http://example.com/nykaa/bath-&-body-works-24h-a-thousand-wishes-body-cream",
+        "rating": 4.7,
+        "review": "A great A Thousand Wishes Body Cream from Bath & Body Works."
+      }
+    ]
+  },
+  {
+    "id": 185,
+    "name": "Bath & Body Works HD A Thousand Wishes Body Cream",
+    "brand": "Bath & Body Works",
+    "description": "A high-quality A Thousand Wishes Body Cream from Bath & Body Works to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=A+Thousand+Wishes+Body+Cream",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 4067.25,
+        "url": "http://example.com/flipkart/bath-&-body-works-hd-a-thousand-wishes-body-cream",
+        "rating": 3.9,
+        "review": "A great A Thousand Wishes Body Cream from Bath & Body Works."
+      },
+      {
+        "site": "Amazon",
+        "price": 3942.09,
+        "url": "http://example.com/amazon/bath-&-body-works-hd-a-thousand-wishes-body-cream",
+        "rating": 4.4,
+        "review": "A great A Thousand Wishes Body Cream from Bath & Body Works."
+      },
+      {
+        "site": "Purplle",
+        "price": 3860.1,
+        "url": "http://example.com/purplle/bath-&-body-works-hd-a-thousand-wishes-body-cream",
+        "rating": 4.7,
+        "review": "A great A Thousand Wishes Body Cream from Bath & Body Works."
+      }
+    ]
+  },
+  {
+    "id": 186,
+    "name": "Bath & Body Works Matte A Thousand Wishes Body Cream",
+    "brand": "Bath & Body Works",
+    "description": "A high-quality A Thousand Wishes Body Cream from Bath & Body Works to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=A+Thousand+Wishes+Body+Cream",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 6282.05,
+        "url": "http://example.com/flipkart/bath-&-body-works-matte-a-thousand-wishes-body-cream",
+        "rating": 4.7,
+        "review": "A great A Thousand Wishes Body Cream from Bath & Body Works."
+      },
+      {
+        "site": "Amazon",
+        "price": 6336.48,
+        "url": "http://example.com/amazon/bath-&-body-works-matte-a-thousand-wishes-body-cream",
+        "rating": 4.3,
+        "review": "A great A Thousand Wishes Body Cream from Bath & Body Works."
+      },
+      {
+        "site": "Nykaa",
+        "price": 6125.21,
+        "url": "http://example.com/nykaa/bath-&-body-works-matte-a-thousand-wishes-body-cream",
+        "rating": 4.1,
+        "review": "A great A Thousand Wishes Body Cream from Bath & Body Works."
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "name": "Bath & Body Works Pro Japanese Cherry Blossom Mist",
+    "brand": "Bath & Body Works",
+    "description": "A high-quality Japanese Cherry Blossom Mist from Bath & Body Works to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Japanese+Cherry+Blossom+Mist",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 1068.9,
+        "url": "http://example.com/nykaa/bath-&-body-works-pro-japanese-cherry-blossom-mist",
+        "rating": 5.0,
+        "review": "A great Japanese Cherry Blossom Mist from Bath & Body Works."
+      },
+      {
+        "site": "Flipkart",
+        "price": 1089.29,
+        "url": "http://example.com/flipkart/bath-&-body-works-pro-japanese-cherry-blossom-mist",
+        "rating": 4.9,
+        "review": "A great Japanese Cherry Blossom Mist from Bath & Body Works."
+      },
+      {
+        "site": "Purplle",
+        "price": 1104.78,
+        "url": "http://example.com/purplle/bath-&-body-works-pro-japanese-cherry-blossom-mist",
+        "rating": 3.9,
+        "review": "A great Japanese Cherry Blossom Mist from Bath & Body Works."
+      }
+    ]
+  },
+  {
+    "id": 188,
+    "name": "Bath & Body Works 24H A Thousand Wishes Body Cream",
+    "brand": "Bath & Body Works",
+    "description": "A high-quality A Thousand Wishes Body Cream from Bath & Body Works to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=A+Thousand+Wishes+Body+Cream",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 4663.84,
+        "url": "http://example.com/amazon/bath-&-body-works-24h-a-thousand-wishes-body-cream",
+        "rating": 4.3,
+        "review": "A great A Thousand Wishes Body Cream from Bath & Body Works."
+      },
+      {
+        "site": "Flipkart",
+        "price": 4889.59,
+        "url": "http://example.com/flipkart/bath-&-body-works-24h-a-thousand-wishes-body-cream",
+        "rating": 4.5,
+        "review": "A great A Thousand Wishes Body Cream from Bath & Body Works."
+      },
+      {
+        "site": "Purplle",
+        "price": 4797.67,
+        "url": "http://example.com/purplle/bath-&-body-works-24h-a-thousand-wishes-body-cream",
+        "rating": 4.1,
+        "review": "A great A Thousand Wishes Body Cream from Bath & Body Works."
+      }
+    ]
+  },
+  {
+    "id": 189,
+    "name": "Bath & Body Works Intense Japanese Cherry Blossom Mist",
+    "brand": "Bath & Body Works",
+    "description": "A high-quality Japanese Cherry Blossom Mist from Bath & Body Works to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Japanese+Cherry+Blossom+Mist",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 2541.94,
+        "url": "http://example.com/amazon/bath-&-body-works-intense-japanese-cherry-blossom-mist",
+        "rating": 3.8,
+        "review": "A great Japanese Cherry Blossom Mist from Bath & Body Works."
+      }
+    ]
+  },
+  {
+    "id": 190,
+    "name": "Bath & Body Works Radiant A Thousand Wishes Body Cream",
+    "brand": "Bath & Body Works",
+    "description": "A high-quality A Thousand Wishes Body Cream from Bath & Body Works to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=A+Thousand+Wishes+Body+Cream",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 1572.41,
+        "url": "http://example.com/flipkart/bath-&-body-works-radiant-a-thousand-wishes-body-cream",
+        "rating": 3.9,
+        "review": "A great A Thousand Wishes Body Cream from Bath & Body Works."
+      }
+    ]
+  },
+  {
+    "id": 191,
+    "name": "Forest Essentials HD Soundarya Radiance Cream",
+    "brand": "Forest Essentials",
+    "description": "A high-quality Soundarya Radiance Cream from Forest Essentials to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Soundarya+Radiance+Cream",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 5959.49,
+        "url": "http://example.com/flipkart/forest-essentials-hd-soundarya-radiance-cream",
+        "rating": 4.0,
+        "review": "A great Soundarya Radiance Cream from Forest Essentials."
+      },
+      {
+        "site": "Nykaa",
+        "price": 6130.02,
+        "url": "http://example.com/nykaa/forest-essentials-hd-soundarya-radiance-cream",
+        "rating": 4.6,
+        "review": "A great Soundarya Radiance Cream from Forest Essentials."
+      }
+    ]
+  },
+  {
+    "id": 192,
+    "name": "Forest Essentials Aqua Soundarya Radiance Cream",
+    "brand": "Forest Essentials",
+    "description": "A high-quality Soundarya Radiance Cream from Forest Essentials to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Soundarya+Radiance+Cream",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 2042.64,
+        "url": "http://example.com/nykaa/forest-essentials-aqua-soundarya-radiance-cream",
+        "rating": 3.9,
+        "review": "A great Soundarya Radiance Cream from Forest Essentials."
+      },
+      {
+        "site": "Flipkart",
+        "price": 1925.95,
+        "url": "http://example.com/flipkart/forest-essentials-aqua-soundarya-radiance-cream",
+        "rating": 3.9,
+        "review": "A great Soundarya Radiance Cream from Forest Essentials."
+      }
+    ]
+  },
+  {
+    "id": 193,
+    "name": "Forest Essentials Radiant Lip Balm",
+    "brand": "Forest Essentials",
+    "description": "A high-quality Lip Balm from Forest Essentials to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lip+Balm",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 7024.5,
+        "url": "http://example.com/amazon/forest-essentials-radiant-lip-balm",
+        "rating": 4.7,
+        "review": "A great Lip Balm from Forest Essentials."
+      },
+      {
+        "site": "Purplle",
+        "price": 7169.81,
+        "url": "http://example.com/purplle/forest-essentials-radiant-lip-balm",
+        "rating": 4.3,
+        "review": "A great Lip Balm from Forest Essentials."
+      },
+      {
+        "site": "Flipkart",
+        "price": 7074.77,
+        "url": "http://example.com/flipkart/forest-essentials-radiant-lip-balm",
+        "rating": 4.4,
+        "review": "A great Lip Balm from Forest Essentials."
+      }
+    ]
+  },
+  {
+    "id": 194,
+    "name": "Forest Essentials Intense Soundarya Radiance Cream",
+    "brand": "Forest Essentials",
+    "description": "A high-quality Soundarya Radiance Cream from Forest Essentials to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Soundarya+Radiance+Cream",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 3700.14,
+        "url": "http://example.com/purplle/forest-essentials-intense-soundarya-radiance-cream",
+        "rating": 3.9,
+        "review": "A great Soundarya Radiance Cream from Forest Essentials."
+      }
+    ]
+  },
+  {
+    "id": 195,
+    "name": "Forest Essentials Luminous Lip Balm",
+    "brand": "Forest Essentials",
+    "description": "A high-quality Lip Balm from Forest Essentials to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lip+Balm",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 5495.1,
+        "url": "http://example.com/purplle/forest-essentials-luminous-lip-balm",
+        "rating": 4.1,
+        "review": "A great Lip Balm from Forest Essentials."
+      }
+    ]
+  },
+  {
+    "id": 196,
+    "name": "Forest Essentials Intense Lip Balm",
+    "brand": "Forest Essentials",
+    "description": "A high-quality Lip Balm from Forest Essentials to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lip+Balm",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 1009.55,
+        "url": "http://example.com/nykaa/forest-essentials-intense-lip-balm",
+        "rating": 4.9,
+        "review": "A great Lip Balm from Forest Essentials."
+      },
+      {
+        "site": "Amazon",
+        "price": 1049.38,
+        "url": "http://example.com/amazon/forest-essentials-intense-lip-balm",
+        "rating": 4.1,
+        "review": "A great Lip Balm from Forest Essentials."
+      },
+      {
+        "site": "Purplle",
+        "price": 1031.42,
+        "url": "http://example.com/purplle/forest-essentials-intense-lip-balm",
+        "rating": 4.4,
+        "review": "A great Lip Balm from Forest Essentials."
+      }
+    ]
+  },
+  {
+    "id": 197,
+    "name": "Forest Essentials Radiant Lip Balm",
+    "brand": "Forest Essentials",
+    "description": "A high-quality Lip Balm from Forest Essentials to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lip+Balm",
+    "offers": [
+      {
+        "site": "Amazon",
+        "price": 1992.28,
+        "url": "http://example.com/amazon/forest-essentials-radiant-lip-balm",
+        "rating": 4.1,
+        "review": "A great Lip Balm from Forest Essentials."
+      },
+      {
+        "site": "Purplle",
+        "price": 2063.5,
+        "url": "http://example.com/purplle/forest-essentials-radiant-lip-balm",
+        "rating": 4.4,
+        "review": "A great Lip Balm from Forest Essentials."
+      },
+      {
+        "site": "Nykaa",
+        "price": 2015.57,
+        "url": "http://example.com/nykaa/forest-essentials-radiant-lip-balm",
+        "rating": 4.4,
+        "review": "A great Lip Balm from Forest Essentials."
+      }
+    ]
+  },
+  {
+    "id": 198,
+    "name": "Forest Essentials Matte Lip Balm",
+    "brand": "Forest Essentials",
+    "description": "A high-quality Lip Balm from Forest Essentials to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Lip+Balm",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 6204.88,
+        "url": "http://example.com/purplle/forest-essentials-matte-lip-balm",
+        "rating": 4.7,
+        "review": "A great Lip Balm from Forest Essentials."
+      },
+      {
+        "site": "Flipkart",
+        "price": 6222.56,
+        "url": "http://example.com/flipkart/forest-essentials-matte-lip-balm",
+        "rating": 3.9,
+        "review": "A great Lip Balm from Forest Essentials."
+      },
+      {
+        "site": "Amazon",
+        "price": 6448.88,
+        "url": "http://example.com/amazon/forest-essentials-matte-lip-balm",
+        "rating": 3.8,
+        "review": "A great Lip Balm from Forest Essentials."
+      }
+    ]
+  },
+  {
+    "id": 199,
+    "name": "Forest Essentials Radiant Soundarya Radiance Cream",
+    "brand": "Forest Essentials",
+    "description": "A high-quality Soundarya Radiance Cream from Forest Essentials to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Soundarya+Radiance+Cream",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 4642.1,
+        "url": "http://example.com/nykaa/forest-essentials-radiant-soundarya-radiance-cream",
+        "rating": 4.7,
+        "review": "A great Soundarya Radiance Cream from Forest Essentials."
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "name": "Forest Essentials Intense Facial Ubtan",
+    "brand": "Forest Essentials",
+    "description": "A high-quality Facial Ubtan from Forest Essentials to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Facial+Ubtan",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 2576.87,
+        "url": "http://example.com/purplle/forest-essentials-intense-facial-ubtan",
+        "rating": 4.3,
+        "review": "A great Facial Ubtan from Forest Essentials."
+      }
+    ]
+  },
+  {
+    "id": 201,
+    "name": "Maybelline Radiant Colossal Mascara",
+    "brand": "Maybelline",
+    "description": "A high-quality Colossal Mascara from Maybelline to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Colossal+Mascara",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 6670.23,
+        "url": "http://example.com/flipkart/maybelline-radiant-colossal-mascara",
+        "rating": 4.7,
+        "review": "A great Colossal Mascara from Maybelline."
+      }
+    ]
+  },
+  {
+    "id": 202,
+    "name": "Maybelline 24H Fit Me Foundation",
+    "brand": "Maybelline",
+    "description": "A high-quality Fit Me Foundation from Maybelline to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Fit+Me+Foundation",
+    "offers": [
+      {
+        "site": "Nykaa",
+        "price": 2626.9,
+        "url": "http://example.com/nykaa/maybelline-24h-fit-me-foundation",
+        "rating": 4.6,
+        "review": "A great Fit Me Foundation from Maybelline."
+      },
+      {
+        "site": "Flipkart",
+        "price": 2644.95,
+        "url": "http://example.com/flipkart/maybelline-24h-fit-me-foundation",
+        "rating": 4.1,
+        "review": "A great Fit Me Foundation from Maybelline."
+      },
+      {
+        "site": "Amazon",
+        "price": 2866.23,
+        "url": "http://example.com/amazon/maybelline-24h-fit-me-foundation",
+        "rating": 3.9,
+        "review": "A great Fit Me Foundation from Maybelline."
+      }
+    ]
+  },
+  {
+    "id": 203,
+    "name": "Maybelline Ultimate SuperStay Matte Ink Lipstick",
+    "brand": "Maybelline",
+    "description": "A high-quality SuperStay Matte Ink Lipstick from Maybelline to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=SuperStay+Matte+Ink+Lipstick",
+    "offers": [
+      {
+        "site": "Flipkart",
+        "price": 5256.57,
+        "url": "http://example.com/flipkart/maybelline-ultimate-superstay-matte-ink-lipstick",
+        "rating": 4.6,
+        "review": "A great SuperStay Matte Ink Lipstick from Maybelline."
+      },
+      {
+        "site": "Nykaa",
+        "price": 5291.45,
+        "url": "http://example.com/nykaa/maybelline-ultimate-superstay-matte-ink-lipstick",
+        "rating": 4.5,
+        "review": "A great SuperStay Matte Ink Lipstick from Maybelline."
+      }
+    ]
+  },
+  {
+    "id": 204,
+    "name": "Maybelline Radiant Colossal Mascara",
+    "brand": "Maybelline",
+    "description": "A high-quality Colossal Mascara from Maybelline to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Colossal+Mascara",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 6117.81,
+        "url": "http://example.com/purplle/maybelline-radiant-colossal-mascara",
+        "rating": 4.1,
+        "review": "A great Colossal Mascara from Maybelline."
+      }
+    ]
+  },
+  {
+    "id": 205,
+    "name": "Maybelline Pro SuperStay Matte Ink Lipstick",
+    "brand": "Maybelline",
+    "description": "A high-quality SuperStay Matte Ink Lipstick from Maybelline to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=SuperStay+Matte+Ink+Lipstick",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 683.17,
+        "url": "http://example.com/purplle/maybelline-pro-superstay-matte-ink-lipstick",
+        "rating": 5.0,
+        "review": "A great SuperStay Matte Ink Lipstick from Maybelline."
+      }
+    ]
+  },
+  {
+    "id": 206,
+    "name": "Maybelline Sheer SuperStay Matte Ink Lipstick",
+    "brand": "Maybelline",
+    "description": "A high-quality SuperStay Matte Ink Lipstick from Maybelline to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=SuperStay+Matte+Ink+Lipstick",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 2446.24,
+        "url": "http://example.com/purplle/maybelline-sheer-superstay-matte-ink-lipstick",
+        "rating": 4.3,
+        "review": "A great SuperStay Matte Ink Lipstick from Maybelline."
+      }
+    ]
+  },
+  {
+    "id": 207,
+    "name": "Maybelline Ultimate SuperStay Matte Ink Lipstick",
+    "brand": "Maybelline",
+    "description": "A high-quality SuperStay Matte Ink Lipstick from Maybelline to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=SuperStay+Matte+Ink+Lipstick",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 3119.93,
+        "url": "http://example.com/purplle/maybelline-ultimate-superstay-matte-ink-lipstick",
+        "rating": 4.5,
+        "review": "A great SuperStay Matte Ink Lipstick from Maybelline."
+      },
+      {
+        "site": "Nykaa",
+        "price": 3133.01,
+        "url": "http://example.com/nykaa/maybelline-ultimate-superstay-matte-ink-lipstick",
+        "rating": 4.4,
+        "review": "A great SuperStay Matte Ink Lipstick from Maybelline."
+      },
+      {
+        "site": "Flipkart",
+        "price": 3300.31,
+        "url": "http://example.com/flipkart/maybelline-ultimate-superstay-matte-ink-lipstick",
+        "rating": 4.8,
+        "review": "A great SuperStay Matte Ink Lipstick from Maybelline."
+      }
+    ]
+  },
+  {
+    "id": 208,
+    "name": "Maybelline Aqua Fit Me Foundation",
+    "brand": "Maybelline",
+    "description": "A high-quality Fit Me Foundation from Maybelline to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Fit+Me+Foundation",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 3732.91,
+        "url": "http://example.com/purplle/maybelline-aqua-fit-me-foundation",
+        "rating": 4.5,
+        "review": "A great Fit Me Foundation from Maybelline."
+      }
+    ]
+  },
+  {
+    "id": 209,
+    "name": "Maybelline Pro Fit Me Foundation",
+    "brand": "Maybelline",
+    "description": "A high-quality Fit Me Foundation from Maybelline to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Fit+Me+Foundation",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 1518.65,
+        "url": "http://example.com/purplle/maybelline-pro-fit-me-foundation",
+        "rating": 4.5,
+        "review": "A great Fit Me Foundation from Maybelline."
+      }
+    ]
+  },
+  {
+    "id": 210,
+    "name": "Maybelline Velvet Fit Me Foundation",
+    "brand": "Maybelline",
+    "description": "A high-quality Fit Me Foundation from Maybelline to meet your beauty needs.",
+    "image": "https://placehold.co/300x300/9E9E9E/ffffff?text=Fit+Me+Foundation",
+    "offers": [
+      {
+        "site": "Purplle",
+        "price": 2473.19,
+        "url": "http://example.com/purplle/maybelline-velvet-fit-me-foundation",
+        "rating": 4.3,
+        "review": "A great Fit Me Foundation from Maybelline."
+      },
+      {
+        "site": "Amazon",
+        "price": 2585.7,
+        "url": "http://example.com/amazon/maybelline-velvet-fit-me-foundation",
+        "rating": 4.1,
+        "review": "A great Fit Me Foundation from Maybelline."
       }
     ]
   }

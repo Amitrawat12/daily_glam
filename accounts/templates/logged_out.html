@@ -19,7 +19,7 @@
     </style>
     <script>
         setTimeout(function() {
-            window.location.href = "{% url 'login' %}";
+            window.location.href = "{% url 'accounts:login' %}";
         }, 3000);
     </script>
 </head>
@@ -28,7 +28,7 @@
         <div class="logout-box">
             <h4 class="text-danger fw-bold">You have been logged out</h4>
             <p>Redirecting to login page in <strong>3 seconds</strong>...</p>
-            <a href="{% url 'login' %}" class="btn btn-danger mt-3">Login Now</a>
+            <a href="{% url 'accounts:login' %}" class="btn btn-danger mt-3">Login Now</a>
         </div>
     </div>
 </body>
