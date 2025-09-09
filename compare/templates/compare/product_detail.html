@@ -11,6 +11,7 @@
     }
     .product-image-container {
         padding: 30px;
+        background-color: #f8f9fa;
     }
     .product-image-container img {
         max-width: 100%;
@@ -40,38 +41,196 @@
     .site-badge.nykaa { background-color: #ff69b4; }
     .site-badge.amazon { background-color: #ff9900; }
     .site-badge.purplle { background-color: #6a0dad; }
-    .btn-buy-now {
-        background-color: #28a745;
-        border-color: #28a745;
-        color: #fff;
-    }
+    .site-badge.flipkart { background-color: #2874f0; }
 </style>
 
 <div class="container mt-5">
     <div class="product-detail-card">
         <div class="row g-0">
             <div class="col-md-5 product-image-container">
-                <img src="{{ product.image }}" alt="{{ product.name }}">
+                {% if product.image %}
+                    <img src="{{ product.image }}" alt="{{ product.name }}">
+                {% else %}
+                    <img src="https://placehold.co/400x400/fce4ec/333333?text={{ product.name|urlencode }}" alt="{{ product.name }} placeholder">
+                {% endif %}
             </div>
             <div class="col-md-7 product-info-container">
-                <h6 class="text-muted">{{ product.brand }}</h6>
+                <h6 class="text-muted">{{ product.brand.name }}</h6>
                 <h2 class="mb-3">{{ product.name }}</h2>
                 <p class="lead">{{ product.description }}</p>
+
+                <div class="product-actions mt-4 mb-4">
+                    <button class="btn btn-outline-warning btn-set-alert" data-product-id="{{ product.id }}"><i class="bi bi-bell"></i> Set Price Alert</button>
+                    <a href="{% url 'dashboard:add_to_wishlist' product_id=product.id %}" class="btn btn-outline-danger btn-add-to-wishlist"><i class="bi bi-heart"></i> Add to Wishlist</a>
+                    <button class="btn btn-outline-secondary btn-add-to-compare" data-product-id="{{ product.id }}"><i class="bi bi-files"></i> Add to Compare</button>
+                </div>
                 
                 <h4 class="mt-4 mb-3">Compare Prices:</h4>
                 <div class="offer-list">
-                    {% for offer in product.offers %}
+                    {% for offer in product.offers.all %}
                     <div class="offer-list-item">
                         <div>
                             <span class="site-badge {{ offer.site|lower }}">{{ offer.site }}</span>
                             <strong class="ms-3 fs-4">₹{{ offer.price }}</strong>
                         </div>
-                        <a href="{{ offer.url }}" class="btn btn-buy-now" target="_blank">Buy Now</a>
+                        <div class="offer-actions">
+                            <button class="btn btn-sm btn-primary btn-add-to-kit" data-offer-id="{{ offer.id }}">Add to Kit</button>
+                            <button class="btn btn-sm btn-success btn-add-to-cart" data-offer-id="{{ offer.id }}">Add to Cart</button>
+                        </div>
                     </div>
+                    {% empty %}
+                    <p class="text-muted">No online offers found for this product yet.</p>
                     {% endfor %}
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Price Alert Modal -->
+<div class="modal fade" id="priceAlertModal" tabindex="-1" aria-labelledby="priceAlertModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="priceAlertModalLabel">Set Price Alert</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="priceAlertForm" method="POST">
+            {% csrf_token %}
+            <input type="hidden" id="alertProductId" name="product_id">
+            <div class="mb-3">
+                <label for="desiredPrice" class="form-label">Your Desired Price (₹)</label>
+                <input type="number" class="form-control" id="desiredPrice" name="desired_price" step="0.01" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Set Alert</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast Notification -->
+<div class="position-fixed top-50 start-50 translate-middle p-3" style="z-index: 11">
+  <div id="notificationToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Notification</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body"></div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    const priceAlertModal = new bootstrap.Modal(document.getElementById('priceAlertModal'));
+    const priceAlertForm = document.getElementById('priceAlertForm');
+    const alertProductIdInput = document.getElementById('alertProductId');
+
+    const notificationToastEl = document.getElementById('notificationToast');
+    const notificationToast = new bootstrap.Toast(notificationToastEl);
+    const toastBody = notificationToastEl.querySelector('.toast-body');
+
+    function showToast(message) {
+        toastBody.textContent = message;
+        notificationToast.show();
+    }
+
+    document.querySelectorAll('.btn-set-alert').forEach(button => {
+        button.addEventListener('click', function() {
+            const productId = this.dataset.productId;
+            alertProductIdInput.value = productId;
+            priceAlertForm.action = `{% url 'dashboard:add_price_alert' product_id=0 %}`.replace('0', productId);
+            priceAlertModal.show();
+        });
+    });
+
+    priceAlertForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const form = event.target;
+        fetch(form.action, {
+            method: 'POST',
+            headers: { 'X-CSRFToken': csrftoken },
+            body: new FormData(form)
+        })
+        .then(response => response.json())
+        .then(data => {
+            showToast(data.message);
+            if (data.status === 'success') priceAlertModal.hide();
+        });
+    });
+
+    document.querySelectorAll('.btn-add-to-cart').forEach(button => {
+        button.addEventListener('click', function() {
+            const offerId = this.dataset.offerId;
+            fetch("{% url 'dashboard:add_to_cart' %}", {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'X-CSRFToken': csrftoken },
+                body: JSON.stringify({ 'offer_id': offerId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    showToast('Product added to cart!');
+                } else {
+                    showToast('Error: ' + data.message);
+                }
+            });
+        });
+    });
+
+    document.querySelectorAll('.btn-add-to-kit').forEach(button => {
+        button.addEventListener('click', function() {
+            const offerId = this.dataset.offerId;
+            fetch("{% url 'kit:add_to_kit' %}", {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'X-CSRFToken': csrftoken },
+                body: JSON.stringify({ 'offer_id': offerId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    showToast('Product added to kit!');
+                } else {
+                    showToast('Error: ' + data.message);
+                }
+            });
+        });
+    });
+
+    document.querySelectorAll('.btn-add-to-wishlist').forEach(a => {
+        a.addEventListener('click', function(event) {
+            event.preventDefault();
+            const url = this.href;
+            fetch(url, {
+                method: 'POST',
+                headers: { 'X-CSRFToken': csrftoken }
+            })
+            .then(response => response.json())
+            .then(data => {
+                showToast(data.message);
+            });
+        });
+    });
+
+    document.querySelectorAll('.btn-add-to-compare').forEach(button => {
+        button.addEventListener('click', function() {
+            const productId = this.dataset.productId;
+            fetch("{% url 'compare:add_to_compare' %}", {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'X-CSRFToken': csrftoken },
+                body: JSON.stringify({ 'product_id': productId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                showToast(data.message);
+            });
+        });
+    });
+});
+</script>
 {% endblock %}

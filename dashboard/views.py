@@ -182,7 +182,6 @@ def add_to_cart_view(request):
 
     return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
 
-# ... (rest of the views remain the same)
 @login_required
 def increase_cart_item_quantity(request, item_id):
     cart_item = get_object_or_404(CartItem, id=item_id, cart__user=request.user)
@@ -207,6 +206,17 @@ def checkout_view(request):
     total_price = sum(item.product_offer.price * item.quantity for item in cart_items)
 
     if request.method == 'POST':
+        payment_method = request.POST.get('paymentMethod')
+
+        if not payment_method:
+            messages.error(request, 'Please select a payment method.')
+            context = get_base_context()
+            context.update({
+                'cart_items': cart_items,
+                'total_price': total_price,
+            })
+            return render(request, 'dashboard/checkout.html', context)
+
         email = request.POST.get('email')
 
         # Create the order
@@ -242,6 +252,15 @@ def checkout_view(request):
         )
 
         cart.items.all().delete()
+
+        if payment_method == 'cod':
+            messages.success(request, 'Your order has been placed successfully with Cash on Delivery.')
+        elif payment_method == 'upi':
+            upi_id = request.POST.get('upi_id')
+            messages.success(request, f'Your payment was successful using UPI ID: {upi_id}. Your order has been placed.')
+        else:
+            messages.success(request, 'Your payment was successful and your order has been placed.')
+
         return redirect('dashboard:order_successful')
 
     context = get_base_context()

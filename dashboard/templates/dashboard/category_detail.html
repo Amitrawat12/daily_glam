@@ -5,23 +5,23 @@
 {% block content %}
 <style>
     .product-comparison-card {
-        border: 1px solid #dee2e6;
+        border: none; /* Removed border */
         border-radius: 8px;
         margin-bottom: 25px;
         overflow: hidden;
-        box-shadow: 0 2px 5px rgba(0,0,0,.05);
+        box-shadow: 0 4px 15px rgba(0,0,0,.08);
         display: flex;
         flex-direction: column;
         transition: all .3s ease;
     }
     .product-comparison-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 6px 15px rgba(0,0,0,.1) !important;
+        box-shadow: 0 8px 25px rgba(0,0,0,.15) !important;
     }
     .product-info {
         padding: 15px;
         background-color: #fff;
-        border-bottom: 1px solid #dee2e6;
+        border-bottom: 1px solid #f0f0f0;
         flex-shrink: 0; 
     }
     .product-info h5 {
@@ -181,7 +181,7 @@
 
             <div class="row" id="product-grid">
                 {% for product in products %}
-                <div class="col-xl-4 col-lg-6 col-md-6 product-item mb-4">
+                <div class="col-lg-6 product-item mb-4">
                     <div class="product-comparison-card h-100">
                         <div class="product-info text-center">
                             <div class="product-image-container mb-3">
@@ -193,10 +193,13 @@
                             </div>
                             <h5 title="{{ product.name }}">{{ product.name }}</h5>
                             <p class="text-muted mb-2">{{ product.brand.name }}</p>
-                            <div class="product-actions mt-2">
-                                <button class="btn btn-sm btn-outline-warning btn-set-alert" data-product-id="{{ product.id }}"><i class="bi bi-bell"></i></button>
-                                <a href="{% url 'dashboard:add_to_wishlist' product_id=product.id %}" class="btn btn-sm btn-outline-danger btn-add-to-wishlist"><i class="bi bi-heart"></i></a>
-                                <button class="btn btn-sm btn-outline-secondary btn-add-to-compare" data-product-id="{{ product.id }}">Add to Compare</button>
+                            <div class="product-actions mt-2 d-flex justify-content-center gap-2">
+                                <button class="btn btn-sm btn-outline-warning btn-set-alert" data-product-id="{{ product.id }}" title="Set Price Alert"><i class="bi bi-bell"></i></button>
+                                <a href="{% url 'dashboard:add_to_wishlist' product_id=product.id %}" class="btn btn-sm btn-outline-danger btn-add-to-wishlist" title="Add to Wishlist"><i class="bi bi-heart"></i></a>
+                                <button class="btn btn-sm btn-outline-secondary btn-add-to-compare" data-product-id="{{ product.id }}" title="Add to Compare"><i class="bi bi-files"></i></button>
+                                {% if product.offers.first %}
+                                <button class="btn btn-sm btn-outline-primary btn-add-to-kit" data-offer-id="{{ product.offers.first.id }}" title="Add to Kit"><i class="bi bi-box"></i></button>
+                                {% endif %}
                             </div>
                         </div>
                         <ul class="offer-list list-group list-group-flush">
@@ -323,6 +326,55 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     showToast('Error: ' + data.message);
                 }
+            });
+        });
+    });
+
+    document.querySelectorAll('.btn-add-to-kit').forEach(button => {
+        button.addEventListener('click', function() {
+            const offerId = this.dataset.offerId;
+            fetch("{% url 'kit:add_to_kit' %}", {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'X-CSRFToken': csrftoken },
+                body: JSON.stringify({ 'offer_id': offerId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    showToast('Product added to kit!');
+                } else {
+                    showToast('Error: ' + data.message);
+                }
+            });
+        });
+    });
+
+    document.querySelectorAll('.btn-add-to-wishlist').forEach(a => {
+        a.addEventListener('click', function(event) {
+            event.preventDefault();
+            const url = this.href;
+            fetch(url, {
+                method: 'POST',
+                headers: { 'X-CSRFToken': csrftoken }
+            })
+            .then(response => response.json())
+            .then(data => {
+                showToast(data.message);
+            });
+        });
+    });
+
+    document.querySelectorAll('.btn-add-to-compare').forEach(button => {
+        button.addEventListener('click', function() {
+            const productId = this.dataset.productId;
+            fetch("{% url 'compare:add_to_compare' %}", {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'X-CSRFToken': csrftoken },
+                body: JSON.stringify({ 'product_id': productId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                showToast(data.message);
             });
         });
     });

@@ -31,14 +31,20 @@
             <div class="col-md-12">
                 <div class="wishlist-item-card">
                     <div class="d-flex align-items-center">
-                        <img src="{{ item.product.image }}" alt="{{ item.product.name }}">
+                        <a href="{% url 'compare:product_detail' product_id=item.product.id %}">
+                            {% if item.product.image %}
+                                <img src="{{ item.product.image }}" alt="{{ item.product.name }}">
+                            {% else %}
+                                <img src="https://placehold.co/100x100/fce4ec/333333?text={{ item.product.name|urlencode }}" alt="{{ item.product.name }} placeholder">
+                            {% endif %}
+                        </a>
                         <div>
-                            <h5>{{ item.product.name }}</h5>
+                            <h5><a href="{% url 'compare:product_detail' product_id=item.product.id %}" class="text-dark text-decoration-none">{{ item.product.name }}</a></h5>
                             <p class="text-muted mb-0">{{ item.product.brand.name }}</p>
                         </div>
                     </div>
                     <div>
-                        <a href="{% url 'dashboard:brand_detail' brand_name=item.product.brand.name %}" class="btn btn-primary btn-sm">View Product</a>
+                        <a href="{% url 'compare:product_detail' product_id=item.product.id %}" class="btn btn-primary btn-sm">View Product</a>
                         <a href="{% url 'dashboard:remove_from_wishlist' product_id=item.product.id %}" class="btn btn-outline-danger btn-sm">Remove</a>
                     </div>
                 </div>

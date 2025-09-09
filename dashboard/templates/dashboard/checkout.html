@@ -12,6 +12,12 @@
     .checkout-form .card {
         margin-bottom: 20px;
     }
+    .payment-options {
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
 </style>
 
 <div class="container mt-5">
@@ -41,24 +47,62 @@
                                     <input type="text" class="form-control" id="city" required>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <label for="zip" class="form-label">ZIP Code</label>
+                                    <label for="zip" class="form-label">Pin Code</label>
                                     <input type="text" class="form-control" id="zip" required>
                                 </div>
                             </div>
                             <hr>
                             <h4 class="mb-3">Payment</h4>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
-                                <label class="form-check-label" for="creditCard">Credit card</label>
+                            <div class="payment-options">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="cod">
+                                    <label class="form-check-label" for="cod">Cash on Delivery</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard">
+                                    <label class="form-check-label" for="creditCard">Credit Card</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="debitCard">
+                                    <label class="form-check-label" for="debitCard">Debit Card</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="upi">
+                                    <label class="form-check-label" for="upi">UPI</label>
+                                </div>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="paymentMethod" id="debitCard">
-                                <label class="form-check-label" for="debitCard">Debit card</label>
+
+                            <div id="cardForm" style="display: none;">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cc-name" class="form-label">Name on card</label>
+                                        <input type="text" class="form-control" id="cc-name" placeholder="">
+                                        <small class="text-muted">Full name as displayed on card</small>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cc-number" class="form-label">Card number</label>
+                                        <input type="text" class="form-control" id="cc-number" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-expiration" class="form-label">Expiration</label>
+                                        <input type="text" class="form-control" id="cc-expiration" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-cvv" class="form-label">CVV</label>
+                                        <input type="text" class="form-control" id="cc-cvv" placeholder="">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
-                                <label class="form-check-label" for="paypal">PayPal</label>
+
+                            <div id="upiForm" style="display: none;">
+                                <div class="mb-3">
+                                    <label for="upi-id" class="form-label">UPI ID</label>
+                                    <input type="text" class="form-control" id="upi-id" name="upi_id" placeholder="yourname@bank">
+                                </div>
                             </div>
+
                             <hr>
                             <button class="btn btn-primary w-100" type="submit">Place Order</button>
                         </form>
@@ -89,4 +133,31 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const paymentMethodRadios = document.querySelectorAll('input[name="paymentMethod"]');
+        const cardForm = document.getElementById('cardForm');
+        const upiForm = document.getElementById('upiForm');
+        const cardFields = cardForm.querySelectorAll('input');
+        const upiField = upiForm.querySelector('input');
+
+        paymentMethodRadios.forEach(function (radio) {
+            radio.addEventListener('change', function () {
+                cardForm.style.display = 'none';
+                upiForm.style.display = 'none';
+                cardFields.forEach(field => field.required = false);
+                upiField.required = false;
+
+                if (this.id === 'creditCard' || this.id === 'debitCard') {
+                    cardForm.style.display = 'block';
+                    cardFields.forEach(field => field.required = true);
+                } else if (this.id === 'upi') {
+                    upiForm.style.display = 'block';
+                    upiField.required = true;
+                }
+            });
+        });
+    });
+</script>
 {% endblock %}
