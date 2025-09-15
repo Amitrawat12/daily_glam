@@ -43,7 +43,7 @@ def get_base_context():
 @login_required
 def dashboard_home(request):
     context = get_base_context()
-    featured_brands = Brand.objects.annotate(num_products=Count('products')).filter(num_products__gt=0).order_by('-num_products')[:18]
+    featured_brands = Brand.objects.annotate(num_products=Count('products')).filter(num_products__gt=0).order_by('-num_products')[:6]
     context['featured_brands'] = featured_brands
     return render(request, 'dashboard/dashboard.html', context)
 

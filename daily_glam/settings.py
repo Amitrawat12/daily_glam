@@ -33,6 +33,7 @@ LOGIN_REDIRECT_URL = '/dashboard/'
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -161,3 +162,76 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # Gemini API Key
 GEMINI_API_KEY = 'AIzaSyCKcp7o7IbcPaRuERWGGgu6C-YzmwNzoc0'
 
+SUIT_CONFIG = {
+    # header
+    'HEADER_DATE_FORMAT': 'l, jS F Y',
+    'HEADER_TIME_FORMAT': 'H:i',
+
+    # forms
+    'SHOW_REQUIRED_ASTERISK': True,  # Default True
+    'CONFIRM_UNSAVED_CHANGES': True, # Default True
+
+    # menu
+    'SEARCH_URL': '/admin/auth/user/',
+    'MENU_ICONS': {
+        'sites': 'icon-leaf',
+        'auth': 'icon-lock',
+    },
+    'MENU_OPEN_FIRST_CHILD': True, # Default True
+    'MENU_EXCLUDE': ('auth.group',),
+    'MENU': (
+        'sites',
+        {'app': 'auth', 'icon':'icon-lock', 'models': ('user', 'group')},
+        {'label': 'Settings', 'icon':'icon-cog', 'models': ('auth.user', 'auth.group')},
+        {'label': 'Support', 'icon':'icon-question-sign', 'url': '/support/'},
+    ),
+
+    # misc
+    'LIST_PER_PAGE': 15}
+
+JAZZMIN_SETTINGS = {
+    # title of the window (Will default to current_admin_site.site_title if absent or None)
+    "site_title": "Daily Glam Admin",
+
+    # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
+    "site_header": "Daily Glam",
+
+    # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
+    "site_brand": "Daily Glam",
+
+    # Welcome text on the login screen
+    "welcome_sign": "Welcome to the Daily Glam Admin",
+
+    # Copyright on the footer
+    "copyright": "Daily Glam Ltd",
+
+    # The model admin to search from the search bar, search bar omitted if excluded
+    "search_model": "auth.User",
+
+    # Links to put along the top menu
+    "topmenu_links": [
+        {"name": "Home", "url": "admin:index"},
+        {"name": "Support", "url": "/support/", "new_window": True},
+        {"model": "auth.User"},
+    ],
+
+    # Order of apps in the side menu
+    "order_with_respect_to": ["auth", "accounts", "dashboard", "compare", "advice", "kit", "search"],
+
+    # Icons for apps and models in the side menu (uses FontAwesome)
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+        "accounts": "fas fa-id-card",
+        "accounts.profile": "fas fa-user-circle",
+        "dashboard": "fas fa-tachometer-alt",
+        "dashboard.brand": "fas fa-copyright",
+        "dashboard.product": "fas fa-box",
+        "dashboard.order": "fas fa-file-invoice-dollar",
+        "compare": "fas fa-exchange-alt",
+        "advice": "fas fa-comment-dots",
+        "kit": "fas fa-box-open",
+        "search": "fas fa-search",
+    },
+}

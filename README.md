@@ -32,13 +32,14 @@ Follow these instructions to get a copy of the project up and running on your lo
 1.  **Clone the repository:**
     ```sh
     git clone <your-repository-url>
-    cd Backend
+    cd Daily_glam
     ```
 
 2.  **Create and activate a virtual environment:**
     ```sh
-    python -m venv .venv
-    source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
+    <!-- python -m venv .venv -->
+    .venv\Scripts\activate.bat
+    cd daily_glam
     ```
 
 3.  **Install the required packages:**
@@ -53,6 +54,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 5.  **Run the database migrations:**
     ```sh
+    python manage.py makemigrations
     python manage.py migrate
     ```
 
@@ -60,9 +62,12 @@ Follow these instructions to get a copy of the project up and running on your lo
     ```sh
     python manage.py runserver
     ```
-
+7.  **Test the application:**
     The application will be available at `http://127.0.0.1:8000/`.
 
+8. Seeder data of products:
+    python manage.py seed_products
+    python manage.py generate_realistic_data
 ## Core Technologies
 
 *   **Backend:** Django, Python
